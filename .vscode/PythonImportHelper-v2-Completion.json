@@ -1,0 +1,388 @@
+[
+    {
+        "label": "init",
+        "importPath": "colorama",
+        "description": "colorama",
+        "isExtraImport": true,
+        "detail": "colorama",
+        "documentation": {}
+    },
+    {
+        "label": "Fore",
+        "importPath": "colorama",
+        "description": "colorama",
+        "isExtraImport": true,
+        "detail": "colorama",
+        "documentation": {}
+    },
+    {
+        "label": "Style",
+        "importPath": "colorama",
+        "description": "colorama",
+        "isExtraImport": true,
+        "detail": "colorama",
+        "documentation": {}
+    },
+    {
+        "label": "Back",
+        "importPath": "colorama",
+        "description": "colorama",
+        "isExtraImport": true,
+        "detail": "colorama",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "termios",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "termios",
+        "description": "termios",
+        "detail": "termios",
+        "documentation": {}
+    },
+    {
+        "label": "tty",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "tty",
+        "description": "tty",
+        "detail": "tty",
+        "documentation": {}
+    },
+    {
+        "label": "signal",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "signal",
+        "description": "signal",
+        "detail": "signal",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "messages",
+        "description": "messages",
+        "isExtraImport": true,
+        "detail": "messages",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "levelsetup",
+        "description": "levelsetup",
+        "isExtraImport": true,
+        "detail": "levelsetup",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "getch",
+        "description": "getch",
+        "isExtraImport": true,
+        "detail": "getch",
+        "documentation": {}
+    },
+    {
+        "label": "Lives",
+        "kind": 6,
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "class Lives:\n    lives = 3\n# Define scene length(vertical), width(horizontal),\n# fullwidth(map length)\nMATRIX_WIDTH = 115\nMATRIX_LENGTH = 35\nALLOWED_INPUTS = ['w', 'a', 'd', 'A', 'C', 'D', ' ']\nSPEED = {1: 0.25,\n         2: 0.2,\n         3: 0.15}",
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "MATRIX_WIDTH",
+        "kind": 5,
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "MATRIX_WIDTH = 115\nMATRIX_LENGTH = 35\nALLOWED_INPUTS = ['w', 'a', 'd', 'A', 'C', 'D', ' ']\nSPEED = {1: 0.25,\n         2: 0.2,\n         3: 0.15}\n# color escape sequences\ncolors = {\n    'Blue': '\\x1b[0;34m',\n    'Green': '\\x1b[0;32m',",
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "MATRIX_LENGTH",
+        "kind": 5,
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "MATRIX_LENGTH = 35\nALLOWED_INPUTS = ['w', 'a', 'd', 'A', 'C', 'D', ' ']\nSPEED = {1: 0.25,\n         2: 0.2,\n         3: 0.15}\n# color escape sequences\ncolors = {\n    'Blue': '\\x1b[0;34m',\n    'Green': '\\x1b[0;32m',\n    'Cyan': '\\x1b[0;36m',",
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "ALLOWED_INPUTS",
+        "kind": 5,
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "ALLOWED_INPUTS = ['w', 'a', 'd', 'A', 'C', 'D', ' ']\nSPEED = {1: 0.25,\n         2: 0.2,\n         3: 0.15}\n# color escape sequences\ncolors = {\n    'Blue': '\\x1b[0;34m',\n    'Green': '\\x1b[0;32m',\n    'Cyan': '\\x1b[0;36m',\n    'Red': '\\x1b[0;31m',",
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "SPEED",
+        "kind": 5,
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "SPEED = {1: 0.25,\n         2: 0.2,\n         3: 0.15}\n# color escape sequences\ncolors = {\n    'Blue': '\\x1b[0;34m',\n    'Green': '\\x1b[0;32m',\n    'Cyan': '\\x1b[0;36m',\n    'Red': '\\x1b[0;31m',\n    'Purple': '\\x1b[0;35m',",
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "colors",
+        "kind": 5,
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "colors = {\n    'Blue': '\\x1b[0;34m',\n    'Green': '\\x1b[0;32m',\n    'Cyan': '\\x1b[0;36m',\n    'Red': '\\x1b[0;31m',\n    'Purple': '\\x1b[0;35m',\n    'Brown': '\\x1b[0;33m',\n    'Gray': '\\x1b[0;37m',\n    'Light Green': '\\x1b[1;32m',\n    'Light Cyan': '\\x1b[1;36m',",
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "RESET",
+        "kind": 5,
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "RESET = '\\x1b[0m'\ngroundx = 36\nbarriers = [colors['Brown'] + '#' + RESET, '#']\nkillers = [colors['Blue'] + '~' + RESET, '~', '{', '}']\nbeaters = ['^']\nmonies = [colors['Yellow'] + '$' + RESET]",
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "groundx",
+        "kind": 5,
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "groundx = 36\nbarriers = [colors['Brown'] + '#' + RESET, '#']\nkillers = [colors['Blue'] + '~' + RESET, '~', '{', '}']\nbeaters = ['^']\nmonies = [colors['Yellow'] + '$' + RESET]",
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "barriers",
+        "kind": 5,
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "barriers = [colors['Brown'] + '#' + RESET, '#']\nkillers = [colors['Blue'] + '~' + RESET, '~', '{', '}']\nbeaters = ['^']\nmonies = [colors['Yellow'] + '$' + RESET]",
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "killers",
+        "kind": 5,
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "killers = [colors['Blue'] + '~' + RESET, '~', '{', '}']\nbeaters = ['^']\nmonies = [colors['Yellow'] + '$' + RESET]",
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "beaters",
+        "kind": 5,
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "beaters = ['^']\nmonies = [colors['Yellow'] + '$' + RESET]",
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "monies",
+        "kind": 5,
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "monies = [colors['Yellow'] + '$' + RESET]",
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "Get",
+        "kind": 6,
+        "importPath": "getch",
+        "description": "getch",
+        "peekOfCode": "class Get:\n    \"\"\"Class to get input from user in real time\"\"\"\n    def __call__(self):\n        \"\"\" Defining the call for class objects \"\"\"\n        fd = sys.stdin.fileno()\n        old_settings = termios.tcgetattr(fd)\n        try:\n            tty.setraw(sys.stdin.fileno())\n            ch = sys.stdin.read(1)\n        finally:",
+        "detail": "getch",
+        "documentation": {}
+    },
+    {
+        "label": "AlarmException",
+        "kind": 6,
+        "importPath": "getch",
+        "description": "getch",
+        "peekOfCode": "class AlarmException(Exception):\n    \"\"\"Handling alarm exception.\"\"\"\n    pass\ndef alarmHandler(signum, frame):\n    \"\"\"Handling timeouts.\"\"\"\n    raise AlarmException\ndef input_to(getch, timeout=0.1):\n    \"\"\"Taking input from user.\"\"\"\n    signal.signal(signal.SIGALRM, alarmHandler)\n    signal.setitimer(signal.ITIMER_REAL, timeout)",
+        "detail": "getch",
+        "documentation": {}
+    },
+    {
+        "label": "alarmHandler",
+        "kind": 2,
+        "importPath": "getch",
+        "description": "getch",
+        "peekOfCode": "def alarmHandler(signum, frame):\n    \"\"\"Handling timeouts.\"\"\"\n    raise AlarmException\ndef input_to(getch, timeout=0.1):\n    \"\"\"Taking input from user.\"\"\"\n    signal.signal(signal.SIGALRM, alarmHandler)\n    signal.setitimer(signal.ITIMER_REAL, timeout)\n    try:\n        text = getch()\n        signal.alarm(0)",
+        "detail": "getch",
+        "documentation": {}
+    },
+    {
+        "label": "input_to",
+        "kind": 2,
+        "importPath": "getch",
+        "description": "getch",
+        "peekOfCode": "def input_to(getch, timeout=0.1):\n    \"\"\"Taking input from user.\"\"\"\n    signal.signal(signal.SIGALRM, alarmHandler)\n    signal.setitimer(signal.ITIMER_REAL, timeout)\n    try:\n        text = getch()\n        signal.alarm(0)\n        return text\n    except AlarmException:\n        signal.signal(signal.SIGALRM, signal.SIG_IGN)",
+        "detail": "getch",
+        "documentation": {}
+    },
+    {
+        "label": "setup",
+        "kind": 2,
+        "importPath": "levelsetup",
+        "description": "levelsetup",
+        "peekOfCode": "def setup(level):\n    striii=\"\"\n    # print(\"    | \",end=\"\")\n    I=int(len(arr[level]))\n    for i in range(0,I):\n        J=int(len(arr[level][i]))\n        striii+=\"    | \"\n        for j in range(0,J):\n            if(arr[level][i][j]==0):\n                striii+=\"      \"",
+        "detail": "levelsetup",
+        "documentation": {}
+    },
+    {
+        "label": "landing_page",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "landing_page = landing_page()\n# generate scene\n# generate paddle\n# set lives/level/score\n# special power\ngetinp = Get()\nPAUSE = False\nLIFE = str(5)\nLEVEL = str((20%10)+1)\nSCORE = str(100000)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "getinp",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "getinp = Get()\nPAUSE = False\nLIFE = str(5)\nLEVEL = str((20%10)+1)\nSCORE = str(100000)\nhh = 108-len(LEVEL)-len(LIFE)-len(SCORE)-70-8-8-11\nif(1 == landing_page):\n    while True:\n        input = input_to(getinp)\n        if(input=='q' or input==\"Q\"):",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "PAUSE",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "PAUSE = False\nLIFE = str(5)\nLEVEL = str((20%10)+1)\nSCORE = str(100000)\nhh = 108-len(LEVEL)-len(LIFE)-len(SCORE)-70-8-8-11\nif(1 == landing_page):\n    while True:\n        input = input_to(getinp)\n        if(input=='q' or input==\"Q\"):\n            quitmsg()",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "LIFE",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "LIFE = str(5)\nLEVEL = str((20%10)+1)\nSCORE = str(100000)\nhh = 108-len(LEVEL)-len(LIFE)-len(SCORE)-70-8-8-11\nif(1 == landing_page):\n    while True:\n        input = input_to(getinp)\n        if(input=='q' or input==\"Q\"):\n            quitmsg()\n            break",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "LEVEL",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "LEVEL = str((20%10)+1)\nSCORE = str(100000)\nhh = 108-len(LEVEL)-len(LIFE)-len(SCORE)-70-8-8-11\nif(1 == landing_page):\n    while True:\n        input = input_to(getinp)\n        if(input=='q' or input==\"Q\"):\n            quitmsg()\n            break\n        if(input=='p' or input==\"P\"):",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "SCORE",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "SCORE = str(100000)\nhh = 108-len(LEVEL)-len(LIFE)-len(SCORE)-70-8-8-11\nif(1 == landing_page):\n    while True:\n        input = input_to(getinp)\n        if(input=='q' or input==\"Q\"):\n            quitmsg()\n            break\n        if(input=='p' or input==\"P\"):\n            PAUSE = True",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "hh",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "hh = 108-len(LEVEL)-len(LIFE)-len(SCORE)-70-8-8-11\nif(1 == landing_page):\n    while True:\n        input = input_to(getinp)\n        if(input=='q' or input==\"Q\"):\n            quitmsg()\n            break\n        if(input=='p' or input==\"P\"):\n            PAUSE = True\n            pausedmsg(SCORE)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "landing_page",
+        "kind": 2,
+        "importPath": "messages",
+        "description": "messages",
+        "peekOfCode": "def landing_page():\n    os.system('clear')\n    print(Fore.RED+Style.BRIGHT+\"\\n\"+\" \"*45+'''\n:::    ::: :::       :::     :::     ::::::::: :::   :::           :::::::::      :::     :::        :::        \n:+:   :+:  :+:       :+:   :+: :+:        :+:  :+:   :+:           :+:    :+:   :+: :+:   :+:        :+:        \n+:+  +:+   +:+       +:+  +:+   +:+      +:+    +:+ +:+            +:+    +:+  +:+   +:+  +:+        +:+        \n+#++:++    +#+  +:+  +#+ +#++:++#++:    +#+      +#++:             +#++:++#+  +#++:++#++: +#+        +#+        \n+#+  +#+   +#+ +#+#+ +#+ +#+     +#+   +#+        +#+              +#+    +#+ +#+     +#+ +#+        +#+        \n#+#   #+#   #+#+# #+#+#  #+#     #+#  #+#         #+#              #+#    #+# #+#     #+# #+#        #+#        \n###    ###   ###   ###   ###     ### #########    ###              #########  ###     ### ########## ########## '''+\" \"*40)",
+        "detail": "messages",
+        "documentation": {}
+    },
+    {
+        "label": "quitmsg",
+        "kind": 2,
+        "importPath": "messages",
+        "description": "messages",
+        "peekOfCode": "def quitmsg():\n    os.system('clear')\n    print(\"\\n\\n\\n\")\n    print(Fore.BLUE + \" \"*20+ '''\n            Y88b   d88P                      .d88888b.           d8b 888    \n             Y88b d88P                      d88P\" \"Y88b          Y8P 888    \n              Y88o88P                       888     888              888    \n               Y888P  .d88b.  888  888      888     888 888  888 888 888888 \n                888  d88\"\"88b 888  888      888     888 888  888 888 888    \n                888  888  888 888  888      888 Y8b 888 888  888 888 888    ",
+        "detail": "messages",
+        "documentation": {}
+    },
+    {
+        "label": "gameover",
+        "kind": 2,
+        "importPath": "messages",
+        "description": "messages",
+        "peekOfCode": "def gameover(SCORE):\n    os.system('clear')\n    print(\"\\n\\n\\n\")\n    print(Fore.BLUE + \" \"*20+ '''\n             .d8888b.                                        .d88888b.                            \n            d88P  Y88b                                      d88P\" \"Y88b                           \n            888    888                                      888     888                           \n            888         8888b.  88888b.d88b.   .d88b.       888     888 888  888  .d88b.  888d888 \n            888  88888     \"88b 888 \"888 \"88b d8P  Y8b      888     888 888  888 d8P  Y8b 888P\"   \n            888    888 .d888888 888  888  888 88888888      888     888 Y88  88P 88888888 888     ",
+        "detail": "messages",
+        "documentation": {}
+    },
+    {
+        "label": "pausedmsg",
+        "kind": 2,
+        "importPath": "messages",
+        "description": "messages",
+        "peekOfCode": "def pausedmsg(SCORE):\n    os.system('clear')\n    print(\"\\n\\n\\n\")\n    print(Fore.BLUE + \" \"*20 + '''\n                            8888888b.                                          888      \n                            888   Y88b                                         888      \n                            888    888                                         888      \n                            888   d88P 8888b.  888  888 .d8888b   .d88b.   .d88888      \n                            8888888P\"     \"88b 888  888 88K      d8P  Y8b d88\" 888      \n                            888       .d888888 888  888 \"Y8888b. 88888888 888  888      ",
+        "detail": "messages",
+        "documentation": {}
+    }
+]
