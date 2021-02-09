@@ -1,5 +1,46 @@
 [
     {
+        "label": "numpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "numpy",
+        "description": "numpy",
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
         "label": "init",
         "importPath": "colorama",
         "description": "colorama",
@@ -68,30 +109,6 @@
         "documentation": {}
     },
     {
-        "label": "*",
-        "importPath": "config",
-        "description": "config",
-        "isExtraImport": true,
-        "detail": "config",
-        "documentation": {}
-    },
-    {
-        "label": "*",
-        "importPath": "config",
-        "description": "config",
-        "isExtraImport": true,
-        "detail": "config",
-        "documentation": {}
-    },
-    {
-        "label": "*",
-        "importPath": "config",
-        "description": "config",
-        "isExtraImport": true,
-        "detail": "config",
-        "documentation": {}
-    },
-    {
         "label": "os",
         "kind": 6,
         "isExtraImport": true,
@@ -134,11 +151,155 @@
         "documentation": {}
     },
     {
+        "label": "arr",
+        "kind": 5,
+        "importPath": "aa",
+        "description": "aa",
+        "peekOfCode": "arr = []\na0 = [\"\"]*115\na1 = [\" \"]*4 + [\"|\"] + [\"=\"]*109+[\"|\"]\na2 = [\" \"]*4 + [\"|\"] + [\" \",\"P\",\"r\",\"e\",\"s\",\"s\",\" \",\"[\",\"P\",\"]\",\" \",\"o\",\"r\",\" \",\"[\",\"p\",\"]\",\" \",\"t\",\"o\",\" \",\"p\",\"a\",\"u\",\"s\",\"e\"] + [\" \"]*58 + [\"P\",\"r\",\"e\",\"s\",\"s\",\" \",\"[\",\"Q\",\"]\",\" \",\"o\",\"r\",\" \",\"[\",\"q\",\"]\",\" \",\"t\",\"o\",\" \",\"q\",\"u\",\"i\",\"t\",\" \",\"|\"]\na3 = [\" \"]*4 + [\"|\"] + [\"-\"]*109+[\"|\"]\na4 = [\" \"]*4 + [\"|\"] + [\" \"]*3 +[\"L\",\"i\",\"v\",\"e\",\"s\",\" \",\":\",\" \"] + [\" \"]*31 +[\"L\",\"e\",\"v\",\"e\",\"l\",\" \",\":\",\" \"] + [\" \"]*21 + [\"S\",\"c\",\"o\",\"r\",\"e\",\" \",\":\",\" \"] + [\" \"]*30 + [\"|\"]\na5 = [\" \"]*4 + [\"|\"] + [\"-\"]*109+[\"|\"]\na6 = [\" \"]*4 + [\"|\"] + [\" \"]*109+[\"|\"]\na7 = [\" \"]*4 + [\"|\"] + [\" \"]*109+[\"|\"]\na8 = [\" \"]*4 + [\"|\"] + [\"/\",\"\\\\\"]*54 + [\"/\",\"|\"]",
+        "detail": "aa",
+        "documentation": {}
+    },
+    {
+        "label": "a0",
+        "kind": 5,
+        "importPath": "aa",
+        "description": "aa",
+        "peekOfCode": "a0 = [\"\"]*115\na1 = [\" \"]*4 + [\"|\"] + [\"=\"]*109+[\"|\"]\na2 = [\" \"]*4 + [\"|\"] + [\" \",\"P\",\"r\",\"e\",\"s\",\"s\",\" \",\"[\",\"P\",\"]\",\" \",\"o\",\"r\",\" \",\"[\",\"p\",\"]\",\" \",\"t\",\"o\",\" \",\"p\",\"a\",\"u\",\"s\",\"e\"] + [\" \"]*58 + [\"P\",\"r\",\"e\",\"s\",\"s\",\" \",\"[\",\"Q\",\"]\",\" \",\"o\",\"r\",\" \",\"[\",\"q\",\"]\",\" \",\"t\",\"o\",\" \",\"q\",\"u\",\"i\",\"t\",\" \",\"|\"]\na3 = [\" \"]*4 + [\"|\"] + [\"-\"]*109+[\"|\"]\na4 = [\" \"]*4 + [\"|\"] + [\" \"]*3 +[\"L\",\"i\",\"v\",\"e\",\"s\",\" \",\":\",\" \"] + [\" \"]*31 +[\"L\",\"e\",\"v\",\"e\",\"l\",\" \",\":\",\" \"] + [\" \"]*21 + [\"S\",\"c\",\"o\",\"r\",\"e\",\" \",\":\",\" \"] + [\" \"]*30 + [\"|\"]\na5 = [\" \"]*4 + [\"|\"] + [\"-\"]*109+[\"|\"]\na6 = [\" \"]*4 + [\"|\"] + [\" \"]*109+[\"|\"]\na7 = [\" \"]*4 + [\"|\"] + [\" \"]*109+[\"|\"]\na8 = [\" \"]*4 + [\"|\"] + [\"/\",\"\\\\\"]*54 + [\"/\",\"|\"]\na9 = [\" \"]*4 + [\"|\"]*111",
+        "detail": "aa",
+        "documentation": {}
+    },
+    {
+        "label": "a1",
+        "kind": 5,
+        "importPath": "aa",
+        "description": "aa",
+        "peekOfCode": "a1 = [\" \"]*4 + [\"|\"] + [\"=\"]*109+[\"|\"]\na2 = [\" \"]*4 + [\"|\"] + [\" \",\"P\",\"r\",\"e\",\"s\",\"s\",\" \",\"[\",\"P\",\"]\",\" \",\"o\",\"r\",\" \",\"[\",\"p\",\"]\",\" \",\"t\",\"o\",\" \",\"p\",\"a\",\"u\",\"s\",\"e\"] + [\" \"]*58 + [\"P\",\"r\",\"e\",\"s\",\"s\",\" \",\"[\",\"Q\",\"]\",\" \",\"o\",\"r\",\" \",\"[\",\"q\",\"]\",\" \",\"t\",\"o\",\" \",\"q\",\"u\",\"i\",\"t\",\" \",\"|\"]\na3 = [\" \"]*4 + [\"|\"] + [\"-\"]*109+[\"|\"]\na4 = [\" \"]*4 + [\"|\"] + [\" \"]*3 +[\"L\",\"i\",\"v\",\"e\",\"s\",\" \",\":\",\" \"] + [\" \"]*31 +[\"L\",\"e\",\"v\",\"e\",\"l\",\" \",\":\",\" \"] + [\" \"]*21 + [\"S\",\"c\",\"o\",\"r\",\"e\",\" \",\":\",\" \"] + [\" \"]*30 + [\"|\"]\na5 = [\" \"]*4 + [\"|\"] + [\"-\"]*109+[\"|\"]\na6 = [\" \"]*4 + [\"|\"] + [\" \"]*109+[\"|\"]\na7 = [\" \"]*4 + [\"|\"] + [\" \"]*109+[\"|\"]\na8 = [\" \"]*4 + [\"|\"] + [\"/\",\"\\\\\"]*54 + [\"/\",\"|\"]\na9 = [\" \"]*4 + [\"|\"]*111\naa = [\" \"]*4 + [\"|\",\" \"] + [\"X\"]*107 + [\" \",\"|\"]",
+        "detail": "aa",
+        "documentation": {}
+    },
+    {
+        "label": "a2",
+        "kind": 5,
+        "importPath": "aa",
+        "description": "aa",
+        "peekOfCode": "a2 = [\" \"]*4 + [\"|\"] + [\" \",\"P\",\"r\",\"e\",\"s\",\"s\",\" \",\"[\",\"P\",\"]\",\" \",\"o\",\"r\",\" \",\"[\",\"p\",\"]\",\" \",\"t\",\"o\",\" \",\"p\",\"a\",\"u\",\"s\",\"e\"] + [\" \"]*58 + [\"P\",\"r\",\"e\",\"s\",\"s\",\" \",\"[\",\"Q\",\"]\",\" \",\"o\",\"r\",\" \",\"[\",\"q\",\"]\",\" \",\"t\",\"o\",\" \",\"q\",\"u\",\"i\",\"t\",\" \",\"|\"]\na3 = [\" \"]*4 + [\"|\"] + [\"-\"]*109+[\"|\"]\na4 = [\" \"]*4 + [\"|\"] + [\" \"]*3 +[\"L\",\"i\",\"v\",\"e\",\"s\",\" \",\":\",\" \"] + [\" \"]*31 +[\"L\",\"e\",\"v\",\"e\",\"l\",\" \",\":\",\" \"] + [\" \"]*21 + [\"S\",\"c\",\"o\",\"r\",\"e\",\" \",\":\",\" \"] + [\" \"]*30 + [\"|\"]\na5 = [\" \"]*4 + [\"|\"] + [\"-\"]*109+[\"|\"]\na6 = [\" \"]*4 + [\"|\"] + [\" \"]*109+[\"|\"]\na7 = [\" \"]*4 + [\"|\"] + [\" \"]*109+[\"|\"]\na8 = [\" \"]*4 + [\"|\"] + [\"/\",\"\\\\\"]*54 + [\"/\",\"|\"]\na9 = [\" \"]*4 + [\"|\"]*111\naa = [\" \"]*4 + [\"|\",\" \"] + [\"X\"]*107 + [\" \",\"|\"]\narr.append(a0)",
+        "detail": "aa",
+        "documentation": {}
+    },
+    {
+        "label": "a3",
+        "kind": 5,
+        "importPath": "aa",
+        "description": "aa",
+        "peekOfCode": "a3 = [\" \"]*4 + [\"|\"] + [\"-\"]*109+[\"|\"]\na4 = [\" \"]*4 + [\"|\"] + [\" \"]*3 +[\"L\",\"i\",\"v\",\"e\",\"s\",\" \",\":\",\" \"] + [\" \"]*31 +[\"L\",\"e\",\"v\",\"e\",\"l\",\" \",\":\",\" \"] + [\" \"]*21 + [\"S\",\"c\",\"o\",\"r\",\"e\",\" \",\":\",\" \"] + [\" \"]*30 + [\"|\"]\na5 = [\" \"]*4 + [\"|\"] + [\"-\"]*109+[\"|\"]\na6 = [\" \"]*4 + [\"|\"] + [\" \"]*109+[\"|\"]\na7 = [\" \"]*4 + [\"|\"] + [\" \"]*109+[\"|\"]\na8 = [\" \"]*4 + [\"|\"] + [\"/\",\"\\\\\"]*54 + [\"/\",\"|\"]\na9 = [\" \"]*4 + [\"|\"]*111\naa = [\" \"]*4 + [\"|\",\" \"] + [\"X\"]*107 + [\" \",\"|\"]\narr.append(a0)\narr.append(a0)",
+        "detail": "aa",
+        "documentation": {}
+    },
+    {
+        "label": "a4",
+        "kind": 5,
+        "importPath": "aa",
+        "description": "aa",
+        "peekOfCode": "a4 = [\" \"]*4 + [\"|\"] + [\" \"]*3 +[\"L\",\"i\",\"v\",\"e\",\"s\",\" \",\":\",\" \"] + [\" \"]*31 +[\"L\",\"e\",\"v\",\"e\",\"l\",\" \",\":\",\" \"] + [\" \"]*21 + [\"S\",\"c\",\"o\",\"r\",\"e\",\" \",\":\",\" \"] + [\" \"]*30 + [\"|\"]\na5 = [\" \"]*4 + [\"|\"] + [\"-\"]*109+[\"|\"]\na6 = [\" \"]*4 + [\"|\"] + [\" \"]*109+[\"|\"]\na7 = [\" \"]*4 + [\"|\"] + [\" \"]*109+[\"|\"]\na8 = [\" \"]*4 + [\"|\"] + [\"/\",\"\\\\\"]*54 + [\"/\",\"|\"]\na9 = [\" \"]*4 + [\"|\"]*111\naa = [\" \"]*4 + [\"|\",\" \"] + [\"X\"]*107 + [\" \",\"|\"]\narr.append(a0)\narr.append(a0)\narr.append(a0)",
+        "detail": "aa",
+        "documentation": {}
+    },
+    {
+        "label": "a5",
+        "kind": 5,
+        "importPath": "aa",
+        "description": "aa",
+        "peekOfCode": "a5 = [\" \"]*4 + [\"|\"] + [\"-\"]*109+[\"|\"]\na6 = [\" \"]*4 + [\"|\"] + [\" \"]*109+[\"|\"]\na7 = [\" \"]*4 + [\"|\"] + [\" \"]*109+[\"|\"]\na8 = [\" \"]*4 + [\"|\"] + [\"/\",\"\\\\\"]*54 + [\"/\",\"|\"]\na9 = [\" \"]*4 + [\"|\"]*111\naa = [\" \"]*4 + [\"|\",\" \"] + [\"X\"]*107 + [\" \",\"|\"]\narr.append(a0)\narr.append(a0)\narr.append(a0)\narr.append(a1)",
+        "detail": "aa",
+        "documentation": {}
+    },
+    {
+        "label": "a6",
+        "kind": 5,
+        "importPath": "aa",
+        "description": "aa",
+        "peekOfCode": "a6 = [\" \"]*4 + [\"|\"] + [\" \"]*109+[\"|\"]\na7 = [\" \"]*4 + [\"|\"] + [\" \"]*109+[\"|\"]\na8 = [\" \"]*4 + [\"|\"] + [\"/\",\"\\\\\"]*54 + [\"/\",\"|\"]\na9 = [\" \"]*4 + [\"|\"]*111\naa = [\" \"]*4 + [\"|\",\" \"] + [\"X\"]*107 + [\" \",\"|\"]\narr.append(a0)\narr.append(a0)\narr.append(a0)\narr.append(a1)\narr.append(a2)",
+        "detail": "aa",
+        "documentation": {}
+    },
+    {
+        "label": "a7",
+        "kind": 5,
+        "importPath": "aa",
+        "description": "aa",
+        "peekOfCode": "a7 = [\" \"]*4 + [\"|\"] + [\" \"]*109+[\"|\"]\na8 = [\" \"]*4 + [\"|\"] + [\"/\",\"\\\\\"]*54 + [\"/\",\"|\"]\na9 = [\" \"]*4 + [\"|\"]*111\naa = [\" \"]*4 + [\"|\",\" \"] + [\"X\"]*107 + [\" \",\"|\"]\narr.append(a0)\narr.append(a0)\narr.append(a0)\narr.append(a1)\narr.append(a2)\narr.append(a3)",
+        "detail": "aa",
+        "documentation": {}
+    },
+    {
+        "label": "a8",
+        "kind": 5,
+        "importPath": "aa",
+        "description": "aa",
+        "peekOfCode": "a8 = [\" \"]*4 + [\"|\"] + [\"/\",\"\\\\\"]*54 + [\"/\",\"|\"]\na9 = [\" \"]*4 + [\"|\"]*111\naa = [\" \"]*4 + [\"|\",\" \"] + [\"X\"]*107 + [\" \",\"|\"]\narr.append(a0)\narr.append(a0)\narr.append(a0)\narr.append(a1)\narr.append(a2)\narr.append(a3)\narr.append(a4)",
+        "detail": "aa",
+        "documentation": {}
+    },
+    {
+        "label": "a9",
+        "kind": 5,
+        "importPath": "aa",
+        "description": "aa",
+        "peekOfCode": "a9 = [\" \"]*4 + [\"|\"]*111\naa = [\" \"]*4 + [\"|\",\" \"] + [\"X\"]*107 + [\" \",\"|\"]\narr.append(a0)\narr.append(a0)\narr.append(a0)\narr.append(a1)\narr.append(a2)\narr.append(a3)\narr.append(a4)\narr.append(a5)",
+        "detail": "aa",
+        "documentation": {}
+    },
+    {
+        "label": "aa",
+        "kind": 5,
+        "importPath": "aa",
+        "description": "aa",
+        "peekOfCode": "aa = [\" \"]*4 + [\"|\",\" \"] + [\"X\"]*107 + [\" \",\"|\"]\narr.append(a0)\narr.append(a0)\narr.append(a0)\narr.append(a1)\narr.append(a2)\narr.append(a3)\narr.append(a4)\narr.append(a5)\narr.append(a6)",
+        "detail": "aa",
+        "documentation": {}
+    },
+    {
+        "label": "arr",
+        "kind": 5,
+        "importPath": "aa",
+        "description": "aa",
+        "peekOfCode": "arr = []\nfor i in range(8,17):\n    arr.append(aa)\nprint(arr)\nprint(\"\\n\\n\\n\\n\")\narr = []\nfor i in range(17,30):\n    arr.append(a7)\narr.append(a8)\narr.append(a1)",
+        "detail": "aa",
+        "documentation": {}
+    },
+    {
+        "label": "arr",
+        "kind": 5,
+        "importPath": "aa",
+        "description": "aa",
+        "peekOfCode": "arr = []\nfor i in range(17,30):\n    arr.append(a7)\narr.append(a8)\narr.append(a1)\nprint(arr)\nprint(\"\\n\\n\\n\\n\")\narr = []\nfor i in range(0,len(arr)):\n    for j in range(0,len(arr[i])):",
+        "detail": "aa",
+        "documentation": {}
+    },
+    {
+        "label": "arr",
+        "kind": 5,
+        "importPath": "aa",
+        "description": "aa",
+        "peekOfCode": "arr = []\nfor i in range(0,len(arr)):\n    for j in range(0,len(arr[i])):\n        print(arr[i][j],end=\"\")\n    print(\"\\n\",end=\"\")\nprint(arr)\n# arr.append(a)\n# arr.append(a)\n# b = [\"*\"]*10\n# brr = []",
+        "detail": "aa",
+        "documentation": {}
+    },
+    {
+        "label": "Scene",
+        "kind": 6,
+        "importPath": "background",
+        "description": "background",
+        "peekOfCode": "class Scene:\n    def __init__(self, length, width):\n        self.width = width\n        self.length = length\n        self.score = 0\n        self.lives = 5\n        self.level = 1\n        self.time = 0\n        self.matrix = []\n        # self.walltop = 0",
+        "detail": "background",
+        "documentation": {}
+    },
+    {
         "label": "Lives",
         "kind": 6,
         "importPath": "config",
         "description": "config",
-        "peekOfCode": "class Lives:\n    lives = 3\n# Define scene length(vertical), width(horizontal),\n# fullwidth(map length)\nMATRIX_WIDTH = 115\nMATRIX_LENGTH = 35\nALLOWED_INPUTS = ['w', 'a', 'd', 'A', 'C', 'D', ' ']\nSPEED = {1: 0.25,\n         2: 0.2,\n         3: 0.15}",
+        "peekOfCode": "class Lives:\n    lives = 3\n# Define scene length(vertical), width(horizontal),\n# fullwidth(map length)\nMATRIX_WIDTH = 115\nMATRIX_LENGTH = 30\nALLOWED_INPUTS = ['w', 'a', 'd', 'A', 'C', 'D', ' ']\nSPEED = {1: 0.25,\n         2: 0.2,\n         3: 0.15}",
         "detail": "config",
         "documentation": {}
     },
@@ -147,7 +308,7 @@
         "kind": 5,
         "importPath": "config",
         "description": "config",
-        "peekOfCode": "MATRIX_WIDTH = 115\nMATRIX_LENGTH = 35\nALLOWED_INPUTS = ['w', 'a', 'd', 'A', 'C', 'D', ' ']\nSPEED = {1: 0.25,\n         2: 0.2,\n         3: 0.15}\n# color escape sequences\ncolors = {\n    'Blue': '\\x1b[0;34m',\n    'Green': '\\x1b[0;32m',",
+        "peekOfCode": "MATRIX_WIDTH = 115\nMATRIX_LENGTH = 30\nALLOWED_INPUTS = ['w', 'a', 'd', 'A', 'C', 'D', ' ']\nSPEED = {1: 0.25,\n         2: 0.2,\n         3: 0.15}\n# color escape sequences\ncolors = {\n    'Blue': '\\x1b[0;34m',\n    'Green': '\\x1b[0;32m',",
         "detail": "config",
         "documentation": {}
     },
@@ -156,7 +317,7 @@
         "kind": 5,
         "importPath": "config",
         "description": "config",
-        "peekOfCode": "MATRIX_LENGTH = 35\nALLOWED_INPUTS = ['w', 'a', 'd', 'A', 'C', 'D', ' ']\nSPEED = {1: 0.25,\n         2: 0.2,\n         3: 0.15}\n# color escape sequences\ncolors = {\n    'Blue': '\\x1b[0;34m',\n    'Green': '\\x1b[0;32m',\n    'Cyan': '\\x1b[0;36m',",
+        "peekOfCode": "MATRIX_LENGTH = 30\nALLOWED_INPUTS = ['w', 'a', 'd', 'A', 'C', 'D', ' ']\nSPEED = {1: 0.25,\n         2: 0.2,\n         3: 0.15}\n# color escape sequences\ncolors = {\n    'Blue': '\\x1b[0;34m',\n    'Green': '\\x1b[0;32m',\n    'Cyan': '\\x1b[0;36m',",
         "detail": "config",
         "documentation": {}
     },
