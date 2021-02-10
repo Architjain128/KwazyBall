@@ -41,6 +41,13 @@ class Scene:
                 print(self.matrix[i][j],end="")
             print("\n",end="")
         return
+    
+    def print_matrix(self):
+        for i in range(0,int(self.matrix.size/self.matrix[0].size)):
+            for j in range(0,self.matrix[i].size):
+                print(self.matrix[i][j],end="")
+            print("\n",end="")
+        return
 
     # update time
     # update level

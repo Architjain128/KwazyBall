@@ -17,9 +17,7 @@ ALLOWED_INPUTS = ['w', 'a', 'd', 'A', 'C', 'D', ' ']
 
 
 
-SPEED = {1: 0.25,
-         2: 0.2,
-         3: 0.15}
+SPEED = 0.1
 
 # color escape sequences
 colors = {
