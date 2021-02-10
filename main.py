@@ -5,6 +5,7 @@ from config import *
 from messages import *
 from levelsetup import *
 from getch import *
+from background import *
 
 landing_page = landing_page()
 
@@ -22,6 +23,7 @@ LIFE = str(5)
 LEVEL = str((20%10)+1)
 SCORE = str(100000)
 hh = 108-len(LEVEL)-len(LIFE)-len(SCORE)-70-8-8-11
+scene = Scene()
 
 if(1 == landing_page):
     while True:
@@ -36,43 +38,10 @@ if(1 == landing_page):
         
         if(input=='r' or input=="R"):
             PAUSE=False
-                
+        
         if(PAUSE==False):
-            # print("code")
-            # code for game
-            
-            os.system("clear")
-            print("\n\n")
-            print("    |"+"-"*109+"|")
-            print("    |"+" Press [P] or [p] to pause "+" "*56+" Press [Q] or [q] to quit "+"|")
-            print("    |"+"-"*109+"|")
-            print("    |"+"   Lives : " +LIFE +" "*30+"Level : " +LEVEL +" "*20+"Score : " +SCORE +" "*20 +" "*hh+" |")
-            print("    |"+"-"*109+"|")
-            print("    |"+" "*109+"|")
-            setup(int(LEVEL))
-            print("    |"+" "*109+"|")
-            print("    |"+" "*109+"|")
-            print("    |"+" "*109+"|")
-            print("    |"+" "*109+"|")
-            print("    |"+" "*109+"|")
-            print("    |"+" "*109+"|")
-            print("    |"+" "*109+"|")
-            print("    |"+" "*109+"|")
-            print("    |"+" "*109+"|")
-            print("    |"+" "*109+"|")
-            print("    |"+" "*109+"|")
-            print("    |"+" "*109+"|")
-            print("    |"+" "*109+"|")
-            print("    |"+" "*109+"|")
-            print("    |"+" "*109+"|")
-            print("    |"+" "*109+"|")
-            print("    |"+" "*109+"|")
-            print("    |"+" "*109+"|")
-            print("    |"+" "*109+"|")
-            print("    |"+" "*109+"|")
-            print("    |"+" "*109+"|")
-            print("    |"+" "*109+"|")
-            print("    |"+"_"*109+"|")
+            os.system('clear')
+            scene.generate_level(1)
     
 else:
     quitmsg();
