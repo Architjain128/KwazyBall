@@ -653,7 +653,7 @@
         "kind": 6,
         "importPath": "scoreoard",
         "description": "scoreoard",
-        "peekOfCode": "class Time(ScoreBoard):\n    def update_val(self,delta,scene):\n        self.val = self.val + delta\n        self.add_in_scene(scene)\n    def return_val(self):\n        return math.floor(self.val)\n    def add_in_scene(self,scene):\n        temp = str(self.val)\n        for i in range(0,len(temp)):\n            scene.matrix[4][54+i]=temp[i]",
+        "peekOfCode": "class Time(ScoreBoard):\n    def update_val(self,delta,scene):\n        self.val = self.val + delta\n        # self.add_in_scene(scene)\n    def return_val(self):\n        return math.floor(self.val)\n    def add_in_scene(self,scene):\n        temp = str(self.val)\n        for i in range(0,len(temp)):\n            scene.matrix[4][54+i]=temp[i]",
         "detail": "scoreoard",
         "documentation": {}
     },
@@ -662,7 +662,7 @@
         "kind": 6,
         "importPath": "scoreoard",
         "description": "scoreoard",
-        "peekOfCode": "class Score(ScoreBoard):\n    def update_val(self):\n        self.val = self.val + 10\n        self.add_in_scene(scene)\n    def add_in_scene(self,scene):\n        temp = str(self.val)\n        for i in range(0,len(temp)):\n            scene.matrix[6][84+i]=temp[i]\nclass Level(ScoreBoard):\n    def update_val(self):",
+        "peekOfCode": "class Score(ScoreBoard):\n    def update_val(self,scene):\n        self.val = self.val + 10\n        self.add_in_scene(scene)\n    def add_in_scene(self,scene):\n        temp = str(self.val)\n        for i in range(0,len(temp)):\n            scene.matrix[6][84+i]=temp[i]\nclass Level(ScoreBoard):\n    def update_val(self,scene):",
         "detail": "scoreoard",
         "documentation": {}
     },
@@ -671,7 +671,7 @@
         "kind": 6,
         "importPath": "scoreoard",
         "description": "scoreoard",
-        "peekOfCode": "class Level(ScoreBoard):\n    def update_val(self):\n        self.val = self.val + 1\n        # self.add_in_scene(scene)\n    def add_in_scene(self,scene):\n        temp = str(self.val)\n        for i in range(0,len(temp)):\n            scene.matrix[6][55+i]=temp[i]",
+        "peekOfCode": "class Level(ScoreBoard):\n    def update_val(self,scene):\n        self.val = self.val + 1\n        # self.add_in_scene(scene)\n    def add_in_scene(self,scene):\n        temp = str(self.val)\n        for i in range(0,len(temp)):\n            scene.matrix[6][55+i]=temp[i]",
         "detail": "scoreoard",
         "documentation": {}
     },

@@ -23,7 +23,7 @@ class Lives(ScoreBoard):
 class Time(ScoreBoard):
     def update_val(self,delta,scene):
         self.val = self.val + delta
-        self.add_in_scene(scene)
+        # self.add_in_scene(scene)
     def return_val(self):
         return math.floor(self.val)
     def add_in_scene(self,scene):
@@ -32,7 +32,7 @@ class Time(ScoreBoard):
             scene.matrix[4][54+i]=temp[i]
 
 class Score(ScoreBoard):
-    def update_val(self):
+    def update_val(self,scene):
         self.val = self.val + 10
         self.add_in_scene(scene)
         
@@ -40,9 +40,9 @@ class Score(ScoreBoard):
         temp = str(self.val)
         for i in range(0,len(temp)):
             scene.matrix[6][84+i]=temp[i]
-        
+
 class Level(ScoreBoard):
-    def update_val(self):
+    def update_val(self,scene):
         self.val = self.val + 1
         # self.add_in_scene(scene)
 
