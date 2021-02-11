@@ -150,6 +150,15 @@
         "documentation": {}
     },
     {
+        "label": "math",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "math",
+        "description": "math",
+        "detail": "math",
+        "documentation": {}
+    },
+    {
         "label": "os",
         "kind": 6,
         "isExtraImport": true,
@@ -469,11 +478,20 @@
         "documentation": {}
     },
     {
+        "label": "ScoreBoar",
+        "kind": 6,
+        "importPath": "lives",
+        "description": "lives",
+        "peekOfCode": "class ScoreBoard : \n    def __init__(self,initialval):\n        self.val = initialval\n    def return_val(self):\n        return self.val\nclass Lives(ScoreBoard):\n    def sub_life(self):\n        self.val = self.val - 1\n        return self.val\n    def add_life(self):",
+        "detail": "lives",
+        "documentation": {}
+    },
+    {
         "label": "Lives",
         "kind": 6,
         "importPath": "lives",
         "description": "lives",
-        "peekOfCode": "class Lives:\n    def __init__(self,initialval):\n        self.val = initialval\n    def return_life(self):\n        return self.val\n    def sub_life(self):\n        self.val = self.val - 1\n        return self.val\n    def add_life(self):\n        self.val = self.val + 1",
+        "peekOfCode": "class Lives(ScoreBoard):\n    def sub_life(self):\n        self.val = self.val - 1\n        return self.val\n    def add_life(self):\n        self.val = self.val + 1\n        return self.val\nclass Time(ScoreBoard):\n    def return_val(self):\n        return math.floor(self.val)",
         "detail": "lives",
         "documentation": {}
     },
@@ -482,7 +500,7 @@
         "kind": 6,
         "importPath": "lives",
         "description": "lives",
-        "peekOfCode": "class Time:\n    def __init__(self):\n        self.cur = 0\n    def return_time(self):\n        return self.cur\nclass Score:\n    def __init__(self):\n        self.cur = 0\n    def return_score(self):\n        return self.cur",
+        "peekOfCode": "class Time(ScoreBoard):\n    def return_val(self):\n        return math.floor(self.val)\nclass Score(ScoreBoard):\n    def update_val(self):\n        self.val = self.val + 10\nclass Level(ScoreBoard):\n    def update_val(self):\n        self.val = self.val + 1\n        return self.val",
         "detail": "lives",
         "documentation": {}
     },
@@ -491,7 +509,16 @@
         "kind": 6,
         "importPath": "lives",
         "description": "lives",
-        "peekOfCode": "class Score:\n    def __init__(self):\n        self.cur = 0\n    def return_score(self):\n        return self.cur",
+        "peekOfCode": "class Score(ScoreBoard):\n    def update_val(self):\n        self.val = self.val + 10\nclass Level(ScoreBoard):\n    def update_val(self):\n        self.val = self.val + 1\n        return self.val",
+        "detail": "lives",
+        "documentation": {}
+    },
+    {
+        "label": "Level",
+        "kind": 6,
+        "importPath": "lives",
+        "description": "lives",
+        "peekOfCode": "class Level(ScoreBoard):\n    def update_val(self):\n        self.val = self.val + 1\n        return self.val",
         "detail": "lives",
         "documentation": {}
     },

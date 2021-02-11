@@ -1,9 +1,12 @@
+import math
 
-class Lives:
+class ScoreBoard : 
     def __init__(self,initialval):
         self.val = initialval
-    def return_life(self):
+    def return_val(self):
         return self.val
+
+class Lives(ScoreBoard):
     def sub_life(self):
         self.val = self.val - 1
         return self.val
@@ -11,14 +14,15 @@ class Lives:
         self.val = self.val + 1
         return self.val
 
-class Time:
-    def __init__(self):
-        self.cur = 0
-    def return_time(self):
-        return self.cur
+class Time(ScoreBoard):
+    def return_val(self):
+        return math.floor(self.val)
 
-class Score:
-    def __init__(self):
-        self.cur = 0
-    def return_score(self):
-        return self.cur
+class Score(ScoreBoard):
+    def update_val(self):
+        self.val = self.val + 10
+        
+class Level(ScoreBoard):
+    def update_val(self):
+        self.val = self.val + 1
+        return self.val
