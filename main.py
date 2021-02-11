@@ -25,7 +25,7 @@ lives = Lives(5)
 
 PAUSE = False
 scene.set_init_array(1)
-paddle.addpaddle(55)
+# paddle.addpaddle(35)
 
 # lives.add_in_scene(scene)
 # score.add_in_scene(scene)

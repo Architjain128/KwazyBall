@@ -10,7 +10,7 @@ class Lives:
 
 # Define scene length(vertical), width(horizontal),
 # fullwidth(map length)
-MATRIX_WIDTH = 115
+MATRIX_WIDTH = 67
 MATRIX_LENGTH = 30
 
 ALLOWED_INPUTS = ['w', 'a', 'd', 'A', 'C', 'D', ' ']

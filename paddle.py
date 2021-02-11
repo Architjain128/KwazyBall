@@ -4,16 +4,16 @@ class Paddle:
         self.length = 10
         self.sticky = False
         self.cordinate = 26
-        self.x = 54
-        self.arr = [" "]*4 + ["|"] + [" "]*109 + ["|"]
+        self.x = 34
+        self.arr = [" "]*4 + ["|"] + [" "]*61 + ["|"]
         print(self.arr)
-        for i in range(54,54+self.length):
+        for i in range(34,34+self.length):
             self.arr[i]="_"
 
     def addpaddle(self,t):
-        self.arr = [" "]*115
+        self.arr = [" "]*67
         self.arr[4]="|"
-        self.arr[114]="|"
+        self.arr[66]="|"
         for i in range(t,t+self.length):
             self.arr[i]="_"
 
@@ -27,7 +27,7 @@ class Paddle:
 
     def move_right(self):
         right_coordinate = self.x + self.length
-        if(right_coordinate < 114):
+        if(right_coordinate < 66):
             self.x = self.x + 1
         self.addpaddle(self.x)
 
