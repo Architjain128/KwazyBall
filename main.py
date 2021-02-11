@@ -65,7 +65,7 @@ if(1 == landing_page):
                 scene.set_init_array(level.val)
                 level_change_flag = False
                 
-            scene.generate_screen(clock.return_val(),level.return_val(),lives.return_val(),score.return_val())
+            scene.generate_screen(clock.return_val(),level.return_val(),lives.return_val(),score.return_val(),paddle)
             
 
             
