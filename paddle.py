@@ -18,11 +18,11 @@ class Paddle:
             self.arr[i]="_"
 
     def upgrade(self):
-        self.length = self.length + 2
+        self.length = self.length + 4
         return 
 
     def degrade(self):
-        self.length = self.length - 2
+        self.length = self.length - 4
         return
 
     def move_right(self):

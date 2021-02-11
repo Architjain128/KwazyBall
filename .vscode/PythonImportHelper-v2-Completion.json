@@ -150,15 +150,6 @@
         "documentation": {}
     },
     {
-        "label": "math",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "math",
-        "description": "math",
-        "detail": "math",
-        "documentation": {}
-    },
-    {
         "label": "os",
         "kind": 6,
         "isExtraImport": true,
@@ -201,7 +192,7 @@
         "documentation": {}
     },
     {
-        "label": "Paddle",
+        "label": "*",
         "importPath": "paddle",
         "description": "paddle",
         "isExtraImport": true,
@@ -209,11 +200,20 @@
         "documentation": {}
     },
     {
-        "label": "Time",
-        "importPath": "lives",
-        "description": "lives",
+        "label": "*",
+        "importPath": "scoreoard",
+        "description": "scoreoard",
         "isExtraImport": true,
-        "detail": "lives",
+        "detail": "scoreoard",
+        "documentation": {}
+    },
+    {
+        "label": "math",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "math",
+        "description": "math",
+        "detail": "math",
         "documentation": {}
     },
     {
@@ -356,7 +356,7 @@
         "kind": 6,
         "importPath": "background",
         "description": "background",
-        "peekOfCode": "class Scene:\n    def __init__(self):\n        self.score = 0\n        self.lives = 5\n        self.level = 1\n        self.time = 0\n        self.matrix = []\n        # self.width = 0\n        # self.length = 0\n        # self.walltop = 0",
+        "peekOfCode": "class Scene:\n    def __init__(self):\n        self.matrix = []\n        # arr1 = [[' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '],[' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '], [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '], [' ', ' ', ' ', ' ', '|', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '|'], [' ', ' ', ' ', ' ', '|', ' ', 'P', 'r', 'e', 's', 's', ' ', '[', 'P', ']', ' ', 'o', 'r', ' ', '[', 'p', ']', ' ', 't', 'o', ' ', 'p', 'a', 'u', 's', 'e', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', 'T', 'i', 'm', 'e', ' ', ':', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', 'P', 'r', 'e', 's', 's', ' ', '[', 'Q', ']', ' ', 'o', 'r', ' ', '[', 'q', ']', ' ', 't', 'o', ' ', 'q', 'u', 'i', 't', ' ', '|'], [' ', ' ', ' ', ' ', '|', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '|'], [' ', ' ', ' ', ' ', '|', ' ', ' ', ' ', 'L', 'i', 'v', 'e', 's', ' ', ':', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', 'L', 'e', 'v', 'e', 'l', ' ', ':', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', 'S', 'c', 'o', 'r', 'e', ' ', ':', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '|'], [' ', ' ', ' ', ' ', '|', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '|'], [' ', ' ', ' ', ' ', '|', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '|']]\n        # arr3 = [[' ', ' ', ' ', ' ', '|', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '|'], [' ', ' ', ' ', ' ', '|', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '|'], [' ', ' ', ' ', ' ', '|', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '|'], [' ', ' ', ' ', ' ', '|', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '|'], [' ', ' ', ' ', ' ', '|', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '|'], [' ', ' ', ' ', ' ', '|', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '|'], [' ', ' ', ' ', ' ', '|', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '|'], [' ', ' ', ' ', ' ', '|', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '|'], [' ', ' ', ' ', ' ', '|', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '|'], [' ', ' ', ' ', ' ', '|', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '|'], [' ', ' ', ' ', ' ', '|', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '|'], [' ', ' ', ' ', ' ', '|', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '|'], [' ', ' ', ' ', ' ', '|', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '|'], [' ', ' ', ' ', ' ', '|', '/', '\\\\', '/', '\\\\', '/', '\\\\', '/', '\\\\', '/', '\\\\', '/', '\\\\', '/', '\\\\', '/', '\\\\', '/', '\\\\', '/', '\\\\', '/', '\\\\', '/', '\\\\', '/', '\\\\', '/', '\\\\', '/', '\\\\', '/', '\\\\', '/', '\\\\', '/', '\\\\', '/', '\\\\', '/', '\\\\', '/', '\\\\', '/', '\\\\', '/', '\\\\', '/', '\\\\', '/', '\\\\', '/', '\\\\', '/', '\\\\', '/', '\\\\', '/', '\\\\', '/', '\\\\', '/', '\\\\', '/', '\\\\', '/', '\\\\', '/', '\\\\', '/', '\\\\', '/', '\\\\', '/', '\\\\', '/', '\\\\', '/', '\\\\', '/', '\\\\', '/', '\\\\', '/', '\\\\', '/', '\\\\', '/', '\\\\', '/', '\\\\', '/', '\\\\', '/', '\\\\', '/', '\\\\', '/', '\\\\', '/', '\\\\', '/', '\\\\', '/', '\\\\', '/', '\\\\', '/', '\\\\', '/', '|'], [' ', ' ', ' ', ' ', '|', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '|']]\n        # arr1 = np.array(arr1)\n        # arr3 = np.array(arr3)\n        # arr2 = setup(0)\n        # arr2 = np.array(arr2)\n        # arr = np.vstack([arr1,arr2,arr3])",
         "detail": "background",
         "documentation": {}
     },
@@ -365,7 +365,7 @@
         "kind": 6,
         "importPath": "config",
         "description": "config",
-        "peekOfCode": "class Lives:\n    lives = 3\n# Define scene length(vertical), width(horizontal),\n# fullwidth(map length)\nMATRIX_WIDTH = 115\nMATRIX_LENGTH = 30\nALLOWED_INPUTS = ['w', 'a', 'd', 'A', 'C', 'D', ' ']\nSPEED = 0.1\n# color escape sequences\ncolors = {",
+        "peekOfCode": "class Lives:\n    lives = 3\n# Define scene length(vertical), width(horizontal),\n# fullwidth(map length)\nMATRIX_WIDTH = 115\nMATRIX_LENGTH = 30\nALLOWED_INPUTS = ['w', 'a', 'd', 'A', 'C', 'D', ' ']\nSPEED = 1\n# color escape sequences\ncolors = {",
         "detail": "config",
         "documentation": {}
     },
@@ -374,7 +374,7 @@
         "kind": 5,
         "importPath": "config",
         "description": "config",
-        "peekOfCode": "MATRIX_WIDTH = 115\nMATRIX_LENGTH = 30\nALLOWED_INPUTS = ['w', 'a', 'd', 'A', 'C', 'D', ' ']\nSPEED = 0.1\n# color escape sequences\ncolors = {\n    'Blue': '\\x1b[0;34m',\n    'Green': '\\x1b[0;32m',\n    'Cyan': '\\x1b[0;36m',\n    'Red': '\\x1b[0;31m',",
+        "peekOfCode": "MATRIX_WIDTH = 115\nMATRIX_LENGTH = 30\nALLOWED_INPUTS = ['w', 'a', 'd', 'A', 'C', 'D', ' ']\nSPEED = 1\n# color escape sequences\ncolors = {\n    'Blue': '\\x1b[0;34m',\n    'Green': '\\x1b[0;32m',\n    'Cyan': '\\x1b[0;36m',\n    'Red': '\\x1b[0;31m',",
         "detail": "config",
         "documentation": {}
     },
@@ -383,7 +383,7 @@
         "kind": 5,
         "importPath": "config",
         "description": "config",
-        "peekOfCode": "MATRIX_LENGTH = 30\nALLOWED_INPUTS = ['w', 'a', 'd', 'A', 'C', 'D', ' ']\nSPEED = 0.1\n# color escape sequences\ncolors = {\n    'Blue': '\\x1b[0;34m',\n    'Green': '\\x1b[0;32m',\n    'Cyan': '\\x1b[0;36m',\n    'Red': '\\x1b[0;31m',\n    'Purple': '\\x1b[0;35m',",
+        "peekOfCode": "MATRIX_LENGTH = 30\nALLOWED_INPUTS = ['w', 'a', 'd', 'A', 'C', 'D', ' ']\nSPEED = 1\n# color escape sequences\ncolors = {\n    'Blue': '\\x1b[0;34m',\n    'Green': '\\x1b[0;32m',\n    'Cyan': '\\x1b[0;36m',\n    'Red': '\\x1b[0;31m',\n    'Purple': '\\x1b[0;35m',",
         "detail": "config",
         "documentation": {}
     },
@@ -392,7 +392,7 @@
         "kind": 5,
         "importPath": "config",
         "description": "config",
-        "peekOfCode": "ALLOWED_INPUTS = ['w', 'a', 'd', 'A', 'C', 'D', ' ']\nSPEED = 0.1\n# color escape sequences\ncolors = {\n    'Blue': '\\x1b[0;34m',\n    'Green': '\\x1b[0;32m',\n    'Cyan': '\\x1b[0;36m',\n    'Red': '\\x1b[0;31m',\n    'Purple': '\\x1b[0;35m',\n    'Brown': '\\x1b[0;33m',",
+        "peekOfCode": "ALLOWED_INPUTS = ['w', 'a', 'd', 'A', 'C', 'D', ' ']\nSPEED = 1\n# color escape sequences\ncolors = {\n    'Blue': '\\x1b[0;34m',\n    'Green': '\\x1b[0;32m',\n    'Cyan': '\\x1b[0;36m',\n    'Red': '\\x1b[0;31m',\n    'Purple': '\\x1b[0;35m',\n    'Brown': '\\x1b[0;33m',",
         "detail": "config",
         "documentation": {}
     },
@@ -401,7 +401,7 @@
         "kind": 5,
         "importPath": "config",
         "description": "config",
-        "peekOfCode": "SPEED = 0.1\n# color escape sequences\ncolors = {\n    'Blue': '\\x1b[0;34m',\n    'Green': '\\x1b[0;32m',\n    'Cyan': '\\x1b[0;36m',\n    'Red': '\\x1b[0;31m',\n    'Purple': '\\x1b[0;35m',\n    'Brown': '\\x1b[0;33m',\n    'Gray': '\\x1b[0;37m',",
+        "peekOfCode": "SPEED = 1\n# color escape sequences\ncolors = {\n    'Blue': '\\x1b[0;34m',\n    'Green': '\\x1b[0;32m',\n    'Cyan': '\\x1b[0;36m',\n    'Red': '\\x1b[0;31m',\n    'Purple': '\\x1b[0;35m',\n    'Brown': '\\x1b[0;33m',\n    'Gray': '\\x1b[0;37m',",
         "detail": "config",
         "documentation": {}
     },
@@ -469,57 +469,30 @@
         "documentation": {}
     },
     {
-        "label": "setup",
+        "label": "return_init_array",
         "kind": 2,
         "importPath": "levelsetup",
         "description": "levelsetup",
-        "peekOfCode": "def setup(level):\n    arrp = []\n    arp = []\n    striii=\"\"\n    I=int(len(arr[level]))\n    for i in range(0,I):\n        J=int(len(arr[level][i]))\n        striii+=\"    | \"\n        arp = [\" \"]*4 + [\"|\",\" \"]\n        for j in range(0,J):",
+        "peekOfCode": "def return_init_array(level):\n    level = int(level)\n    return levelarr[level]\ndef setup(level):\n    arrp = []\n    arp = []\n    striii=\"\"\n    I=int(len(levelarr[level]))\n    for i in range(0,I):\n        J=int(len(levelarr[level][i]))",
         "detail": "levelsetup",
         "documentation": {}
     },
     {
-        "label": "ScoreBoar",
-        "kind": 6,
-        "importPath": "lives",
-        "description": "lives",
-        "peekOfCode": "class ScoreBoard : \n    def __init__(self,initialval):\n        self.val = initialval\n    def return_val(self):\n        return self.val\nclass Lives(ScoreBoard):\n    def sub_life(self):\n        self.val = self.val - 1\n        return self.val\n    def add_life(self):",
-        "detail": "lives",
+        "label": "setup",
+        "kind": 2,
+        "importPath": "levelsetup",
+        "description": "levelsetup",
+        "peekOfCode": "def setup(level):\n    arrp = []\n    arp = []\n    striii=\"\"\n    I=int(len(levelarr[level]))\n    for i in range(0,I):\n        J=int(len(levelarr[level][i]))\n        striii+=\"    | \"\n        arp = [\" \"]*4 + [\"|\",\" \"]\n        for j in range(0,J):",
+        "detail": "levelsetup",
         "documentation": {}
     },
     {
-        "label": "Lives",
-        "kind": 6,
-        "importPath": "lives",
-        "description": "lives",
-        "peekOfCode": "class Lives(ScoreBoard):\n    def sub_life(self):\n        self.val = self.val - 1\n        return self.val\n    def add_life(self):\n        self.val = self.val + 1\n        return self.val\nclass Time(ScoreBoard):\n    def return_val(self):\n        return math.floor(self.val)",
-        "detail": "lives",
-        "documentation": {}
-    },
-    {
-        "label": "Time",
-        "kind": 6,
-        "importPath": "lives",
-        "description": "lives",
-        "peekOfCode": "class Time(ScoreBoard):\n    def return_val(self):\n        return math.floor(self.val)\nclass Score(ScoreBoard):\n    def update_val(self):\n        self.val = self.val + 10\nclass Level(ScoreBoard):\n    def update_val(self):\n        self.val = self.val + 1\n        return self.val",
-        "detail": "lives",
-        "documentation": {}
-    },
-    {
-        "label": "Score",
-        "kind": 6,
-        "importPath": "lives",
-        "description": "lives",
-        "peekOfCode": "class Score(ScoreBoard):\n    def update_val(self):\n        self.val = self.val + 10\nclass Level(ScoreBoard):\n    def update_val(self):\n        self.val = self.val + 1\n        return self.val",
-        "detail": "lives",
-        "documentation": {}
-    },
-    {
-        "label": "Level",
-        "kind": 6,
-        "importPath": "lives",
-        "description": "lives",
-        "peekOfCode": "class Level(ScoreBoard):\n    def update_val(self):\n        self.val = self.val + 1\n        return self.val",
-        "detail": "lives",
+        "label": "levelarr",
+        "kind": 5,
+        "importPath": "levelsetup",
+        "description": "levelsetup",
+        "peekOfCode": "levelarr = [\n     [[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],\n      [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],\n      [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],\n      [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],\n      [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],\n      [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]],\n     [[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],\n      [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],\n      [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],",
+        "detail": "levelsetup",
         "documentation": {}
     },
     {
@@ -527,7 +500,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "landing_page = landing_page()\n# generate scene\n# generate paddle\n# set lives/level/score\n# special power\ngetinp = Get()\nPAUSE = False\nLIFE = str(5)\nLEVEL = str((20%10)+1)\nSCORE = str(100000)",
+        "peekOfCode": "landing_page = landing_page()\ngetinp = Get()\nscene = Scene()\npaddle = Paddle()\nclock = Time(0)\nscore = Score(0)\nlevel = Level(1)\nlives = Lives(5)\n# ball\n# bricks",
         "detail": "main",
         "documentation": {}
     },
@@ -536,52 +509,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "getinp = Get()\nPAUSE = False\nLIFE = str(5)\nLEVEL = str((20%10)+1)\nSCORE = str(100000)\nhh = 108-len(LEVEL)-len(LIFE)-len(SCORE)-70-8-8-11\nscene = Scene()\npaddle = Paddle()\nclock = Time()\npaddle.addpaddle(55)",
-        "detail": "main",
-        "documentation": {}
-    },
-    {
-        "label": "PAUSE",
-        "kind": 5,
-        "importPath": "main",
-        "description": "main",
-        "peekOfCode": "PAUSE = False\nLIFE = str(5)\nLEVEL = str((20%10)+1)\nSCORE = str(100000)\nhh = 108-len(LEVEL)-len(LIFE)-len(SCORE)-70-8-8-11\nscene = Scene()\npaddle = Paddle()\nclock = Time()\npaddle.addpaddle(55)\nif(1 == landing_page):",
-        "detail": "main",
-        "documentation": {}
-    },
-    {
-        "label": "LIFE",
-        "kind": 5,
-        "importPath": "main",
-        "description": "main",
-        "peekOfCode": "LIFE = str(5)\nLEVEL = str((20%10)+1)\nSCORE = str(100000)\nhh = 108-len(LEVEL)-len(LIFE)-len(SCORE)-70-8-8-11\nscene = Scene()\npaddle = Paddle()\nclock = Time()\npaddle.addpaddle(55)\nif(1 == landing_page):\n    while True:",
-        "detail": "main",
-        "documentation": {}
-    },
-    {
-        "label": "LEVEL",
-        "kind": 5,
-        "importPath": "main",
-        "description": "main",
-        "peekOfCode": "LEVEL = str((20%10)+1)\nSCORE = str(100000)\nhh = 108-len(LEVEL)-len(LIFE)-len(SCORE)-70-8-8-11\nscene = Scene()\npaddle = Paddle()\nclock = Time()\npaddle.addpaddle(55)\nif(1 == landing_page):\n    while True:\n        input = input_to(getinp,SPEED)",
-        "detail": "main",
-        "documentation": {}
-    },
-    {
-        "label": "SCORE",
-        "kind": 5,
-        "importPath": "main",
-        "description": "main",
-        "peekOfCode": "SCORE = str(100000)\nhh = 108-len(LEVEL)-len(LIFE)-len(SCORE)-70-8-8-11\nscene = Scene()\npaddle = Paddle()\nclock = Time()\npaddle.addpaddle(55)\nif(1 == landing_page):\n    while True:\n        input = input_to(getinp,SPEED)\n        clock.cur = clock.cur + SPEED",
-        "detail": "main",
-        "documentation": {}
-    },
-    {
-        "label": "hh",
-        "kind": 5,
-        "importPath": "main",
-        "description": "main",
-        "peekOfCode": "hh = 108-len(LEVEL)-len(LIFE)-len(SCORE)-70-8-8-11\nscene = Scene()\npaddle = Paddle()\nclock = Time()\npaddle.addpaddle(55)\nif(1 == landing_page):\n    while True:\n        input = input_to(getinp,SPEED)\n        clock.cur = clock.cur + SPEED\n        if(input=='q' or input==\"Q\"):",
+        "peekOfCode": "getinp = Get()\nscene = Scene()\npaddle = Paddle()\nclock = Time(0)\nscore = Score(0)\nlevel = Level(1)\nlives = Lives(5)\n# ball\n# bricks\n# special power",
         "detail": "main",
         "documentation": {}
     },
@@ -590,7 +518,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "scene = Scene()\npaddle = Paddle()\nclock = Time()\npaddle.addpaddle(55)\nif(1 == landing_page):\n    while True:\n        input = input_to(getinp,SPEED)\n        clock.cur = clock.cur + SPEED\n        if(input=='q' or input==\"Q\"):\n            quitmsg()",
+        "peekOfCode": "scene = Scene()\npaddle = Paddle()\nclock = Time(0)\nscore = Score(0)\nlevel = Level(1)\nlives = Lives(5)\n# ball\n# bricks\n# special power\nPAUSE = False",
         "detail": "main",
         "documentation": {}
     },
@@ -599,7 +527,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "paddle = Paddle()\nclock = Time()\npaddle.addpaddle(55)\nif(1 == landing_page):\n    while True:\n        input = input_to(getinp,SPEED)\n        clock.cur = clock.cur + SPEED\n        if(input=='q' or input==\"Q\"):\n            quitmsg()\n            break",
+        "peekOfCode": "paddle = Paddle()\nclock = Time(0)\nscore = Score(0)\nlevel = Level(1)\nlives = Lives(5)\n# ball\n# bricks\n# special power\nPAUSE = False\nscene.set_init_array(1)",
         "detail": "main",
         "documentation": {}
     },
@@ -608,7 +536,52 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "clock = Time()\npaddle.addpaddle(55)\nif(1 == landing_page):\n    while True:\n        input = input_to(getinp,SPEED)\n        clock.cur = clock.cur + SPEED\n        if(input=='q' or input==\"Q\"):\n            quitmsg()\n            break\n        if(input=='p' or input==\"P\"):",
+        "peekOfCode": "clock = Time(0)\nscore = Score(0)\nlevel = Level(1)\nlives = Lives(5)\n# ball\n# bricks\n# special power\nPAUSE = False\nscene.set_init_array(1)\npaddle.addpaddle(55)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "score",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "score = Score(0)\nlevel = Level(1)\nlives = Lives(5)\n# ball\n# bricks\n# special power\nPAUSE = False\nscene.set_init_array(1)\npaddle.addpaddle(55)\n# lives.add_in_scene(scene)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "level",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "level = Level(1)\nlives = Lives(5)\n# ball\n# bricks\n# special power\nPAUSE = False\nscene.set_init_array(1)\npaddle.addpaddle(55)\n# lives.add_in_scene(scene)\n# score.add_in_scene(scene)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "lives",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "lives = Lives(5)\n# ball\n# bricks\n# special power\nPAUSE = False\nscene.set_init_array(1)\npaddle.addpaddle(55)\n# lives.add_in_scene(scene)\n# score.add_in_scene(scene)\n# clock.add_in_scene(scene)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "PAUSE",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "PAUSE = False\nscene.set_init_array(1)\npaddle.addpaddle(55)\n# lives.add_in_scene(scene)\n# score.add_in_scene(scene)\n# clock.add_in_scene(scene)\n# level.add_in_scene(scene)\nlevel_change_flag = False\nif(1 == landing_page):\n    while True:",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "level_change_flag",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "level_change_flag = False\nif(1 == landing_page):\n    while True:\n        input = input_to(getinp,SPEED)\n        if(input=='q' or input==\"Q\"):\n            quitmsg()\n            break\n        if(input=='p' or input==\"P\"):\n            PAUSE = True\n            pausedmsg(score.return_val(),clock.return_val())",
         "detail": "main",
         "documentation": {}
     },
@@ -635,7 +608,7 @@
         "kind": 2,
         "importPath": "messages",
         "description": "messages",
-        "peekOfCode": "def gameover(SCORE):\n    os.system('clear')\n    print(\"\\n\\n\\n\")\n    print(Fore.BLUE + \" \"*20+ '''\n             .d8888b.                                        .d88888b.                            \n            d88P  Y88b                                      d88P\" \"Y88b                           \n            888    888                                      888     888                           \n            888         8888b.  88888b.d88b.   .d88b.       888     888 888  888  .d88b.  888d888 \n            888  88888     \"88b 888 \"888 \"88b d8P  Y8b      888     888 888  888 d8P  Y8b 888P\"   \n            888    888 .d888888 888  888  888 88888888      888     888 Y88  88P 88888888 888     ",
+        "peekOfCode": "def gameover(SCORE,TIME):\n    os.system('clear')\n    print(\"\\n\\n\\n\")\n    print(Fore.BLUE + \" \"*20+ '''\n             .d8888b.                                        .d88888b.                            \n            d88P  Y88b                                      d88P\" \"Y88b                           \n            888    888                                      888     888                           \n            888         8888b.  88888b.d88b.   .d88b.       888     888 888  888  .d88b.  888d888 \n            888  88888     \"88b 888 \"888 \"88b d8P  Y8b      888     888 888  888 d8P  Y8b 888P\"   \n            888    888 .d888888 888  888  888 88888888      888     888 Y88  88P 88888888 888     ",
         "detail": "messages",
         "documentation": {}
     },
@@ -644,7 +617,7 @@
         "kind": 2,
         "importPath": "messages",
         "description": "messages",
-        "peekOfCode": "def pausedmsg(SCORE):\n    os.system('clear')\n    print(\"\\n\\n\\n\")\n    print(Fore.BLUE + \" \"*20 + '''\n                            8888888b.                                          888      \n                            888   Y88b                                         888      \n                            888    888                                         888      \n                            888   d88P 8888b.  888  888 .d8888b   .d88b.   .d88888      \n                            8888888P\"     \"88b 888  888 88K      d8P  Y8b d88\" 888      \n                            888       .d888888 888  888 \"Y8888b. 88888888 888  888      ",
+        "peekOfCode": "def pausedmsg(SCORE,TIME):\n    os.system('clear')\n    print(\"\\n\\n\\n\")\n    print(Fore.BLUE + \" \"*20 + '''\n                            8888888b.                                          888      \n                            888   Y88b                                         888      \n                            888    888                                         888      \n                            888   d88P 8888b.  888  888 .d8888b   .d88b.   .d88888      \n                            8888888P\"     \"88b 888  888 88K      d8P  Y8b d88\" 888      \n                            888       .d888888 888  888 \"Y8888b. 88888888 888  888      ",
         "detail": "messages",
         "documentation": {}
     },
@@ -655,6 +628,51 @@
         "description": "paddle",
         "peekOfCode": "class Paddle:\n    def __init__(self):\n        self.length = 10\n        self.sticky = False\n        self.cordinate = 26\n        self.x = 54\n        self.arr = [\" \"]*4 + [\"|\"] + [\" \"]*109 + [\"|\"]\n        print(self.arr)\n        for i in range(54,54+self.length):\n            self.arr[i]=\"_\"",
         "detail": "paddle",
+        "documentation": {}
+    },
+    {
+        "label": "ScoreBoar",
+        "kind": 6,
+        "importPath": "scoreoard",
+        "description": "scoreoard",
+        "peekOfCode": "class ScoreBoard : \n    def __init__(self,initialval):\n        self.val = initialval\n    def return_val(self):\n        return self.val\nclass Lives(ScoreBoard):\n    def sub_life(self):\n        self.val = self.val - 1\n        return self.val\n    def add_life(self):",
+        "detail": "scoreoard",
+        "documentation": {}
+    },
+    {
+        "label": "Lives",
+        "kind": 6,
+        "importPath": "scoreoard",
+        "description": "scoreoard",
+        "peekOfCode": "class Lives(ScoreBoard):\n    def sub_life(self):\n        self.val = self.val - 1\n        return self.val\n    def add_life(self):\n        self.val = self.val + 1\n        return self.val\n    def add_in_scene(self,scene):\n        temp = str(self.val)\n        for i in range(0,len(temp)):",
+        "detail": "scoreoard",
+        "documentation": {}
+    },
+    {
+        "label": "Time",
+        "kind": 6,
+        "importPath": "scoreoard",
+        "description": "scoreoard",
+        "peekOfCode": "class Time(ScoreBoard):\n    def update_val(self,delta,scene):\n        self.val = self.val + delta\n        self.add_in_scene(scene)\n    def return_val(self):\n        return math.floor(self.val)\n    def add_in_scene(self,scene):\n        temp = str(self.val)\n        for i in range(0,len(temp)):\n            scene.matrix[4][54+i]=temp[i]",
+        "detail": "scoreoard",
+        "documentation": {}
+    },
+    {
+        "label": "Score",
+        "kind": 6,
+        "importPath": "scoreoard",
+        "description": "scoreoard",
+        "peekOfCode": "class Score(ScoreBoard):\n    def update_val(self):\n        self.val = self.val + 10\n        self.add_in_scene(scene)\n    def add_in_scene(self,scene):\n        temp = str(self.val)\n        for i in range(0,len(temp)):\n            scene.matrix[6][84+i]=temp[i]\nclass Level(ScoreBoard):\n    def update_val(self):",
+        "detail": "scoreoard",
+        "documentation": {}
+    },
+    {
+        "label": "Level",
+        "kind": 6,
+        "importPath": "scoreoard",
+        "description": "scoreoard",
+        "peekOfCode": "class Level(ScoreBoard):\n    def update_val(self):\n        self.val = self.val + 1\n        # self.add_in_scene(scene)\n    def add_in_scene(self,scene):\n        temp = str(self.val)\n        for i in range(0,len(temp)):\n            scene.matrix[6][55+i]=temp[i]",
+        "detail": "scoreoard",
         "documentation": {}
     },
     {
