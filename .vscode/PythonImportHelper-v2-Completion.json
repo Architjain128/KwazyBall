@@ -50,6 +50,14 @@
         "documentation": {}
     },
     {
+        "label": "SPEED",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
         "label": "*",
         "importPath": "config",
         "description": "config",
@@ -226,11 +234,20 @@
         "documentation": {}
     },
     {
+        "label": "Ball",
+        "kind": 6,
+        "importPath": "ball",
+        "description": "ball",
+        "peekOfCode": "class Ball:\n    def __init__(self):\n        self.sticky = False\n        self.fastball = False\n        self.thruball = False\n        self.multiball = False\n        self.x = 0\n        self.y = 0\n        self.speedx = 0\n        self.speedy = 0",
+        "detail": "ball",
+        "documentation": {}
+    },
+    {
         "label": "Lives",
         "kind": 6,
         "importPath": "config",
         "description": "config",
-        "peekOfCode": "class Lives:\n    lives = 3\n# Define scene length(vertical), width(horizontal),\n# fullwidth(map length)\nMATRIX_WIDTH = 67\nMATRIX_LENGTH = 30\nALLOWED_INPUTS = ['w', 'a', 'd', 'A', 'C', 'D', ' ']\nSPEED = 1\n# color escape sequences\ncolors = {",
+        "peekOfCode": "class Lives:\n    lives = 3\n# Define scene length(vertical), width(horizontal),\n# fullwidth(map length)\nMATRIX_WIDTH = 85\nMATRIX_LENGTH = 30\nALLOWED_INPUTS = ['w', 'a', 'd', 'A', 'C', 'D', ' ']\nSPEED = 1\n# color escape sequences\ncolors = {",
         "detail": "config",
         "documentation": {}
     },
@@ -239,7 +256,7 @@
         "kind": 5,
         "importPath": "config",
         "description": "config",
-        "peekOfCode": "MATRIX_WIDTH = 67\nMATRIX_LENGTH = 30\nALLOWED_INPUTS = ['w', 'a', 'd', 'A', 'C', 'D', ' ']\nSPEED = 1\n# color escape sequences\ncolors = {\n    'Blue': '\\x1b[0;34m',\n    'Green': '\\x1b[0;32m',\n    'Cyan': '\\x1b[0;36m',\n    'Red': '\\x1b[0;31m',",
+        "peekOfCode": "MATRIX_WIDTH = 85\nMATRIX_LENGTH = 30\nALLOWED_INPUTS = ['w', 'a', 'd', 'A', 'C', 'D', ' ']\nSPEED = 1\n# color escape sequences\ncolors = {\n    'Blue': '\\x1b[0;34m',\n    'Green': '\\x1b[0;32m',\n    'Cyan': '\\x1b[0;36m',\n    'Red': '\\x1b[0;31m',",
         "detail": "config",
         "documentation": {}
     },
@@ -356,7 +373,7 @@
         "kind": 5,
         "importPath": "levelsetup",
         "description": "levelsetup",
-        "peekOfCode": "levelarr = [\n     [[0,0,0,0,0,0,0,0,0,0],\n      [0,0,0,0,0,0,0,0,0,0],\n      [0,0,0,0,0,0,0,0,0,0],\n      [0,0,0,0,0,0,0,0,0,0],\n      [0,0,0,0,0,0,0,0,0,0],\n      [0,0,0,0,0,0,0,0,0,0]],\n     [[1,1,1,1,1,1,1,1,1,1],\n      [1,1,1,1,1,1,1,1,1,1],\n      [1,1,1,1,1,1,1,1,1,1],",
+        "peekOfCode": "levelarr = [\n     [[0,0,0,0,0,0,0,0,0,0,0,0],\n      [0,0,0,0,0,0,0,0,0,0,0,0],\n      [0,0,0,0,0,0,0,0,0,0,0,0],\n      [0,0,0,0,0,0,0,0,0,0,0,0],\n      [0,0,0,0,0,0,0,0,0,0,0,0],\n      [0,0,0,0,0,0,0,0,0,0,0,0]],\n     [[1,1,1,1,1,1,1,1,1,1,1,1],\n      [1,1,1,1,1,1,1,1,1,1,1,1],\n      [1,1,1,1,1,1,1,1,1,1,1,1],",
         "detail": "levelsetup",
         "documentation": {}
     },
@@ -491,7 +508,7 @@
         "kind": 6,
         "importPath": "paddle",
         "description": "paddle",
-        "peekOfCode": "class Paddle:\n    def __init__(self):\n        self.length = 10\n        self.sticky = False\n        self.cordinate = 26\n        self.x = 34\n        self.arr = [\" \"]*4 + [\"|\"] + [\" \"]*61 + [\"|\"]\n        print(self.arr)\n        for i in range(34,34+self.length):\n            self.arr[i]=\"_\"",
+        "peekOfCode": "class Paddle:\n    def __init__(self):\n        self.scale = 3\n        self.length = 5*self.scale\n        self.sticky = False\n        self.cordinate = 26\n        self.x = 34\n        self.arr = [\" \"]*4 + [\"|\"] + [\" \"]*61 + [\"|\"]\n        for i in range(34,34+self.length):\n            self.arr[i]=\"_\"",
         "detail": "paddle",
         "documentation": {}
     },

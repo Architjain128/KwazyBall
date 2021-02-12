@@ -55,8 +55,8 @@ def gameover(SCORE,TIME):
             888    888 .d888888 888  888  888 88888888      888     888 Y88  88P 88888888 888     
             Y88b  d88P 888  888 888  888  888 Y8b.          Y88b. .d88P  Y8bd8P  Y8b.     888     
              "Y8888P88 "Y888888 888  888  888  "Y8888        "Y88888P"    Y88P    "Y8888  888 ''' + "\n\n\n\n") 
-    print(Fore.GREEN + " "*45+ "Final Score : "+ SCORE +"\n")
-    print(Fore.GREEN + " "*45+ "Time taken : "+ TIME +" second(s) \n\n")
+    print(Fore.GREEN + " "*45+ "Final Score : "+ str(SCORE) +"\n")
+    print(Fore.GREEN + " "*42+ "Time taken : "+ str(TIME) +" second(s) \n\n")
     print("\n"+Fore.WHITE+" "*20 + "----------------------------------------------------------------------\n")
 
 def pausedmsg(SCORE,TIME):
@@ -71,8 +71,8 @@ def pausedmsg(SCORE,TIME):
                             888       .d888888 888  888 "Y8888b. 88888888 888  888      
                             888       888  888 Y88b 888      X88 Y8b.     Y88b 888      
                             888       "Y888888  "Y88888  88888P'  "Y8888   "Y88888 ''' + "\n\n") 
-    print(Fore.GREEN + " "*45+ "Current Score : "+ SCORE +"\n")
-    print(Fore.GREEN + " "*45+ "Time taken : "+ TIME +" second(s) \n\n")
+    print(Fore.GREEN + " "*45+ "Current Score : "+ str(SCORE) +"\n")
+    print(Fore.GREEN + " "*42+ "Time taken : "+ str(TIME) +" second(s) \n\n")
     print("\n"+Fore.WHITE+" "*20 + "----------------------------------------------------------------------\n")
     print("\n"+Fore.WHITE+" "*20 + "                    < Press [R] or [r] to resume >                    \n")
     print("\n"+Fore.WHITE+" "*20 + "                     < Press [Q] or [q] to quit >                     \n")
