@@ -35,14 +35,6 @@
     },
     {
         "label": "*",
-        "importPath": "levelsetup",
-        "description": "levelsetup",
-        "isExtraImport": true,
-        "detail": "levelsetup",
-        "documentation": {}
-    },
-    {
-        "label": "*",
         "importPath": "config",
         "description": "config",
         "isExtraImport": true,
@@ -51,14 +43,6 @@
     },
     {
         "label": "SPEED",
-        "importPath": "config",
-        "description": "config",
-        "isExtraImport": true,
-        "detail": "config",
-        "documentation": {}
-    },
-    {
-        "label": "*",
         "importPath": "config",
         "description": "config",
         "isExtraImport": true,
@@ -128,6 +112,15 @@
         "description": "colorama",
         "isExtraImport": true,
         "detail": "colorama",
+        "documentation": {}
+    },
+    {
+        "label": "random",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "random",
+        "description": "random",
+        "detail": "random",
         "documentation": {}
     },
     {
@@ -216,6 +209,14 @@
         "documentation": {}
     },
     {
+        "label": "*",
+        "importPath": "ball",
+        "description": "ball",
+        "isExtraImport": true,
+        "detail": "ball",
+        "documentation": {}
+    },
+    {
         "label": "math",
         "kind": 6,
         "isExtraImport": true,
@@ -238,7 +239,7 @@
         "kind": 6,
         "importPath": "ball",
         "description": "ball",
-        "peekOfCode": "class Ball:\n    def __init__(self):\n        self.sticky = False\n        self.fastball = False\n        self.thruball = False\n        self.multiball = False\n        self.x = 0\n        self.y = 0\n        self.speedx = 0\n        self.speedy = 0",
+        "peekOfCode": "class Ball:\n    def __init__(self,ppadle):\n        self.die = False\n        self.sticky = False\n        self.fastball = False\n        self.thruball = False\n        self.multiball = False\n        self.x = 0\n        self.y = 0\n        self.speedx = 1",
         "detail": "ball",
         "documentation": {}
     },
@@ -382,7 +383,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "landing_page = landing_page()\ngetinp = Get()\nscene = Scene()\npaddle = Paddle()\nclock = Time(0)\nscore = Score(0)\nlevel = Level(1)\nlives = Lives(5)\n# ball\n# bricks",
+        "peekOfCode": "landing_page = landing_page()\ngetinp = Get()\nscene = Scene()\npaddle = Paddle()\nclock = Time(0)\nscore = Score(0)\nlevel = Level(1)\nlives = Lives(5)\nball = Ball(paddle)\n# ball",
         "detail": "main",
         "documentation": {}
     },
@@ -391,7 +392,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "getinp = Get()\nscene = Scene()\npaddle = Paddle()\nclock = Time(0)\nscore = Score(0)\nlevel = Level(1)\nlives = Lives(5)\n# ball\n# bricks\n# special power",
+        "peekOfCode": "getinp = Get()\nscene = Scene()\npaddle = Paddle()\nclock = Time(0)\nscore = Score(0)\nlevel = Level(1)\nlives = Lives(5)\nball = Ball(paddle)\n# ball\n# bricks",
         "detail": "main",
         "documentation": {}
     },
@@ -400,7 +401,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "scene = Scene()\npaddle = Paddle()\nclock = Time(0)\nscore = Score(0)\nlevel = Level(1)\nlives = Lives(5)\n# ball\n# bricks\n# special power\nPAUSE = False",
+        "peekOfCode": "scene = Scene()\npaddle = Paddle()\nclock = Time(0)\nscore = Score(0)\nlevel = Level(1)\nlives = Lives(5)\nball = Ball(paddle)\n# ball\n# bricks\n# special power",
         "detail": "main",
         "documentation": {}
     },
@@ -409,7 +410,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "paddle = Paddle()\nclock = Time(0)\nscore = Score(0)\nlevel = Level(1)\nlives = Lives(5)\n# ball\n# bricks\n# special power\nPAUSE = False\nscene.set_init_array(1)",
+        "peekOfCode": "paddle = Paddle()\nclock = Time(0)\nscore = Score(0)\nlevel = Level(1)\nlives = Lives(5)\nball = Ball(paddle)\n# ball\n# bricks\n# special power\nPAUSE = False",
         "detail": "main",
         "documentation": {}
     },
@@ -418,7 +419,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "clock = Time(0)\nscore = Score(0)\nlevel = Level(1)\nlives = Lives(5)\n# ball\n# bricks\n# special power\nPAUSE = False\nscene.set_init_array(1)\n# paddle.addpaddle(35)",
+        "peekOfCode": "clock = Time(0)\nscore = Score(0)\nlevel = Level(1)\nlives = Lives(5)\nball = Ball(paddle)\n# ball\n# bricks\n# special power\nPAUSE = False\nscene.set_init_array(1)",
         "detail": "main",
         "documentation": {}
     },
@@ -427,7 +428,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "score = Score(0)\nlevel = Level(1)\nlives = Lives(5)\n# ball\n# bricks\n# special power\nPAUSE = False\nscene.set_init_array(1)\n# paddle.addpaddle(35)\n# lives.add_in_scene(scene)",
+        "peekOfCode": "score = Score(0)\nlevel = Level(1)\nlives = Lives(5)\nball = Ball(paddle)\n# ball\n# bricks\n# special power\nPAUSE = False\nscene.set_init_array(1)\n# paddle.addpaddle(35)",
         "detail": "main",
         "documentation": {}
     },
@@ -436,7 +437,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "level = Level(1)\nlives = Lives(5)\n# ball\n# bricks\n# special power\nPAUSE = False\nscene.set_init_array(1)\n# paddle.addpaddle(35)\n# lives.add_in_scene(scene)\n# score.add_in_scene(scene)",
+        "peekOfCode": "level = Level(1)\nlives = Lives(5)\nball = Ball(paddle)\n# ball\n# bricks\n# special power\nPAUSE = False\nscene.set_init_array(1)\n# paddle.addpaddle(35)\n# lives.add_in_scene(scene)",
         "detail": "main",
         "documentation": {}
     },
@@ -445,7 +446,16 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "lives = Lives(5)\n# ball\n# bricks\n# special power\nPAUSE = False\nscene.set_init_array(1)\n# paddle.addpaddle(35)\n# lives.add_in_scene(scene)\n# score.add_in_scene(scene)\n# clock.add_in_scene(scene)",
+        "peekOfCode": "lives = Lives(5)\nball = Ball(paddle)\n# ball\n# bricks\n# special power\nPAUSE = False\nscene.set_init_array(1)\n# paddle.addpaddle(35)\n# lives.add_in_scene(scene)\n# score.add_in_scene(scene)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "ball",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "ball = Ball(paddle)\n# ball\n# bricks\n# special power\nPAUSE = False\nscene.set_init_array(1)\n# paddle.addpaddle(35)\n# lives.add_in_scene(scene)\n# score.add_in_scene(scene)\n# clock.add_in_scene(scene)",
         "detail": "main",
         "documentation": {}
     },
@@ -555,24 +565,6 @@
         "description": "scoreoard",
         "peekOfCode": "class Level(ScoreBoard):\n    def update_val(self,scene):\n        self.val = self.val + 1\n        # self.add_in_scene(scene)\n    def add_in_scene(self,scene):\n        temp = str(self.val)\n        for i in range(0,len(temp)):\n            scene.matrix[6][55+i]=temp[i]",
         "detail": "scoreoard",
-        "documentation": {}
-    },
-    {
-        "label": "arr1",
-        "kind": 5,
-        "importPath": "temp",
-        "description": "temp",
-        "peekOfCode": "arr1 = [[' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '], \n        [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '], \n        [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '], \n        [' ', ' ', ' ', ' ', '|', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '|'],\n        [' ', ' ', ' ', ' ', '|', ' ', 'P', 'r', 'e', 's', 's', ' ', '[', 'P', ']', ' ', 'o', 'r', ' ', '[', 'p', ']', ' ', 't', 'o', ' ', 'p', 'a', 'u', 's', 'e', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', 'P', 'r', 'e', 's', 's', ' ', '[', 'Q', ']', ' ', 'o', 'r', ' ', '[', 'q', ']', ' ', 't', 'o', ' ', 'q', 'u', 'i', 't', ' ', '|'], \n        [' ', ' ', ' ', ' ', '|', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '|'], \n        [' ', ' ', ' ', ' ', '|', ' ', 'L', 'i', 'v', 'e', 's', ' ', ':', ' ', ' ', ' ', ' ', ' ', 'L', 'e', 'v', 'e', 'l', ' ', ':', ' ', ' ', ' ', ' ', ' ', ' ', 'S', 'c', 'o', 'r', 'e', ' ', ':', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', 'T', 'i', 'm', 'e', ':', ' ', ' ', ' ', ' ', ' ', ' ', ' ',  ' ', ' ', ' ','|'], \n        [' ', ' ', ' ', ' ', '|', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '|'], \n        [' ', ' ', ' ', ' ', '|', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '|']]\n# arr1 = np.array(arr1)",
-        "detail": "temp",
-        "documentation": {}
-    },
-    {
-        "label": "arr3",
-        "kind": 5,
-        "importPath": "temp",
-        "description": "temp",
-        "peekOfCode": "arr3 = [[' ', ' ', ' ', ' ', '|', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '|'], \n        [' ', ' ', ' ', ' ', '|', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '|'], \n        [' ', ' ', ' ', ' ', '|', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '|'], \n        [' ', ' ', ' ', ' ', '|', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '|'], \n        [' ', ' ', ' ', ' ', '|', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '|'], \n        [' ', ' ', ' ', ' ', '|', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '|'], \n        [' ', ' ', ' ', ' ', '|', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '|'], \n        [' ', ' ', ' ', ' ', '|', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '|'], \n        [' ', ' ', ' ', ' ', '|', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '|'], \n        [' ', ' ', ' ', ' ', '|', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '|'], ",
-        "detail": "temp",
         "documentation": {}
     }
 ]
