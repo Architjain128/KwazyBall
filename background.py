@@ -143,7 +143,7 @@ class Scene:
             farr[27][i]="_"
             
         a = bball.collision_paddle(ppadle)
-        b = bball.collision_check()
+        b = bball.collision_check(self.matrix)
         bball.ball_move()
         farr[bball.y][bball.x]='0'
         # print(bball.y,bball.x)
