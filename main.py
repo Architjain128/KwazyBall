@@ -65,14 +65,14 @@ if(1 == landing_page):
         
         if(PAUSE==False):
             clock.update_val(SPEED,scene)
-            os.system('clear')
+            # os.system('clear')
             if(level_change_flag==True):
                 level.update_val(scene)
                 scene.set_init_array(level.val)
                 ball.start_throw(paddle)
                 level_change_flag = False
                 
-            scene.generate_screen(clock.return_val(),level.return_val(),lives.return_val(),score.return_val(),paddle,ball)
+            scene.generate_screen(clock,level,lives,score,paddle,ball)
             
 
             

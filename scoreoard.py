@@ -32,9 +32,9 @@ class Time(ScoreBoard):
             scene.matrix[4][54+i]=temp[i]
 
 class Score(ScoreBoard):
-    def update_val(self,scene):
-        self.val = self.val + 10
-        self.add_in_scene(scene)
+    def update_val(self,ss):
+        self.val = self.val + ss*10
+        # self.add_in_scene(scene)
         
     def add_in_scene(self,scene):
         temp = str(self.val)

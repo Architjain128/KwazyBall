@@ -115,6 +115,15 @@
         "documentation": {}
     },
     {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
         "label": "random",
         "kind": 6,
         "isExtraImport": true,
@@ -148,15 +157,6 @@
         "importPath": "signal",
         "description": "signal",
         "detail": "signal",
-        "documentation": {}
-    },
-    {
-        "label": "os",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "os",
-        "description": "os",
-        "detail": "os",
         "documentation": {}
     },
     {
@@ -239,7 +239,16 @@
         "kind": 6,
         "importPath": "ball",
         "description": "ball",
-        "peekOfCode": "class Ball:\n    def __init__(self,ppadle):\n        self.die = False\n        self.sticky = False\n        self.fastball = False\n        self.thruball = False\n        self.multiball = False\n        self.x = 0\n        self.y = 0\n        self.speedx = 1",
+        "peekOfCode": "class Ball:\n    def __init__(self,ppadle):\n        self.die = False\n        self.sticky = False\n        self.fastball = False\n        self.thruball = False\n        self.multiball = False\n        self.x = 0\n        self.y = 0\n        self.speedx = -1",
+        "detail": "ball",
+        "documentation": {}
+    },
+    {
+        "label": "check_buddy",
+        "kind": 2,
+        "importPath": "ball",
+        "description": "ball",
+        "peekOfCode": "def check_buddy(ok):\n    if(ok>=0 and ok<=5):\n        return True\n    return False\nclass Ball:\n    def __init__(self,ppadle):\n        self.die = False\n        self.sticky = False\n        self.fastball = False\n        self.thruball = False",
         "detail": "ball",
         "documentation": {}
     },
@@ -248,7 +257,7 @@
         "kind": 6,
         "importPath": "config",
         "description": "config",
-        "peekOfCode": "class Lives:\n    lives = 3\n# Define scene length(vertical), width(horizontal),\n# fullwidth(map length)\nMATRIX_WIDTH = 85\nMATRIX_LENGTH = 30\nALLOWED_INPUTS = ['w', 'a', 'd', 'A', 'C', 'D', ' ']\nSPEED = 1\n# color escape sequences\ncolors = {",
+        "peekOfCode": "class Lives:\n    lives = 3\n# Define scene length(vertical), width(horizontal),\n# fullwidth(map length)\nMATRIX_WIDTH = 85\nMATRIX_LENGTH = 30\nALLOWED_INPUTS = ['w', 'a', 'd', 'A', 'C', 'D', ' ']\nSPEED = 0.2\n# color escape sequences\ncolors = {",
         "detail": "config",
         "documentation": {}
     },
@@ -257,7 +266,7 @@
         "kind": 5,
         "importPath": "config",
         "description": "config",
-        "peekOfCode": "MATRIX_WIDTH = 85\nMATRIX_LENGTH = 30\nALLOWED_INPUTS = ['w', 'a', 'd', 'A', 'C', 'D', ' ']\nSPEED = 1\n# color escape sequences\ncolors = {\n    'Blue': '\\x1b[0;34m',\n    'Green': '\\x1b[0;32m',\n    'Cyan': '\\x1b[0;36m',\n    'Red': '\\x1b[0;31m',",
+        "peekOfCode": "MATRIX_WIDTH = 85\nMATRIX_LENGTH = 30\nALLOWED_INPUTS = ['w', 'a', 'd', 'A', 'C', 'D', ' ']\nSPEED = 0.2\n# color escape sequences\ncolors = {\n    'Blue': '\\x1b[0;34m',\n    'Green': '\\x1b[0;32m',\n    'Cyan': '\\x1b[0;36m',\n    'Red': '\\x1b[0;31m',",
         "detail": "config",
         "documentation": {}
     },
@@ -266,7 +275,7 @@
         "kind": 5,
         "importPath": "config",
         "description": "config",
-        "peekOfCode": "MATRIX_LENGTH = 30\nALLOWED_INPUTS = ['w', 'a', 'd', 'A', 'C', 'D', ' ']\nSPEED = 1\n# color escape sequences\ncolors = {\n    'Blue': '\\x1b[0;34m',\n    'Green': '\\x1b[0;32m',\n    'Cyan': '\\x1b[0;36m',\n    'Red': '\\x1b[0;31m',\n    'Purple': '\\x1b[0;35m',",
+        "peekOfCode": "MATRIX_LENGTH = 30\nALLOWED_INPUTS = ['w', 'a', 'd', 'A', 'C', 'D', ' ']\nSPEED = 0.2\n# color escape sequences\ncolors = {\n    'Blue': '\\x1b[0;34m',\n    'Green': '\\x1b[0;32m',\n    'Cyan': '\\x1b[0;36m',\n    'Red': '\\x1b[0;31m',\n    'Purple': '\\x1b[0;35m',",
         "detail": "config",
         "documentation": {}
     },
@@ -275,7 +284,7 @@
         "kind": 5,
         "importPath": "config",
         "description": "config",
-        "peekOfCode": "ALLOWED_INPUTS = ['w', 'a', 'd', 'A', 'C', 'D', ' ']\nSPEED = 1\n# color escape sequences\ncolors = {\n    'Blue': '\\x1b[0;34m',\n    'Green': '\\x1b[0;32m',\n    'Cyan': '\\x1b[0;36m',\n    'Red': '\\x1b[0;31m',\n    'Purple': '\\x1b[0;35m',\n    'Brown': '\\x1b[0;33m',",
+        "peekOfCode": "ALLOWED_INPUTS = ['w', 'a', 'd', 'A', 'C', 'D', ' ']\nSPEED = 0.2\n# color escape sequences\ncolors = {\n    'Blue': '\\x1b[0;34m',\n    'Green': '\\x1b[0;32m',\n    'Cyan': '\\x1b[0;36m',\n    'Red': '\\x1b[0;31m',\n    'Purple': '\\x1b[0;35m',\n    'Brown': '\\x1b[0;33m',",
         "detail": "config",
         "documentation": {}
     },
@@ -284,7 +293,7 @@
         "kind": 5,
         "importPath": "config",
         "description": "config",
-        "peekOfCode": "SPEED = 1\n# color escape sequences\ncolors = {\n    'Blue': '\\x1b[0;34m',\n    'Green': '\\x1b[0;32m',\n    'Cyan': '\\x1b[0;36m',\n    'Red': '\\x1b[0;31m',\n    'Purple': '\\x1b[0;35m',\n    'Brown': '\\x1b[0;33m',\n    'Gray': '\\x1b[0;37m',",
+        "peekOfCode": "SPEED = 0.2\n# color escape sequences\ncolors = {\n    'Blue': '\\x1b[0;34m',\n    'Green': '\\x1b[0;32m',\n    'Cyan': '\\x1b[0;36m',\n    'Red': '\\x1b[0;31m',\n    'Purple': '\\x1b[0;35m',\n    'Brown': '\\x1b[0;33m',\n    'Gray': '\\x1b[0;37m',",
         "detail": "config",
         "documentation": {}
     },
@@ -374,7 +383,7 @@
         "kind": 5,
         "importPath": "levelsetup",
         "description": "levelsetup",
-        "peekOfCode": "levelarr = [\n     [[0,0,0,0,0,0,0,0,0,0,0,0],\n      [0,0,0,0,0,0,0,0,0,0,0,0],\n      [0,0,0,0,0,0,0,0,0,0,0,0],\n      [0,0,0,0,0,0,0,0,0,0,0,0],\n      [0,0,0,0,0,0,0,0,0,0,0,0],\n      [0,0,0,0,0,0,0,0,0,0,0,0]],\n     [[1,1,1,1,1,1,1,1,1,1,1,1],\n      [1,1,1,1,1,1,1,1,1,1,1,1],\n      [1,1,1,1,1,1,1,1,1,1,1,1],",
+        "peekOfCode": "levelarr = [\n     [[0,0,0,0,0,0,0,0,0,0,0,0,0],\n      [0,0,0,0,0,0,0,0,0,0,0,0,0],\n      [0,0,0,0,0,0,0,0,0,0,0,0,0],\n      [0,0,0,0,0,0,0,0,0,0,0,0,0],\n      [0,0,0,0,0,0,0,0,0,0,0,0,0],\n      [0,0,0,0,0,0,0,0,0,0,0,0,0]],\n     [[1,1,1,1,1,1,1,1,1,1,1,1,1],\n      [1,1,1,1,1,1,1,1,1,1,1,1,1],\n      [1,1,1,1,1,1,1,1,1,1,1,1,1],",
         "detail": "levelsetup",
         "documentation": {}
     },
@@ -554,7 +563,7 @@
         "kind": 6,
         "importPath": "scoreoard",
         "description": "scoreoard",
-        "peekOfCode": "class Score(ScoreBoard):\n    def update_val(self,scene):\n        self.val = self.val + 10\n        self.add_in_scene(scene)\n    def add_in_scene(self,scene):\n        temp = str(self.val)\n        for i in range(0,len(temp)):\n            scene.matrix[6][84+i]=temp[i]\nclass Level(ScoreBoard):\n    def update_val(self,scene):",
+        "peekOfCode": "class Score(ScoreBoard):\n    def update_val(self,ss):\n        self.val = self.val + ss*10\n        # self.add_in_scene(scene)\n    def add_in_scene(self,scene):\n        temp = str(self.val)\n        for i in range(0,len(temp)):\n            scene.matrix[6][84+i]=temp[i]\nclass Level(ScoreBoard):\n    def update_val(self,scene):",
         "detail": "scoreoard",
         "documentation": {}
     },
