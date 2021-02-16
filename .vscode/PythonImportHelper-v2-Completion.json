@@ -74,11 +74,51 @@
         "documentation": {}
     },
     {
+        "label": "*",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
         "label": "colorama",
         "kind": 6,
         "isExtraImport": true,
         "importPath": "colorama",
         "description": "colorama",
+        "detail": "colorama",
+        "documentation": {}
+    },
+    {
+        "label": "init",
+        "importPath": "colorama",
+        "description": "colorama",
+        "isExtraImport": true,
+        "detail": "colorama",
+        "documentation": {}
+    },
+    {
+        "label": "Fore",
+        "importPath": "colorama",
+        "description": "colorama",
+        "isExtraImport": true,
+        "detail": "colorama",
+        "documentation": {}
+    },
+    {
+        "label": "Style",
+        "importPath": "colorama",
+        "description": "colorama",
+        "isExtraImport": true,
+        "detail": "colorama",
+        "documentation": {}
+    },
+    {
+        "label": "Back",
+        "importPath": "colorama",
+        "description": "colorama",
+        "isExtraImport": true,
         "detail": "colorama",
         "documentation": {}
     },
@@ -239,7 +279,7 @@
         "kind": 6,
         "importPath": "ball",
         "description": "ball",
-        "peekOfCode": "class Ball:\n    def __init__(self,ppadle):\n        self.die = False\n        self.sticky = False\n        self.fastball = False\n        self.thruball = False\n        self.multiball = False\n        self.x = 0\n        self.y = 0\n        self.speedx = -1",
+        "peekOfCode": "class Ball:\n    def __init__(self,ppadle):\n        self.die = False\n        self.sticky = False\n        self.fastball = False\n        self.thruball = False\n        self.multiball = False\n        self.x = 0\n        self.y = 0\n        self.speedx = 0",
         "detail": "ball",
         "documentation": {}
     },
@@ -257,7 +297,7 @@
         "kind": 6,
         "importPath": "config",
         "description": "config",
-        "peekOfCode": "class Lives:\n    lives = 3\n# Define scene length(vertical), width(horizontal),\n# fullwidth(map length)\nMATRIX_WIDTH = 85\nMATRIX_LENGTH = 30\nALLOWED_INPUTS = ['w', 'a', 'd', 'A', 'C', 'D', ' ']\nSPEED = 0.2\n# color escape sequences\ncolors = {",
+        "peekOfCode": "class Lives:\n    lives = 3\n# Define scene length(vertical), width(horizontal),\n# fullwidth(map length)\nMATRIX_WIDTH = 85\nMATRIX_LENGTH = 30\nALLOWED_INPUTS = ['w', 'a', 'd', 'A', 'C', 'D', ' ']\nSPEED = 2\n# color escape sequences\ncolors = {",
         "detail": "config",
         "documentation": {}
     },
@@ -266,7 +306,7 @@
         "kind": 5,
         "importPath": "config",
         "description": "config",
-        "peekOfCode": "MATRIX_WIDTH = 85\nMATRIX_LENGTH = 30\nALLOWED_INPUTS = ['w', 'a', 'd', 'A', 'C', 'D', ' ']\nSPEED = 0.2\n# color escape sequences\ncolors = {\n    'Blue': '\\x1b[0;34m',\n    'Green': '\\x1b[0;32m',\n    'Cyan': '\\x1b[0;36m',\n    'Red': '\\x1b[0;31m',",
+        "peekOfCode": "MATRIX_WIDTH = 85\nMATRIX_LENGTH = 30\nALLOWED_INPUTS = ['w', 'a', 'd', 'A', 'C', 'D', ' ']\nSPEED = 2\n# color escape sequences\ncolors = {\n    'Blue': '\\x1b[0;34m',\n    'Green': '\\x1b[0;32m',\n    'Cyan': '\\x1b[0;36m',\n    'Red': '\\x1b[0;31m',",
         "detail": "config",
         "documentation": {}
     },
@@ -275,7 +315,7 @@
         "kind": 5,
         "importPath": "config",
         "description": "config",
-        "peekOfCode": "MATRIX_LENGTH = 30\nALLOWED_INPUTS = ['w', 'a', 'd', 'A', 'C', 'D', ' ']\nSPEED = 0.2\n# color escape sequences\ncolors = {\n    'Blue': '\\x1b[0;34m',\n    'Green': '\\x1b[0;32m',\n    'Cyan': '\\x1b[0;36m',\n    'Red': '\\x1b[0;31m',\n    'Purple': '\\x1b[0;35m',",
+        "peekOfCode": "MATRIX_LENGTH = 30\nALLOWED_INPUTS = ['w', 'a', 'd', 'A', 'C', 'D', ' ']\nSPEED = 2\n# color escape sequences\ncolors = {\n    'Blue': '\\x1b[0;34m',\n    'Green': '\\x1b[0;32m',\n    'Cyan': '\\x1b[0;36m',\n    'Red': '\\x1b[0;31m',\n    'Purple': '\\x1b[0;35m',",
         "detail": "config",
         "documentation": {}
     },
@@ -284,7 +324,7 @@
         "kind": 5,
         "importPath": "config",
         "description": "config",
-        "peekOfCode": "ALLOWED_INPUTS = ['w', 'a', 'd', 'A', 'C', 'D', ' ']\nSPEED = 0.2\n# color escape sequences\ncolors = {\n    'Blue': '\\x1b[0;34m',\n    'Green': '\\x1b[0;32m',\n    'Cyan': '\\x1b[0;36m',\n    'Red': '\\x1b[0;31m',\n    'Purple': '\\x1b[0;35m',\n    'Brown': '\\x1b[0;33m',",
+        "peekOfCode": "ALLOWED_INPUTS = ['w', 'a', 'd', 'A', 'C', 'D', ' ']\nSPEED = 2\n# color escape sequences\ncolors = {\n    'Blue': '\\x1b[0;34m',\n    'Green': '\\x1b[0;32m',\n    'Cyan': '\\x1b[0;36m',\n    'Red': '\\x1b[0;31m',\n    'Purple': '\\x1b[0;35m',\n    'Brown': '\\x1b[0;33m',",
         "detail": "config",
         "documentation": {}
     },
@@ -293,7 +333,7 @@
         "kind": 5,
         "importPath": "config",
         "description": "config",
-        "peekOfCode": "SPEED = 0.2\n# color escape sequences\ncolors = {\n    'Blue': '\\x1b[0;34m',\n    'Green': '\\x1b[0;32m',\n    'Cyan': '\\x1b[0;36m',\n    'Red': '\\x1b[0;31m',\n    'Purple': '\\x1b[0;35m',\n    'Brown': '\\x1b[0;33m',\n    'Gray': '\\x1b[0;37m',",
+        "peekOfCode": "SPEED = 2\n# color escape sequences\ncolors = {\n    'Blue': '\\x1b[0;34m',\n    'Green': '\\x1b[0;32m',\n    'Cyan': '\\x1b[0;36m',\n    'Red': '\\x1b[0;31m',\n    'Purple': '\\x1b[0;35m',\n    'Brown': '\\x1b[0;33m',\n    'Gray': '\\x1b[0;37m',",
         "detail": "config",
         "documentation": {}
     },
@@ -383,7 +423,7 @@
         "kind": 5,
         "importPath": "levelsetup",
         "description": "levelsetup",
-        "peekOfCode": "levelarr = [\n     [[0,0,0,0,0,0,0,0,0,0,0,0,0],\n      [0,0,0,0,0,0,0,0,0,0,0,0,0],\n      [0,0,0,0,0,0,0,0,0,0,0,0,0],\n      [0,0,0,0,0,0,0,0,0,0,0,0,0],\n      [0,0,0,0,0,0,0,0,0,0,0,0,0],\n      [0,0,0,0,0,0,0,0,0,0,0,0,0]],\n     [[1,1,1,1,1,1,1,1,1,1,1,1,1],\n      [1,1,1,1,1,1,1,1,1,1,1,1,1],\n      [1,1,1,1,1,1,1,1,1,1,1,1,1],",
+        "peekOfCode": "levelarr = [\n     [[0,0,0,0,0,0,0,0,0,0,0,0,0],\n      [0,0,0,0,0,0,0,0,0,0,0,0,0],\n      [0,0,0,0,0,0,0,0,0,0,0,0,0],\n      [0,0,0,0,0,0,0,0,0,0,0,0,0],\n      [0,0,0,0,0,0,0,0,0,0,0,0,0],\n      [10,10,10,10,10,10,10,10,10,10,10,10,10]],\n    [[1,1,1,1,1,1,1,1,1,1,1,1,1],\n      [-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\n      [1,1,1,1,1,1,1,1,1,1,1,1,1],",
         "detail": "levelsetup",
         "documentation": {}
     },
@@ -437,7 +477,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "score = Score(0)\nlevel = Level(1)\nlives = Lives(5)\nball = Ball(paddle)\n# ball\n# bricks\n# special power\nPAUSE = False\nscene.set_init_array(1)\n# paddle.addpaddle(35)",
+        "peekOfCode": "score = Score(0)\nlevel = Level(1)\nlives = Lives(5)\nball = Ball(paddle)\n# ball\n# bricks\n# special power\nPAUSE = False\nscene.set_init_array(1)\nball.start_throw(paddle)",
         "detail": "main",
         "documentation": {}
     },
@@ -446,7 +486,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "level = Level(1)\nlives = Lives(5)\nball = Ball(paddle)\n# ball\n# bricks\n# special power\nPAUSE = False\nscene.set_init_array(1)\n# paddle.addpaddle(35)\n# lives.add_in_scene(scene)",
+        "peekOfCode": "level = Level(1)\nlives = Lives(5)\nball = Ball(paddle)\n# ball\n# bricks\n# special power\nPAUSE = False\nscene.set_init_array(1)\nball.start_throw(paddle)\n# paddle.addpaddle(35)",
         "detail": "main",
         "documentation": {}
     },
@@ -455,7 +495,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "lives = Lives(5)\nball = Ball(paddle)\n# ball\n# bricks\n# special power\nPAUSE = False\nscene.set_init_array(1)\n# paddle.addpaddle(35)\n# lives.add_in_scene(scene)\n# score.add_in_scene(scene)",
+        "peekOfCode": "lives = Lives(5)\nball = Ball(paddle)\n# ball\n# bricks\n# special power\nPAUSE = False\nscene.set_init_array(1)\nball.start_throw(paddle)\n# paddle.addpaddle(35)\n# lives.add_in_scene(scene)",
         "detail": "main",
         "documentation": {}
     },
@@ -464,7 +504,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "ball = Ball(paddle)\n# ball\n# bricks\n# special power\nPAUSE = False\nscene.set_init_array(1)\n# paddle.addpaddle(35)\n# lives.add_in_scene(scene)\n# score.add_in_scene(scene)\n# clock.add_in_scene(scene)",
+        "peekOfCode": "ball = Ball(paddle)\n# ball\n# bricks\n# special power\nPAUSE = False\nscene.set_init_array(1)\nball.start_throw(paddle)\n# paddle.addpaddle(35)\n# lives.add_in_scene(scene)\n# score.add_in_scene(scene)",
         "detail": "main",
         "documentation": {}
     },
@@ -473,7 +513,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "PAUSE = False\nscene.set_init_array(1)\n# paddle.addpaddle(35)\n# lives.add_in_scene(scene)\n# score.add_in_scene(scene)\n# clock.add_in_scene(scene)\n# level.add_in_scene(scene)\nlevel_change_flag = False\nif(1 == landing_page):\n    while True:",
+        "peekOfCode": "PAUSE = False\nscene.set_init_array(1)\nball.start_throw(paddle)\n# paddle.addpaddle(35)\n# lives.add_in_scene(scene)\n# score.add_in_scene(scene)\n# clock.add_in_scene(scene)\n# level.add_in_scene(scene)\nlevel_change_flag = False\nif(1 == landing_page):",
         "detail": "main",
         "documentation": {}
     },
@@ -527,7 +567,7 @@
         "kind": 6,
         "importPath": "paddle",
         "description": "paddle",
-        "peekOfCode": "class Paddle:\n    def __init__(self):\n        self.scale = 3\n        self.length = 5*self.scale\n        self.sticky = False\n        self.cordinate = 26\n        self.x = 34\n        self.arr = [\" \"]*4 + [\"|\"] + [\" \"]*61 + [\"|\"]\n        for i in range(34,34+self.length):\n            self.arr[i]=\"_\"",
+        "peekOfCode": "class Paddle:\n    def __init__(self):\n        self.scale = 3\n        self.length = 5*self.scale\n        self.sticky = True\n        self.cordinate = 26\n        self.x = 34\n        self.arr = [\" \"]*4 + [\"|\"] + [\" \"]*61 + [\"|\"]\n        for i in range(34,34+self.length):\n            self.arr[i]=\"_\"",
         "detail": "paddle",
         "documentation": {}
     },
@@ -574,6 +614,42 @@
         "description": "scoreoard",
         "peekOfCode": "class Level(ScoreBoard):\n    def update_val(self,scene):\n        self.val = self.val + 1\n        # self.add_in_scene(scene)\n    def add_in_scene(self,scene):\n        temp = str(self.val)\n        for i in range(0,len(temp)):\n            scene.matrix[6][55+i]=temp[i]",
         "detail": "scoreoard",
+        "documentation": {}
+    },
+    {
+        "label": "temp1",
+        "kind": 5,
+        "importPath": "temp",
+        "description": "temp",
+        "peekOfCode": "temp1 = Back.WHITE + Fore.BLACK + \"[\" + RESET\ntemp2 = Back.WHITE + Fore.BLACK + \" \" + RESET\ntemp3 = Back.WHITE + Fore.BLACK + \"]\" + RESET\narp = [temp1,temp2,temp2,temp2,temp3]\nfor x in arp:\n    print(x,end=\"\")",
+        "detail": "temp",
+        "documentation": {}
+    },
+    {
+        "label": "temp2",
+        "kind": 5,
+        "importPath": "temp",
+        "description": "temp",
+        "peekOfCode": "temp2 = Back.WHITE + Fore.BLACK + \" \" + RESET\ntemp3 = Back.WHITE + Fore.BLACK + \"]\" + RESET\narp = [temp1,temp2,temp2,temp2,temp3]\nfor x in arp:\n    print(x,end=\"\")",
+        "detail": "temp",
+        "documentation": {}
+    },
+    {
+        "label": "temp3",
+        "kind": 5,
+        "importPath": "temp",
+        "description": "temp",
+        "peekOfCode": "temp3 = Back.WHITE + Fore.BLACK + \"]\" + RESET\narp = [temp1,temp2,temp2,temp2,temp3]\nfor x in arp:\n    print(x,end=\"\")",
+        "detail": "temp",
+        "documentation": {}
+    },
+    {
+        "label": "arp",
+        "kind": 5,
+        "importPath": "temp",
+        "description": "temp",
+        "peekOfCode": "arp = [temp1,temp2,temp2,temp2,temp3]\nfor x in arp:\n    print(x,end=\"\")",
+        "detail": "temp",
         "documentation": {}
     }
 ]

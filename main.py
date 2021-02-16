@@ -26,7 +26,7 @@ ball = Ball(paddle)
 
 PAUSE = False
 scene.set_init_array(1)
-
+ball.start_throw(paddle)
 # paddle.addpaddle(35)
 
 # lives.add_in_scene(scene)
@@ -51,16 +51,18 @@ if(1 == landing_page):
             PAUSE=False
             
         if(input=='a' or input=="A"):
-            paddle.move_left()
+            paddle.move_left(ball)
         
         if(input=='d' or input=="D"):
-            paddle.move_right()
+            paddle.move_right(ball)
             
         if(input=='z' or input=="Z"):
             level_change_flag = True
             
         if(input==' '):
-            #  ball go baby go
+            paddle.sticky=False
+            ball.speedy = 1
+            ball.speedx = -1
             pass
         
         if(PAUSE==False):

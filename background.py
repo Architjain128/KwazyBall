@@ -52,33 +52,40 @@ class Scene:
                     arp = arp + [" "]*5
                 elif(self.matrix[i][j]==1):
                     striii+= Back.CYAN+Fore.BLACK+"[   ]"+RESET+" "
-                    temp1 = bcolors['Cyan'] + colors['Black'] + "[" + RESET
-                    temp2 = bcolors['Cyan'] + colors['Black'] + " " + RESET
-                    temp3 = bcolors['Cyan'] + colors['Black'] + "]" + RESET
+                    temp1 = Back.CYAN + Fore.BLACK + "[" + RESET
+                    temp2 = Back.CYAN + Fore.BLACK + " " + RESET
+                    temp3 = Back.CYAN + Fore.BLACK + "]" + RESET
                     arp = arp + [temp1,temp2,temp2,temp2,temp3]
                 elif(self.matrix[i][j]==2):
                     striii+= Back.BLUE+Fore.BLACK+"[   ]"+RESET+" "
-                    temp1 = bcolors['Blue'] + colors['Black'] + "[" + RESET
-                    temp2 = bcolors['Blue'] + colors['Black'] + " " + RESET
-                    temp3 = bcolors['Blue'] + colors['Black'] + "]" + RESET
+                    temp1 = Back.BLUE + Fore.BLACK + "[" + RESET
+                    temp2 = Back.BLUE + Fore.BLACK + " " + RESET
+                    temp3 = Back.BLUE + Fore.BLACK + "]" + RESET
                     arp = arp + [temp1,temp2,temp2,temp2,temp3]
                 elif(self.matrix[i][j]==3):
                     striii+= Back.RED+Fore.BLACK+"[   ]"+RESET+" "
-                    temp1 = bcolors['Red'] + colors['Black'] + "[" + RESET
-                    temp2 = bcolors['Red'] + colors['Black'] + " " + RESET
-                    temp3 = bcolors['Red'] + colors['Black'] + "]" + RESET
+                    temp1 = Back.RED + Fore.BLACK + "[" + RESET
+                    temp2 = Back.RED + Fore.BLACK + " " + RESET
+                    temp3 = Back.RED + Fore.BLACK + "]" + RESET
                     arp = arp + [temp1,temp2,temp2,temp2,temp3]
                 elif(self.matrix[i][j]==4):
                     striii+= Back.GREEN+Fore.BLACK+"[   ]"+RESET+" "
-                    temp1 = bcolors['Green'] + colors['Black'] + "[" + RESET
-                    temp2 = bcolors['Green'] + colors['Black'] + " " + RESET
-                    temp3 = bcolors['Green'] + colors['Black'] + "]" + RESET
+                    temp1 = Back.GREEN + Fore.BLACK + "[" + RESET
+                    temp2 = Back.GREEN + Fore.BLACK + " " + RESET
+                    temp3 = Back.GREEN + Fore.BLACK + "]" + RESET
+                    arp = arp + [temp1,temp2,temp2,temp2,temp3]
+                elif(self.matrix[i][j]==10):
+                    print("ppkp")
+                    striii+= Back.WHITE +Fore.BLACK+"[   ]"+RESET+" "
+                    temp1 = Back.WHITE + Fore.BLACK + "[" + RESET
+                    temp2 = Back.WHITE + Fore.BLACK + " " + RESET
+                    temp3 = Back.WHITE + Fore.BLACK + "]" + RESET
                     arp = arp + [temp1,temp2,temp2,temp2,temp3]
                 elif(self.matrix[i][j]==-1):
                     striii+= Back.YELLOW+Fore.BLACK+"[   ]"+RESET+" "
-                    temp1 = bcolors['Yellow'] + colors['Black'] + "[" + RESET
-                    temp2 = bcolors['Yellow'] + colors['Black'] + " " + RESET
-                    temp3 = bcolors['Yellow'] + colors['Black'] + "]" + RESET
+                    temp1 = Back.YELLOW + Fore.BLACK + "[" + RESET
+                    temp2 = Back.YELLOW + Fore.BLACK + " " + RESET
+                    temp3 = Back.YELLOW + Fore.BLACK + "]" + RESET
                     arp = arp + [temp1,temp2,temp2,temp2,temp3]
             striii+="|"
             arp = arp + [" "]*4 + ["|"]
@@ -123,9 +130,8 @@ class Scene:
         arr2 = np.array(arr2)
         farr = np.vstack([arr1,arr2,arr3])
         
-        b = bball.collision_check(self.matrix,sscore,llives)
+        b = bball.collision_check(self.matrix,sscore,llives,ppadle)
         a = bball.collision_paddle(ppadle)
-        farr[bball.y][bball.x]='0'
         
         temp = str(cclock.return_val())
         for i in range(0,len(temp)):
@@ -147,6 +153,7 @@ class Scene:
         for i in range(t,t+ppadle.length):
             farr[27][i]="_"
             
+        farr[bball.y][bball.x]='0'
         # print(bball.y,bball.x)
         os.system('clear')
         

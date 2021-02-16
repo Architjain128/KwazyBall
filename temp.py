@@ -70,7 +70,13 @@
 
 
 
-import random
+from colorama import init, Fore, Style, Back
+from  config import *
 
-for i in range(0,20):
-    print(random.randrange(0,30)//3)
+temp1 = Back.WHITE + Fore.BLACK + "[" + RESET
+temp2 = Back.WHITE + Fore.BLACK + " " + RESET
+temp3 = Back.WHITE + Fore.BLACK + "]" + RESET
+arp = [temp1,temp2,temp2,temp2,temp3]
+
+for x in arp:
+    print(x,end="")

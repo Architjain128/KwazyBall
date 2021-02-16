@@ -3,7 +3,7 @@ class Paddle:
     def __init__(self):
         self.scale = 3
         self.length = 5*self.scale
-        self.sticky = False
+        self.sticky = True
         self.cordinate = 26
         self.x = 34
         self.arr = [" "]*4 + ["|"] + [" "]*61 + ["|"]
@@ -25,16 +25,28 @@ class Paddle:
         self.length = self.length - 2*self.scale
         return
 
-    def move_right(self):
+    def move_right(self,bball):
         right_coordinate = self.x + self.length
         if(right_coordinate < 78):
-            self.x = self.x + self.scale
+            cc = min(self.x + self.scale,78-self.length)
+            dd = cc - self.x
+            self.x = cc
+            if(self.sticky==True):
+                bball.x = bball.x + dd
+                bball.speedy = 0
+                bball.speedx = 0
         self.addpaddle(self.x)
 
-    def move_left(self):
+    def move_left(self,bball):
         left_coordinate = self.x
         if(left_coordinate > 5):
-            self.x = self.x - self.scale
+            cc = max(self.x - self.scale,5)
+            dd = cc -self.x
+            self.x = cc
+            if(self.sticky==True):
+                bball.x = bball.x + dd
+                bball.speedx = 0
+                bball.speedy = 0
         self.addpaddle(self.x)
 
     def print_paddle(self):
