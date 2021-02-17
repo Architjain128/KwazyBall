@@ -13,7 +13,8 @@ def landing_page():
 ###    ###   ###   ###   ###     ### #########    ###              #########  ###     ### ########## ########## '''+" "*40)
     print("\n"+Fore.YELLOW+" "*51 + "By Archit Jain")
     print("\n"+Fore.WHITE+" "*22 + "--------------------------------------------------------------------\n")
-    print(Fore.CYAN+"\n"+" "*50 + "Press 1 to start\n")
+    print(Fore.CYAN+"\n"+" "*50 + "Press 1 to start in easy mode\n")
+    print(Fore.CYAN+"\n"+" "*50 + "Press 2 to start in hard mode\n")
     print(Fore.CYAN+" "*45 + "Press any other key to exit\n")
     print("\n"+Fore.WHITE+" "*22 + "--------------------------------------------------------------------\n")
     
@@ -24,6 +25,8 @@ def landing_page():
       val = int(x)
       if(val == 1 ):
             archit = 1
+      if(val == 2):
+            archit = 2
     except ValueError:
       if(x == "1" ):
             archit = 1

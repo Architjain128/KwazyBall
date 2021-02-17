@@ -34,7 +34,7 @@ ball.start_throw(paddle)
 # clock.add_in_scene(scene)
 # level.add_in_scene(scene)
 level_change_flag = False
-if(1 == landing_page):
+if(0 != landing_page):
     while True:
         
         input = input_to(getinp,SPEED)
@@ -61,9 +61,7 @@ if(1 == landing_page):
             
         if(input==' '):
             paddle.sticky=False
-            ball.speedy = 1
-            ball.speedx = -1
-            pass
+            ball.launch_ball(landing_page,paddle)
         
         if(PAUSE==False):
             clock.update_val(SPEED,scene)

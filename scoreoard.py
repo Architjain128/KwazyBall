@@ -19,7 +19,6 @@ class Lives(ScoreBoard):
         for i in range(0,len(temp)):
             scene.matrix[6][16+i]=temp[i]
 
-
 class Time(ScoreBoard):
     def update_val(self,delta,scene):
         self.val = self.val + delta

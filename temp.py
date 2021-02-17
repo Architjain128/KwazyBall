@@ -70,13 +70,15 @@
 
 
 
-from colorama import init, Fore, Style, Back
-from  config import *
-
-temp1 = Back.WHITE + Fore.BLACK + "[" + RESET
-temp2 = Back.WHITE + Fore.BLACK + " " + RESET
-temp3 = Back.WHITE + Fore.BLACK + "]" + RESET
-arp = [temp1,temp2,temp2,temp2,temp3]
-
-for x in arp:
-    print(x,end="")
+ar = []
+ar.append(0)
+ar.append(1)
+ar.append(2)
+ar.append(3)
+ar.append(4)
+ar.append(5)
+print(ar)
+ar.pop(3)
+print(ar)
+ar.pop(1)
+print(ar)

@@ -1,4 +1,5 @@
 from config import SPEED
+from powerup import *
 import random
 
 def check_buddy(ok):
@@ -9,10 +10,18 @@ def check_buddy(ok):
 class Ball:
     def __init__(self,ppadle):
         self.die = False
-        self.sticky = False
-        self.fastball = False
+        self.spread = False
+        self.spread_time = False
+        self.shrink = False
+        self.shrink_time = False
         self.thruball = False
+        self.thruball_time = False
+        self.sticky = False
+        self.sticky_time = False
+        self.fastball = False
+        self.fastball_time = False
         self.multiball = False
+        self.multiball_time = False
         self.x = 0
         self.y = 0
         self.speedx = 0
@@ -59,17 +68,34 @@ class Ball:
         # self.speedx = self.speedx + temp - (ppadle.length//2)
         self.y = 27
         self.speedy = 0
+        self.speedx = 0
         
-    def launch_ball(self):
-        pass
+    def launch_ball(self,a,ppadle):
+        if(a==1):
+            self.speedy = -1
+            self.speedx = random.choice([-1,1])
+        if(a==2):
+            self.speedy = -1
+            self.speedx = 0 + (((ppadle.x - self.x)//3)-ppadle.scale+1)
     
-    def collision_check(self,archit,sscore,llives,ppadle):
+    def collision_check(self,archit,archit_power,powers,sscore,llives,ppadle,cclock):
         # wall check
-        print(self.speedx)
-        if(self.x == 5 and self.speedx < 0):
+        # if(self.x == 5 and self.speedx < 0):
+        #     self.speedx =  -1 * self.speedx 
+        # if(self.x == 77 and self.speedx > 0):
+        #     self.speedx =  -1 * self.speedx 
+        # if(self.y == 8 and self.speedy < 0):
+        #     self.speedy =  -1 * self.speedy 
+        # if(self.y == 28 and self.speedy > 0):
+        #     llives.sub_life()
+        #     self.start_throw(ppadle)
+            
+        if(self.speedx < 0 and (self.x + self.speedx < 4)):
             self.speedx =  -1 * self.speedx 
-        if(self.x == 77 and self.speedx > 0):
+            self.x = self.speedx - self.x + 8
+        if(self.speedx > 0 and (self.x + self.speedx >= 77)):
             self.speedx =  -1 * self.speedx 
+            self.x = self.speedx - self.x + 77 + 77
         if(self.y == 8 and self.speedy < 0):
             self.speedy =  -1 * self.speedy 
         if(self.y == 28 and self.speedy > 0):
@@ -82,7 +108,7 @@ class Ball:
         
         if(self.speedy < 0):
             if(self.speedx > 0):
-                t = self.x
+                t = self.x + self.speedx - 1
                 if(t%5==3 ):
                     # check up and side
                     flup = False
@@ -99,12 +125,17 @@ class Ball:
                             else:
                                 archit[self.y-10][(t-4)//5]=archit[self.y-10][(t-4)//5]-1
                                 sscore.update_val(1)
+                                if(archit[self.y-10][(t-4)//5]==0 and archit_power[self.y-10][(t-4)//5]!=0):
+                                    powers.append(Power((t-4)//5,self.y-10,archit_power[self.y-10][(t-4)//5],cclock.return_val()))
+                                
                         if(archit[self.y-11][((t-4)//5)-1] != 10):
                             if(archit[self.y-11][((t-4)//5)-1] == -1):
                                 sscore.update_val( self.chickibum(self.y-11,archit))
                             else:
                                 archit[self.y-11][((t-4)//5)-1] = archit[self.y-11][((t-4)//5)-1]-1
                                 sscore.update_val(1)
+                                if(archit[self.y-11][((t-4)//5)-1]==0 and archit_power[self.y-11][((t-4)//5)-1]!=0):
+                                    powers.append(Power(((t-4)//5)-1,self.y-11,archit_power[self.y-11][((t-4)//5)-1],cclock.return_val()))
                         if(self.thruball == False):
                             self.speedx = -1 * self.speedx
                             self.speedy = -1 * self.speedy
@@ -115,6 +146,8 @@ class Ball:
                             else:
                                 archit[self.y-10][(t-4)//5]=archit[self.y-10][(t-4)//5]-1
                                 sscore.update_val(1)
+                                if(archit[self.y-10][(t-4)//5]==0 and archit_power[self.y-10][(t-4)//5]!=0):
+                                    powers.append(Power((t-4)//5,self.y-10,archit_power[self.y-10][(t-4)//5],cclock.return_val()))
                         if(self.thruball == False):
                             self.speedx = -1 * self.speedx
                     
@@ -125,6 +158,8 @@ class Ball:
                             else:
                                 archit[self.y-11][((t-4)//5)-1] = archit[self.y-11][((t-4)//5)-1]-1
                                 sscore.update_val(1)
+                                if(archit[self.y-11][((t-4)//5)-1]==0 and archit_power[self.y-11][((t-4)//5)-1]!=0):
+                                    powers.append(Power(((t-4)//5)-1,self.y-11,archit_power[self.y-11][((t-4)//5)-1],cclock.return_val()))
                         if(self.thruball == False):
                             self.speedy = -1 * self.speedy
                     
@@ -136,6 +171,8 @@ class Ball:
                                 else:
                                     archit[self.y-11][((t-4)//5)] = archit[self.y-11][((t-4)//5)] -1
                                     sscore.update_val(1)
+                                    if(archit[self.y-11][(t-4)//5]==0 and archit_power[self.y-11][(t-4)//5]!=0):
+                                        powers.append(Power((t-4)//5,self.y-11,archit_power[self.y-11][(t-4)//5],cclock.return_val()))
                             if(self.thruball == False):
                                 self.speedx = -1 * self.speedx
                                 self.speedy = -1 * self.speedy
@@ -147,11 +184,13 @@ class Ball:
                             else:
                                 archit[self.y-11][(t-9)//5] = archit[self.y-11][(t-9)//5]-1
                                 sscore.update_val(1)
+                                if(archit[self.y-11][(t-9)//5]==0 and archit_power[self.y-11][(t-9)//5]!=0):
+                                    powers.append(Power((t-9)//5,self.y-11,archit_power[self.y-11][(t-9)//5],cclock.return_val()))
                         if(self.thruball == False):
                             self.speedy = -1 * self.speedy
-    
+
             elif(self.speedx < 0 ):
-                t = self.x
+                t = self.x + self.speedx + 1 
                 if(t%5==4 and t>9):
                     fldw = False
                     flss = False
@@ -167,12 +206,16 @@ class Ball:
                             else:
                                 archit[self.y-10][((t-14)//5)]=archit[self.y-10][((t-14)//5)]-1
                                 sscore.update_val(1)
+                                if(archit[self.y-10][(t-4)//5]==0 and archit_power[self.y-10][(t-4)//5]!=0):
+                                    powers.append(Power((t-4)//5,self.y-10,archit_power[self.y-10][(t-4)//5],cclock.return_val()))
                         if(archit[self.y-11][(t-9)//5]!=10):
                             if(archit[self.y-11][(t-4)//5] == -1):
                                 sscore.update_val( self.chickibum(self.y-11,archit))
                             else:
                                 archit[self.y-11][(t-9)//5] = archit[self.y-11][(t-9)//5]-1
                                 sscore.update_val(1)
+                                if(archit[self.y-11][(t-9)//5]==0 and archit_power[self.y-11][(t-9)//5]!=0):
+                                    powers.append(Power((t-9)//5,self.y-11,archit_power[self.y-11][(t-9)//5],cclock.return_val()))
                         if(self.thruball == False):
                             self.speedx = -1 * self.speedx
                             self.speedy = -1 * self.speedy
@@ -184,6 +227,8 @@ class Ball:
                             else:
                                 archit[self.y-10][((t-14)//5)]=archit[self.y-10][((t-14)//5)]-1
                                 sscore.update_val(1)
+                                if(archit[self.y-10][((t-14)//5)]==0 and archit_power[self.y-10][((t-14)//5)]!=0):
+                                    powers.append(Power(((t-14)//5),self.y-10,archit_power[self.y-10][((t-14)//5)],cclock.return_val()))
                         if(self.thruball == False):
                             self.speedx = -1 * self.speedx
                     elif(fldw == True):
@@ -193,6 +238,8 @@ class Ball:
                             else:
                                 archit[self.y-11][(t-9)//5] = archit[self.y-11][(t-9)//5]-1
                                 sscore.update_val(1)
+                                if(archit[self.y-11][((t-9)//5)]==0 and archit_power[self.y-11][((t-9)//5)]!=0):
+                                    powers.append(Power(((t-9)//5),self.y-11,archit_power[self.y-11][((t-9)//5)],cclock.return_val()))
                         if(self.thruball == False):
                             self.speedy = -1 * self.speedy
                     else:
@@ -203,6 +250,8 @@ class Ball:
                                 else:
                                     archit[self.y-11][((t-4)//5)-1] = archit[self.y-11][((t-4)//5)-1] -1
                                     sscore.update_val(1)
+                                    if(archit[self.y-11][((t-4)//5)-1]==0 and archit_power[self.y-11][((t-4)//5)-1]!=0):
+                                        powers.append(Power(((t-4)//5)-1,self.y-11,archit_power[self.y-11][((t-14)//5)-1],cclock.return_val()))
                             if(self.thruball == False):
                                 self.speedx = -1 * self.speedx
                                 self.speedy = -1 * self.speedy
@@ -214,6 +263,8 @@ class Ball:
                             else:
                                 archit[self.y-11][(t-9)//5] = archit[self.y-11][(t-9)//5]-1
                                 sscore.update_val(1)
+                                if(archit[self.y-11][((t-9)//5)]==0 and archit_power[self.y-11][((t-9)//5)]!=0):
+                                    powers.append(Power(((t-9)//5),self.y-11,archit_power[self.y-11][((t-9)//5)],cclock.return_val()))
                         if(self.thruball == False):
                             self.speedy = -1 * self.speedy
             else:
@@ -224,13 +275,15 @@ class Ball:
                         else:
                             archit[self.y-11][(t-9)//5] = archit[self.y-11][(t-9)//5]-1
                             sscore.update_val(1)
+                            if(archit[self.y-11][((t-9)//5)]==0 and archit_power[self.y-11][((t-9)//5)]!=0):
+                                    powers.append(Power(((t-9)//5),self.y-11,archit_power[self.y-11][((t-9)//5)],cclock.return_val()))
                     if(self.thruball == False):
                         self.speedy = -1 * self.speedy
 
 
-        if(self.speedy > 0):
+        elif(self.speedy > 0):
             if(self.speedx > 0):
-                t = self.x
+                t = self.x + self.speedx - 1
                 if(t%5==3 ):
                     # check up and side
                     flup = False
@@ -247,12 +300,16 @@ class Ball:
                             else:
                                 archit[self.y-10][(t-4)//5]=archit[self.y-10][(t-4)//5]-1
                                 sscore.update_val(1)
+                                if(archit[self.y-10][((t-4)//5)]==0 and archit_power[self.y-10][((t-4)//5)]!=0):
+                                    powers.append(Power(((t-4)//5),self.y-10,archit_power[self.y-10][((t-4)//5)],cclock.return_val()))
                         if(archit[self.y-9][((t-4)//5)-1]!=10):
                             if(archit[self.y-9][((t-4)//5)-1] == -1):
                                 sscore.update_val( self.chickibum(self.y-9,archit))
                             else:
                                 archit[self.y-9][((t-4)//5)-1] = archit[self.y-9][((t-4)//5)-1]-1
                                 sscore.update_val(1)
+                                if(archit[self.y-9][((t-4)//5)-1]==0 and archit_power[self.y-9][((t-4)//5)-1]!=0):
+                                    powers.append(Power(((t-4)//5)-1,self.y-9,archit_power[self.y-9][((t-4)//5)-1],cclock.return_val()))
                         if(self.thruball == False):
                             self.speedx = -1 * self.speedx
                             self.speedy = -1 * self.speedy
@@ -263,6 +320,8 @@ class Ball:
                             else:
                                 archit[self.y-10][(t-4)//5]=archit[self.y-10][(t-4)//5]-1
                                 sscore.update_val(1)
+                                if(archit[self.y-10][((t-4)//5)]==0 and archit_power[self.y-10][((t-4)//5)]!=0):
+                                    powers.append(Power(((t-4)//5),self.y-10,archit_power[self.y-10][((t-4)//5)],cclock.return_val()))
                         if(self.thruball == False):
                             self.speedx = -1 * self.speedx
                     elif(flup == True):
@@ -272,6 +331,8 @@ class Ball:
                             else:
                                 archit[self.y-9][((t-4)//5)-1] = archit[self.y-9][((t-4)//5)-1]-1
                                 sscore.update_val(1)
+                                if(archit[self.y-9][((t-4)//5)-1]==0 and archit_power[self.y-9][((t-4)//5)-1]!=0):
+                                    powers.append(Power(((t-4)//5)-1,self.y-9,archit_power[self.y-9][((t-4)//5)-1],cclock.return_val()))
                         if(self.thruball == False):
                             self.speedy = -1 * self.speedy
                     else : 
@@ -282,6 +343,8 @@ class Ball:
                                 else:
                                     archit[self.y-9][((t-4)//5)] = archit[self.y-9][((t-4)//5)] -1
                                     sscore.update_val(1)
+                                    if(archit[self.y-9][((t-4)//5)]==0 and archit_power[self.y-9][((t-4)//5)]!=0):
+                                        powers.append(Power(((t-4)//5),self.y-9,archit_power[self.y-9][((t-4)//5)],cclock.return_val()))
                             if(self.thruball==False):
                                 self.speedx = -1 * self.speedx
                                 self.speedy = -1 * self.speedy
@@ -293,11 +356,13 @@ class Ball:
                             else:
                                 archit[self.y-9][(t-9)//5] = archit[self.y-9][(t-9)//5]-1
                                 sscore.update_val(1)
+                                if(archit[self.y-9][((t-9)//5)]==0 and archit_power[self.y-9][((t-9)//5)]!=0):
+                                    powers.append(Power(((t-9)//5),self.y-9,archit_power[self.y-9][((t-9)//5)],cclock.return_val()))
                         if(self.thruball==False):
                             self.speedy = -1 * self.speedy
-                        
+            
             elif(self.speedx < 0 ):
-                t = self.x
+                t = self.x + self.speedx + 1
                 if(t%5==4 and t>9):
                     fldw = False
                     flss = False
@@ -313,12 +378,16 @@ class Ball:
                             else:
                                 archit[self.y-10][((t-14)//5)]=archit[self.y-10][((t-14)//5)]-1
                                 sscore.update_val(1)
+                                if(archit[self.y-10][((t-14)//5)]==0 and archit_power[self.y-10][((t-14)//5)]!=0):
+                                    powers.append(Power(((t-14)//5),self.y-10,archit_power[self.y-10][((t-14)//5)],cclock.return_val()))
                         if(archit[self.y-9][(t-9)//5]!=10):
                             if(archit[self.y-9][(t-9)//5] == -1):
                                 sscore.update_val( self.chickibum(self.y-9,archit))
                             else:
                                 archit[self.y-9][(t-9)//5] = archit[self.y-9][(t-9)//5]-1
                                 sscore.update_val(1)
+                                if(archit[self.y-9][((t-9)//5)]==0 and archit_power[self.y-9][((t-9)//5)]!=0):
+                                    powers.append(Power(((t-9)//5),self.y-9,archit_power[self.y-9][((t-9)//5)],cclock.return_val()))
                         if(self.thruball==False):
                             self.speedx = -1 * self.speedx
                             self.speedy = -1 * self.speedy
@@ -329,6 +398,8 @@ class Ball:
                             else:
                                 archit[self.y-10][((t-14)//5)]=archit[self.y-10][((t-14)//5)]-1
                                 sscore.update_val(1)
+                                if(archit[self.y-10][((t-14)//5)]==0 and archit_power[self.y-10][((t-14)//5)]!=0):
+                                    powers.append(Power(((t-14)//5),self.y-10,archit_power[self.y-10][((t-14)//5)],cclock.return_val()))
                         if(self.thruball==False):
                             self.speedx = -1 * self.speedx
                     elif(fldw == True):
@@ -338,6 +409,8 @@ class Ball:
                             else:
                                 archit[self.y-9][(t-9)//5] = archit[self.y-9][(t-9)//5]-1
                                 sscore.update_val(1)
+                                if(archit[self.y-9][((t-9)//5)]==0 and archit_power[self.y-9][((t-9)//5)]!=0):
+                                    powers.append(Power(((t-9)//5),self.y-9,archit_power[self.y-9][((t-9)//5)],cclock.return_val()))
                         if(self.thruball==False):
                             self.speedy = -1 * self.speedy
                     else:
@@ -348,6 +421,8 @@ class Ball:
                                 else:
                                     archit[self.y-9][((t-4)//5)-1] = archit[self.y-9][((t-4)//5)-1] -1
                                     sscore.update_val(1)
+                                    if(archit[self.y-9][((t-4)//5)-1]==0 and archit_power[self.y-9][((t-4)//5)-1]!=0):
+                                        powers.append(Power(((t-4)//5)-1,self.y-9,archit_power[self.y-9][((t-4)//5)-1],cclock.return_val()))
                             if(self.thruball==False):
                                 self.speedx = -1 * self.speedx
                                 self.speedy = -1 * self.speedy
@@ -359,6 +434,8 @@ class Ball:
                             else:
                                 archit[self.y-9][(t-9)//5] = archit[self.y-9][(t-9)//5]-1
                                 sscore.update_val(1)
+                                if(archit[self.y-9][((t-9)//5)]==0 and archit_power[self.y-9][((t-9)//5)]!=0):
+                                    powers.append(Power(((t-9)//5),self.y-9,archit_power[self.y-9][((t-9)//5)],cclock.return_val()))
                         if(self.thruball==False):
                             self.speedy = -1 * self.speedy
             else:
@@ -369,11 +446,11 @@ class Ball:
                         else:
                             archit[self.y-9][(t-9)//5] = archit[self.y-9][(t-9)//5]-1
                             sscore.update_val(1)
+                            if(archit[self.y-9][((t-9)//5)]==0 and archit_power[self.y-11][((t-9)//5)]!=0):
+                                    powers.append(Power(((t-9)//5),self.y-9,archit_power[self.y-9][((t-9)//5)],cclock.return_val()))
                     if(self.thruball==False):
                         self.speedy = -1 * self.speedy
 
-        
-        
         # pos = self.x + self.speedx
         # if(self.speedy > 0):      # Going down
         #     if((pos>=9 and pos<=73)and (self.y<=14 and self.y>=9)):
