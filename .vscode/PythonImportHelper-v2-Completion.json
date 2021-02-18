@@ -273,7 +273,7 @@
         "kind": 6,
         "importPath": "config",
         "description": "config",
-        "peekOfCode": "class Lives:\n    lives = 3\n# Define scene length(vertical), width(horizontal),\n# fullwidth(map length)\nMATRIX_WIDTH = 85\nMATRIX_LENGTH = 30\nALLOWED_INPUTS = ['w', 'a', 'd', 'A', 'C', 'D', ' ']\nSPEED = 2\n# color escape sequences\ncolors = {",
+        "peekOfCode": "class Lives:\n    lives = 3\n# Define scene length(vertical), width(horizontal),\n# fullwidth(map length)\nMATRIX_WIDTH = 85\nMATRIX_LENGTH = 30\nALLOWED_INPUTS = ['w', 'a', 'd', 'A', 'C', 'D', ' ']\nSPEED = 1\n# color escape sequences\ncolors = {",
         "detail": "config",
         "documentation": {}
     },
@@ -282,7 +282,7 @@
         "kind": 5,
         "importPath": "config",
         "description": "config",
-        "peekOfCode": "MATRIX_WIDTH = 85\nMATRIX_LENGTH = 30\nALLOWED_INPUTS = ['w', 'a', 'd', 'A', 'C', 'D', ' ']\nSPEED = 2\n# color escape sequences\ncolors = {\n    'Blue': '\\x1b[0;34m',\n    'Green': '\\x1b[0;32m',\n    'Cyan': '\\x1b[0;36m',\n    'Red': '\\x1b[0;31m',",
+        "peekOfCode": "MATRIX_WIDTH = 85\nMATRIX_LENGTH = 30\nALLOWED_INPUTS = ['w', 'a', 'd', 'A', 'C', 'D', ' ']\nSPEED = 1\n# color escape sequences\ncolors = {\n    'Blue': '\\x1b[0;34m',\n    'Green': '\\x1b[0;32m',\n    'Cyan': '\\x1b[0;36m',\n    'Red': '\\x1b[0;31m',",
         "detail": "config",
         "documentation": {}
     },
@@ -291,7 +291,7 @@
         "kind": 5,
         "importPath": "config",
         "description": "config",
-        "peekOfCode": "MATRIX_LENGTH = 30\nALLOWED_INPUTS = ['w', 'a', 'd', 'A', 'C', 'D', ' ']\nSPEED = 2\n# color escape sequences\ncolors = {\n    'Blue': '\\x1b[0;34m',\n    'Green': '\\x1b[0;32m',\n    'Cyan': '\\x1b[0;36m',\n    'Red': '\\x1b[0;31m',\n    'Purple': '\\x1b[0;35m',",
+        "peekOfCode": "MATRIX_LENGTH = 30\nALLOWED_INPUTS = ['w', 'a', 'd', 'A', 'C', 'D', ' ']\nSPEED = 1\n# color escape sequences\ncolors = {\n    'Blue': '\\x1b[0;34m',\n    'Green': '\\x1b[0;32m',\n    'Cyan': '\\x1b[0;36m',\n    'Red': '\\x1b[0;31m',\n    'Purple': '\\x1b[0;35m',",
         "detail": "config",
         "documentation": {}
     },
@@ -300,7 +300,7 @@
         "kind": 5,
         "importPath": "config",
         "description": "config",
-        "peekOfCode": "ALLOWED_INPUTS = ['w', 'a', 'd', 'A', 'C', 'D', ' ']\nSPEED = 2\n# color escape sequences\ncolors = {\n    'Blue': '\\x1b[0;34m',\n    'Green': '\\x1b[0;32m',\n    'Cyan': '\\x1b[0;36m',\n    'Red': '\\x1b[0;31m',\n    'Purple': '\\x1b[0;35m',\n    'Brown': '\\x1b[0;33m',",
+        "peekOfCode": "ALLOWED_INPUTS = ['w', 'a', 'd', 'A', 'C', 'D', ' ']\nSPEED = 1\n# color escape sequences\ncolors = {\n    'Blue': '\\x1b[0;34m',\n    'Green': '\\x1b[0;32m',\n    'Cyan': '\\x1b[0;36m',\n    'Red': '\\x1b[0;31m',\n    'Purple': '\\x1b[0;35m',\n    'Brown': '\\x1b[0;33m',",
         "detail": "config",
         "documentation": {}
     },
@@ -309,7 +309,7 @@
         "kind": 5,
         "importPath": "config",
         "description": "config",
-        "peekOfCode": "SPEED = 2\n# color escape sequences\ncolors = {\n    'Blue': '\\x1b[0;34m',\n    'Green': '\\x1b[0;32m',\n    'Cyan': '\\x1b[0;36m',\n    'Red': '\\x1b[0;31m',\n    'Purple': '\\x1b[0;35m',\n    'Brown': '\\x1b[0;33m',\n    'Gray': '\\x1b[0;37m',",
+        "peekOfCode": "SPEED = 1\n# color escape sequences\ncolors = {\n    'Blue': '\\x1b[0;34m',\n    'Green': '\\x1b[0;32m',\n    'Cyan': '\\x1b[0;36m',\n    'Red': '\\x1b[0;31m',\n    'Purple': '\\x1b[0;35m',\n    'Brown': '\\x1b[0;33m',\n    'Gray': '\\x1b[0;37m',",
         "detail": "config",
         "documentation": {}
     },
@@ -417,7 +417,7 @@
         "kind": 5,
         "importPath": "levelsetup",
         "description": "levelsetup",
-        "peekOfCode": "levelpow = [\n            [[0,0,0,0,0,0,0,0,0,0,0,0,0],\n            [0,0,0,0,0,0,0,0,0,0,0,0,0],\n            [0,0,0,0,0,0,0,0,0,0,0,0,0],\n            [0,0,0,0,0,0,0,0,0,0,0,0,0],\n            [0,0,0,0,0,0,0,0,0,0,0,0,0],\n            [1,0,2,0,1,0,4,0,1,0,2,0,1]],\n            [[0,0,0,0,0,0,0,0,0,0,0,0,0],\n            [0,0,0,0,0,0,0,0,0,0,0,0,0],\n            [0,0,0,0,0,0,0,0,0,0,0,0,0],",
+        "peekOfCode": "levelpow = [\n            [[0,0,0,0,0,0,0,0,0,0,0,0,0],\n            [0,0,0,0,0,0,0,0,0,0,0,0,0],\n            [0,0,0,0,0,0,0,0,0,0,0,0,0],\n            [0,0,0,0,0,0,0,0,0,0,0,0,0],\n            [0,0,0,0,0,0,0,0,0,0,0,0,0],\n            [1,0,2,0,4,0,4,0,4,0,2,0,1]],\n            [[0,0,0,0,0,0,0,0,0,0,0,0,0],\n            [0,0,0,0,0,0,0,0,0,0,0,0,0],\n            [0,0,0,0,0,0,0,0,0,0,0,0,0],",
         "detail": "levelsetup",
         "documentation": {}
     },
@@ -570,7 +570,7 @@
         "kind": 6,
         "importPath": "powerup",
         "description": "powerup",
-        "peekOfCode": "class Power:\n    def __init__(self,x,y,num,tinka):\n        self.x = x\n        self.y = y+10\n        self.speedy = 2\n        self.num = num\n        self.start = int(tinka)\n        self.active = True\n    def print_data(self):\n        print(self.x,self.y,self.speedy,self.num,self.start,self.active)",
+        "peekOfCode": "class Power:\n    def __init__(self,x,y,num,tinka):\n        self.x = x\n        self.y = y+10\n        self.speedy = 2\n        self.num = num\n        self.start = int(tinka)\n        self.starteff = 0\n        self.active = True\n    def print_data(self):",
         "detail": "powerup",
         "documentation": {}
     },

@@ -38,16 +38,18 @@ class Scene:
 
     def power_puff(self,tieme,ppadle,bball):
         for pp in self.powers:
+            pp.print_data()
             if(pp.active == True): 
-                if((pp.start+10) < tieme):
-                    pp.restore(pp.num,ppadle,bball)
-                    pp.active = False
+                print("?????")
+                if((pp.starteff+50) < tieme and pp.starteff !=0):
+                    print("?????")
+                    pp.restore(ppadle,bball)
                 # pp.print_label()
         return True
     
     def power_moves(self,farr,bball,ppadle,cclock):
         for pp in self.powers:
-            if(pp.active==True):
+            if(pp.active==True and pp.y<=25):
                 pp.power_move(bball,ppadle,cclock)
                 farr[pp.y][pp.x*5+11]=str(pp.num)
                 print(pp.y,pp.x*5+11,pp.num)
@@ -154,7 +156,6 @@ class Scene:
         os.system('clear')
         
         print(ppadle.length)
-        d=self.power_puff(cclock.return_val(),ppadle,bball)
         b = bball.collision_check(self.matrix,self.power_matrix,self.powers,sscore,llives,ppadle,cclock)
         a = bball.collision_paddle(ppadle)
         
@@ -178,6 +179,7 @@ class Scene:
         for i in range(t,t+ppadle.length):
             farr[27][i]="_"
             
+        d=self.power_puff(cclock.return_val(),ppadle,bball)
         c = self.power_moves(farr,bball,ppadle,cclock)
         farr[bball.y][bball.x]='0'
         # print(bball.y,bball.x)

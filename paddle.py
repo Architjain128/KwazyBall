@@ -31,7 +31,7 @@ class Paddle:
             cc = min(self.x + self.scale,78-self.length)
             dd = cc - self.x
             self.x = cc
-            if(self.sticky==True):
+            if((self.sticky==True or bball.sticky == True ) and bball.y==27):
                 bball.x = bball.x + dd
                 bball.speedy = 0
                 bball.speedx = 0
@@ -43,7 +43,7 @@ class Paddle:
             cc = max(self.x - self.scale,5)
             dd = cc -self.x
             self.x = cc
-            if(self.sticky==True):
+            if((self.sticky==True or bball.sticky == True ) and bball.y==27):
                 bball.x = bball.x + dd
                 bball.speedx = 0
                 bball.speedy = 0

@@ -123,8 +123,12 @@ class Ball:
                             if(archit[self.y-10][(t-4)//5] == -1):
                                 sscore.update_val( self.chickibum(self.y-10,archit))
                             else:
-                                archit[self.y-10][(t-4)//5]=archit[self.y-10][(t-4)//5]-1
-                                sscore.update_val(1)
+                                if(self.thruball==True):
+                                    sscore.update_val(archit[self.y-10][(t-4)//5])
+                                    archit[self.y-10][(t-4)//5]=0
+                                else:
+                                    archit[self.y-10][(t-4)//5]=archit[self.y-10][(t-4)//5]-1
+                                    sscore.update_val(1)
                                 if(archit[self.y-10][(t-4)//5]==0 and archit_power[self.y-10][(t-4)//5]!=0):
                                     powers.append(Power((t-4)//5,self.y-10,archit_power[self.y-10][(t-4)//5],cclock.return_val()))
                                 
@@ -132,8 +136,12 @@ class Ball:
                             if(archit[self.y-11][((t-4)//5)-1] == -1):
                                 sscore.update_val( self.chickibum(self.y-11,archit))
                             else:
-                                archit[self.y-11][((t-4)//5)-1] = archit[self.y-11][((t-4)//5)-1]-1
-                                sscore.update_val(1)
+                                if(self.thruball==True):
+                                    sscore.update_val(archit[self.y-11][((t-4)//5)-1] )
+                                    archit[self.y-11][((t-4)//5)-1] =0
+                                else:
+                                    archit[self.y-11][((t-4)//5)-1] = archit[self.y-11][((t-4)//5)-1]-1
+                                    sscore.update_val(1)
                                 if(archit[self.y-11][((t-4)//5)-1]==0 and archit_power[self.y-11][((t-4)//5)-1]!=0):
                                     powers.append(Power(((t-4)//5)-1,self.y-11,archit_power[self.y-11][((t-4)//5)-1],cclock.return_val()))
                         if(self.thruball == False):
@@ -144,8 +152,12 @@ class Ball:
                             if(archit[self.y-10][(t-4)//5] == -1):
                                 sscore.update_val( self.chickibum(self.y-10,archit))
                             else:
-                                archit[self.y-10][(t-4)//5]=archit[self.y-10][(t-4)//5]-1
-                                sscore.update_val(1)
+                                if(self.thruball==True):
+                                    sscore.update_val(archit[self.y-10][((t-4)//5)] )
+                                    archit[self.y-10][((t-4)//5)] =0
+                                else:
+                                    archit[self.y-10][(t-4)//5]=archit[self.y-10][(t-4)//5]-1
+                                    sscore.update_val(1)
                                 if(archit[self.y-10][(t-4)//5]==0 and archit_power[self.y-10][(t-4)//5]!=0):
                                     powers.append(Power((t-4)//5,self.y-10,archit_power[self.y-10][(t-4)//5],cclock.return_val()))
                         if(self.thruball == False):
@@ -156,8 +168,12 @@ class Ball:
                             if(archit[self.y-11][((t-4)//5)-1] == -1):
                                 sscore.update_val( self.chickibum(self.y-11,archit))
                             else:
-                                archit[self.y-11][((t-4)//5)-1] = archit[self.y-11][((t-4)//5)-1]-1
-                                sscore.update_val(1)
+                                if(self.thruball==True):
+                                    sscore.update_val(archit[self.y-11][((t-4)//5)-1] )
+                                    archit[self.y-11][((t-4)//5)-1] =0
+                                else:
+                                    archit[self.y-11][((t-4)//5)-1] = archit[self.y-11][((t-4)//5)-1]-1
+                                    sscore.update_val(1)
                                 if(archit[self.y-11][((t-4)//5)-1]==0 and archit_power[self.y-11][((t-4)//5)-1]!=0):
                                     powers.append(Power(((t-4)//5)-1,self.y-11,archit_power[self.y-11][((t-4)//5)-1],cclock.return_val()))
                         if(self.thruball == False):
@@ -169,8 +185,12 @@ class Ball:
                                 if(archit[self.y-11][(t-4)//5] == -1):
                                     sscore.update_val( self.chickibum(self.y-11,archit))
                                 else:
-                                    archit[self.y-11][((t-4)//5)] = archit[self.y-11][((t-4)//5)] -1
-                                    sscore.update_val(1)
+                                    if(self.thruball==True):
+                                        sscore.update_val(archit[self.y-11][((t-4)//5)] )
+                                        archit[self.y-11][((t-4)//5)] =0
+                                    else:
+                                        archit[self.y-11][((t-4)//5)] = archit[self.y-11][((t-4)//5)] -1
+                                        sscore.update_val(1)
                                     if(archit[self.y-11][(t-4)//5]==0 and archit_power[self.y-11][(t-4)//5]!=0):
                                         powers.append(Power((t-4)//5,self.y-11,archit_power[self.y-11][(t-4)//5],cclock.return_val()))
                             if(self.thruball == False):
@@ -182,8 +202,12 @@ class Ball:
                             if(archit[self.y-11][(t-4)//5] == -1):
                                 sscore.update_val( self.chickibum(self.y-11,archit))
                             else:
-                                archit[self.y-11][(t-9)//5] = archit[self.y-11][(t-9)//5]-1
-                                sscore.update_val(1)
+                                if(self.thruball==True):
+                                    sscore.update_val(archit[self.y-11][((t-9)//5)] )
+                                    archit[self.y-11][((t-9)//5)] =0
+                                else:
+                                    archit[self.y-11][(t-9)//5] = archit[self.y-11][(t-9)//5]-1
+                                    sscore.update_val(1)
                                 if(archit[self.y-11][(t-9)//5]==0 and archit_power[self.y-11][(t-9)//5]!=0):
                                     powers.append(Power((t-9)//5,self.y-11,archit_power[self.y-11][(t-9)//5],cclock.return_val()))
                         if(self.thruball == False):
@@ -204,16 +228,25 @@ class Ball:
                             if(archit[self.y-10][((t-14)//5)] == -1):
                                 sscore.update_val( self.chickibum(self.y-10,archit))
                             else:
-                                archit[self.y-10][((t-14)//5)]=archit[self.y-10][((t-14)//5)]-1
-                                sscore.update_val(1)
+                                if(self.thruball==True):
+                                    sscore.update_val(archit[self.y-10][((t-14)//5)] )
+                                    archit[self.y-10][((t-14)//5)] =0
+                                else:
+                                    archit[self.y-10][((t-14)//5)]=archit[self.y-10][((t-14)//5)]-1
+                                    sscore.update_val(1)
                                 if(archit[self.y-10][(t-4)//5]==0 and archit_power[self.y-10][(t-4)//5]!=0):
                                     powers.append(Power((t-4)//5,self.y-10,archit_power[self.y-10][(t-4)//5],cclock.return_val()))
+                        
                         if(archit[self.y-11][(t-9)//5]!=10):
-                            if(archit[self.y-11][(t-4)//5] == -1):
+                            if(archit[self.y-11][(t-9)//5] == -1):
                                 sscore.update_val( self.chickibum(self.y-11,archit))
                             else:
-                                archit[self.y-11][(t-9)//5] = archit[self.y-11][(t-9)//5]-1
-                                sscore.update_val(1)
+                                if(self.thruball==True):
+                                    sscore.update_val(archit[self.y-11][((t-9)//5)-1] )
+                                    archit[self.y-11][((t-9)//5)-1] =0
+                                else:
+                                    archit[self.y-11][(t-9)//5] = archit[self.y-11][(t-9)//5]-1
+                                    sscore.update_val(1)
                                 if(archit[self.y-11][(t-9)//5]==0 and archit_power[self.y-11][(t-9)//5]!=0):
                                     powers.append(Power((t-9)//5,self.y-11,archit_power[self.y-11][(t-9)//5],cclock.return_val()))
                         if(self.thruball == False):
@@ -225,8 +258,12 @@ class Ball:
                             if(archit[self.y-10][((t-14)//5)] == -1):
                                 sscore.update_val( self.chickibum(self.y-10,archit))
                             else:
-                                archit[self.y-10][((t-14)//5)]=archit[self.y-10][((t-14)//5)]-1
-                                sscore.update_val(1)
+                                if(self.thruball==True):
+                                    sscore.update_val(archit[self.y-10][((t-14)//5)] )
+                                    archit[self.y-10][((t-14)//5)] =0
+                                else:
+                                    archit[self.y-10][((t-14)//5)]=archit[self.y-10][((t-14)//5)]-1
+                                    sscore.update_val(1)
                                 if(archit[self.y-10][((t-14)//5)]==0 and archit_power[self.y-10][((t-14)//5)]!=0):
                                     powers.append(Power(((t-14)//5),self.y-10,archit_power[self.y-10][((t-14)//5)],cclock.return_val()))
                         if(self.thruball == False):
@@ -236,8 +273,12 @@ class Ball:
                             if(archit[self.y-11][(t-9)//5] == -1):
                                 sscore.update_val( self.chickibum(self.y-11,archit))
                             else:
-                                archit[self.y-11][(t-9)//5] = archit[self.y-11][(t-9)//5]-1
-                                sscore.update_val(1)
+                                if(self.thruball==True):
+                                    sscore.update_val(archit[self.y-11][((t-9)//5)] )
+                                    archit[self.y-11][((t-9)//5)] =0
+                                else:
+                                    archit[self.y-11][(t-9)//5] = archit[self.y-11][(t-9)//5]-1
+                                    sscore.update_val(1)
                                 if(archit[self.y-11][((t-9)//5)]==0 and archit_power[self.y-11][((t-9)//5)]!=0):
                                     powers.append(Power(((t-9)//5),self.y-11,archit_power[self.y-11][((t-9)//5)],cclock.return_val()))
                         if(self.thruball == False):
@@ -248,8 +289,12 @@ class Ball:
                                 if(archit[self.y-11][((t-4)//5)-1] == -1):
                                     sscore.update_val( self.chickibum(self.y-11,archit))
                                 else:
-                                    archit[self.y-11][((t-4)//5)-1] = archit[self.y-11][((t-4)//5)-1] -1
-                                    sscore.update_val(1)
+                                    if(self.thruball==True):
+                                        sscore.update_val(archit[self.y-11][((t-4)//5)-1] )
+                                        archit[self.y-11][((t-4)//5)-1] =0
+                                    else:
+                                        archit[self.y-11][((t-4)//5)-1] = archit[self.y-11][((t-4)//5)-1] -1
+                                        sscore.update_val(1)
                                     if(archit[self.y-11][((t-4)//5)-1]==0 and archit_power[self.y-11][((t-4)//5)-1]!=0):
                                         powers.append(Power(((t-4)//5)-1,self.y-11,archit_power[self.y-11][((t-14)//5)-1],cclock.return_val()))
                             if(self.thruball == False):
@@ -261,8 +306,12 @@ class Ball:
                             if(archit[self.y-11][(t-9)//5] == -1):
                                 sscore.update_val( self.chickibum(self.y-11,archit))
                             else:
-                                archit[self.y-11][(t-9)//5] = archit[self.y-11][(t-9)//5]-1
-                                sscore.update_val(1)
+                                if(self.thruball==True):
+                                    sscore.update_val(archit[self.y-11][((t-9)//5)] )
+                                    archit[self.y-11][((t-9)//5)] =0
+                                else:
+                                    archit[self.y-11][(t-9)//5] = archit[self.y-11][(t-9)//5]-1
+                                    sscore.update_val(1)
                                 if(archit[self.y-11][((t-9)//5)]==0 and archit_power[self.y-11][((t-9)//5)]!=0):
                                     powers.append(Power(((t-9)//5),self.y-11,archit_power[self.y-11][((t-9)//5)],cclock.return_val()))
                         if(self.thruball == False):
@@ -273,8 +322,12 @@ class Ball:
                         if(archit[self.y-11][(t-9)//5] == -1):
                             sscore.update_val( self.chickibum(self.y-11,archit))
                         else:
-                            archit[self.y-11][(t-9)//5] = archit[self.y-11][(t-9)//5]-1
-                            sscore.update_val(1)
+                            if(self.thruball==True):
+                                    sscore.update_val(archit[self.y-11][((t-9)//5)] )
+                                    archit[self.y-11][((t-9)//5)] =0
+                            else:
+                                archit[self.y-11][(t-9)//5] = archit[self.y-11][(t-9)//5]-1
+                                sscore.update_val(1)
                             if(archit[self.y-11][((t-9)//5)]==0 and archit_power[self.y-11][((t-9)//5)]!=0):
                                     powers.append(Power(((t-9)//5),self.y-11,archit_power[self.y-11][((t-9)//5)],cclock.return_val()))
                     if(self.thruball == False):
@@ -298,16 +351,24 @@ class Ball:
                             if(archit[self.y-10][(t-4)//5] == -1):
                                 sscore.update_val( self.chickibum(self.y-10,archit))
                             else:
-                                archit[self.y-10][(t-4)//5]=archit[self.y-10][(t-4)//5]-1
-                                sscore.update_val(1)
+                                if(self.thruball==True):
+                                    sscore.update_val(archit[self.y-10][((t-4)//5)] )
+                                    archit[self.y-10][((t-4)//5)] =0
+                                else:
+                                    archit[self.y-10][(t-4)//5]=archit[self.y-10][(t-4)//5]-1
+                                    sscore.update_val(1)
                                 if(archit[self.y-10][((t-4)//5)]==0 and archit_power[self.y-10][((t-4)//5)]!=0):
                                     powers.append(Power(((t-4)//5),self.y-10,archit_power[self.y-10][((t-4)//5)],cclock.return_val()))
                         if(archit[self.y-9][((t-4)//5)-1]!=10):
                             if(archit[self.y-9][((t-4)//5)-1] == -1):
                                 sscore.update_val( self.chickibum(self.y-9,archit))
                             else:
-                                archit[self.y-9][((t-4)//5)-1] = archit[self.y-9][((t-4)//5)-1]-1
-                                sscore.update_val(1)
+                                if(self.thruball==True):
+                                    sscore.update_val(archit[self.y-9][((t-4)//5)-1] )
+                                    archit[self.y-9][((t-4)//5)-1] =0
+                                else:
+                                    archit[self.y-9][((t-4)//5)-1] = archit[self.y-9][((t-4)//5)-1]-1
+                                    sscore.update_val(1)
                                 if(archit[self.y-9][((t-4)//5)-1]==0 and archit_power[self.y-9][((t-4)//5)-1]!=0):
                                     powers.append(Power(((t-4)//5)-1,self.y-9,archit_power[self.y-9][((t-4)//5)-1],cclock.return_val()))
                         if(self.thruball == False):
@@ -318,8 +379,12 @@ class Ball:
                             if(archit[self.y-10][(t-4)//5] == -1):
                                 sscore.update_val( self.chickibum(self.y-10,archit))
                             else:
-                                archit[self.y-10][(t-4)//5]=archit[self.y-10][(t-4)//5]-1
-                                sscore.update_val(1)
+                                if(self.thruball==True):
+                                    sscore.update_val(archit[self.y-10][((t-4)//5)] )
+                                    archit[self.y-10][((t-4)//5)] =0
+                                else:
+                                    archit[self.y-10][(t-4)//5]=archit[self.y-10][(t-4)//5]-1
+                                    sscore.update_val(1)
                                 if(archit[self.y-10][((t-4)//5)]==0 and archit_power[self.y-10][((t-4)//5)]!=0):
                                     powers.append(Power(((t-4)//5),self.y-10,archit_power[self.y-10][((t-4)//5)],cclock.return_val()))
                         if(self.thruball == False):
@@ -329,8 +394,12 @@ class Ball:
                             if(archit[self.y-9][((t-4)//5)-1] == -1):
                                 sscore.update_val( self.chickibum(self.y-9,archit))
                             else:
-                                archit[self.y-9][((t-4)//5)-1] = archit[self.y-9][((t-4)//5)-1]-1
-                                sscore.update_val(1)
+                                if(self.thruball==True):
+                                    sscore.update_val(archit[self.y-9][((t-4)//5)-1] )
+                                    archit[self.y-9][((t-4)//5)-1] =0
+                                else:
+                                    archit[self.y-9][((t-4)//5)-1] = archit[self.y-9][((t-4)//5)-1]-1
+                                    sscore.update_val(1)
                                 if(archit[self.y-9][((t-4)//5)-1]==0 and archit_power[self.y-9][((t-4)//5)-1]!=0):
                                     powers.append(Power(((t-4)//5)-1,self.y-9,archit_power[self.y-9][((t-4)//5)-1],cclock.return_val()))
                         if(self.thruball == False):
@@ -341,8 +410,12 @@ class Ball:
                                 if(archit[self.y-9][((t-4)//5)] == -1):
                                     sscore.update_val( self.chickibum(self.y-9,archit))
                                 else:
-                                    archit[self.y-9][((t-4)//5)] = archit[self.y-9][((t-4)//5)] -1
-                                    sscore.update_val(1)
+                                    if(self.thruball==True):
+                                        sscore.update_val(archit[self.y-9][((t-4)//5)] )
+                                        archit[self.y-9][((t-4)//5)] =0
+                                    else:
+                                        archit[self.y-9][((t-4)//5)] = archit[self.y-9][((t-4)//5)] -1
+                                        sscore.update_val(1)
                                     if(archit[self.y-9][((t-4)//5)]==0 and archit_power[self.y-9][((t-4)//5)]!=0):
                                         powers.append(Power(((t-4)//5),self.y-9,archit_power[self.y-9][((t-4)//5)],cclock.return_val()))
                             if(self.thruball==False):
@@ -354,8 +427,12 @@ class Ball:
                             if(archit[self.y-9][(t-9)//5] == -1):
                                 sscore.update_val( self.chickibum(self.y-9,archit))
                             else:
-                                archit[self.y-9][(t-9)//5] = archit[self.y-9][(t-9)//5]-1
-                                sscore.update_val(1)
+                                if(self.thruball==True):
+                                    sscore.update_val(archit[self.y-9][((t-9)//5)] )
+                                    archit[self.y-9][((t-9)//5)] =0
+                                else:
+                                    archit[self.y-9][(t-9)//5] = archit[self.y-9][(t-9)//5]-1
+                                    sscore.update_val(1)
                                 if(archit[self.y-9][((t-9)//5)]==0 and archit_power[self.y-9][((t-9)//5)]!=0):
                                     powers.append(Power(((t-9)//5),self.y-9,archit_power[self.y-9][((t-9)//5)],cclock.return_val()))
                         if(self.thruball==False):
@@ -376,16 +453,24 @@ class Ball:
                             if(archit[self.y-10][((t-14)//5)] == -1):
                                 sscore.update_val( self.chickibum(self.y-10,archit))
                             else:
-                                archit[self.y-10][((t-14)//5)]=archit[self.y-10][((t-14)//5)]-1
-                                sscore.update_val(1)
+                                if(self.thruball==True):
+                                    sscore.update_val(archit[self.y-10][((t-14)//5)] )
+                                    archit[self.y-10][((t-14)//5)] =0
+                                else:
+                                    archit[self.y-10][((t-14)//5)]=archit[self.y-10][((t-14)//5)]-1
+                                    sscore.update_val(1)
                                 if(archit[self.y-10][((t-14)//5)]==0 and archit_power[self.y-10][((t-14)//5)]!=0):
                                     powers.append(Power(((t-14)//5),self.y-10,archit_power[self.y-10][((t-14)//5)],cclock.return_val()))
                         if(archit[self.y-9][(t-9)//5]!=10):
                             if(archit[self.y-9][(t-9)//5] == -1):
                                 sscore.update_val( self.chickibum(self.y-9,archit))
                             else:
-                                archit[self.y-9][(t-9)//5] = archit[self.y-9][(t-9)//5]-1
-                                sscore.update_val(1)
+                                if(self.thruball==True):
+                                    sscore.update_val(archit[self.y-9][((t-9)//5)] )
+                                    archit[self.y-9][((t-9)//5)] =0
+                                else:
+                                    archit[self.y-9][(t-9)//5] = archit[self.y-9][(t-9)//5]-1
+                                    sscore.update_val(1)
                                 if(archit[self.y-9][((t-9)//5)]==0 and archit_power[self.y-9][((t-9)//5)]!=0):
                                     powers.append(Power(((t-9)//5),self.y-9,archit_power[self.y-9][((t-9)//5)],cclock.return_val()))
                         if(self.thruball==False):
@@ -396,8 +481,12 @@ class Ball:
                             if(archit[self.y-10][((t-14)//5)] == -1):
                                 sscore.update_val( self.chickibum(self.y-10,archit))
                             else:
-                                archit[self.y-10][((t-14)//5)]=archit[self.y-10][((t-14)//5)]-1
-                                sscore.update_val(1)
+                                if(self.thruball==True):
+                                    sscore.update_val(archit[self.y-10][((t-14)//5)] )
+                                    archit[self.y-10][((t-14)//5)] =0
+                                else:
+                                    archit[self.y-10][((t-14)//5)]=archit[self.y-10][((t-14)//5)]-1
+                                    sscore.update_val(1)
                                 if(archit[self.y-10][((t-14)//5)]==0 and archit_power[self.y-10][((t-14)//5)]!=0):
                                     powers.append(Power(((t-14)//5),self.y-10,archit_power[self.y-10][((t-14)//5)],cclock.return_val()))
                         if(self.thruball==False):
@@ -407,8 +496,12 @@ class Ball:
                             if(archit[self.y-9][(t-9)//5] == -1):
                                 sscore.update_val( self.chickibum(self.y-9,archit))
                             else:
-                                archit[self.y-9][(t-9)//5] = archit[self.y-9][(t-9)//5]-1
-                                sscore.update_val(1)
+                                if(self.thruball==True):
+                                    sscore.update_val(archit[self.y-9][((t-9)//5)] )
+                                    archit[self.y-9][((t-9)//5)] =0
+                                else:
+                                    archit[self.y-9][(t-9)//5] = archit[self.y-9][(t-9)//5]-1
+                                    sscore.update_val(1)
                                 if(archit[self.y-9][((t-9)//5)]==0 and archit_power[self.y-9][((t-9)//5)]!=0):
                                     powers.append(Power(((t-9)//5),self.y-9,archit_power[self.y-9][((t-9)//5)],cclock.return_val()))
                         if(self.thruball==False):
@@ -419,8 +512,12 @@ class Ball:
                                 if(archit[self.y-9][((t-4)//5)-1] == -1):
                                     sscore.update_val( self.chickibum(self.y-9,archit))
                                 else:
-                                    archit[self.y-9][((t-4)//5)-1] = archit[self.y-9][((t-4)//5)-1] -1
-                                    sscore.update_val(1)
+                                    if(self.thruball==True):
+                                        sscore.update_val(archit[self.y-9][((t-4)//5)-1] )
+                                        archit[self.y-9][((t-4)//5)-1] =0
+                                    else:
+                                        archit[self.y-9][((t-4)//5)-1] = archit[self.y-9][((t-4)//5)-1] -1
+                                        sscore.update_val(1)
                                     if(archit[self.y-9][((t-4)//5)-1]==0 and archit_power[self.y-9][((t-4)//5)-1]!=0):
                                         powers.append(Power(((t-4)//5)-1,self.y-9,archit_power[self.y-9][((t-4)//5)-1],cclock.return_val()))
                             if(self.thruball==False):
@@ -432,8 +529,12 @@ class Ball:
                             if(archit[self.y-9][(t-9)//5] == -1):
                                 sscore.update_val( self.chickibum(self.y-9,archit))
                             else:
-                                archit[self.y-9][(t-9)//5] = archit[self.y-9][(t-9)//5]-1
-                                sscore.update_val(1)
+                                if(self.thruball==True):
+                                    sscore.update_val(archit[self.y-9][((t-9)//5)] )
+                                    archit[self.y-9][((t-9)//5)] =0
+                                else:
+                                    archit[self.y-9][(t-9)//5] = archit[self.y-9][(t-9)//5]-1
+                                    sscore.update_val(1)
                                 if(archit[self.y-9][((t-9)//5)]==0 and archit_power[self.y-9][((t-9)//5)]!=0):
                                     powers.append(Power(((t-9)//5),self.y-9,archit_power[self.y-9][((t-9)//5)],cclock.return_val()))
                         if(self.thruball==False):
@@ -444,156 +545,16 @@ class Ball:
                         if(archit[self.y-9][(t-9)//5] == -1):
                             sscore.update_val( self.chickibum(self.y-9,archit))
                         else:
-                            archit[self.y-9][(t-9)//5] = archit[self.y-9][(t-9)//5]-1
-                            sscore.update_val(1)
+                            if(self.thruball==True):
+                                sscore.update_val(archit[self.y-9][((t-9)//5)] )
+                                archit[self.y-9][((t-9)//5)] =0
+                            else:
+                                archit[self.y-9][(t-9)//5] = archit[self.y-9][(t-9)//5]-1
+                                sscore.update_val(1)
                             if(archit[self.y-9][((t-9)//5)]==0 and archit_power[self.y-11][((t-9)//5)]!=0):
                                     powers.append(Power(((t-9)//5),self.y-9,archit_power[self.y-9][((t-9)//5)],cclock.return_val()))
                     if(self.thruball==False):
                         self.speedy = -1 * self.speedy
-
-        # pos = self.x + self.speedx
-        # if(self.speedy > 0):      # Going down
-        #     if((pos>=9 and pos<=73)and (self.y<=14 and self.y>=9)):
-        #         g = pos-9
-        #         t = g
-        #         while(t%5%10!=0):
-        #             t=t+1
-        #         t = t//5
-        #         if(archit[self.y-9][t]!=0):
-        #             archit[self.y-9][t] = archit[self.y-9][t] -1
-        #             self.speedy = -1 * self.speedy
-        #         else :
-        #             if((g%5 == 0 and self.speedx < 0) and (t!=0 and archit[self.y-9][t-1]!=0)):
-        #                 self.speedx = -1 * self.speedx
-        #                 archit[self.y-9][t-1]=archit[self.y-9][t-1]-1
-        #             elif((g%5 == 4 and self.speedx > 0) and (t!=12 and archit[self.y-9][t+1]!=0)):
-        #                 self.speedx = -1 * self.speedx
-        #                 archit[self.y-9][t+1]=archit[self.y-9][t+1]-1
-        # elif(self.speedy < 0):      # Going up
-        #     if((pos>=9 and pos<=73)and (self.y<=16 and self.y>=11)):
-        #         g = pos - 4
-        #         t = pos - 9
-        #         while(t%5!=0): 
-        #             t=t+1
-        #         t = t//5
-        #         if(archit[self.y-11][t]!=0):
-        #             archit[self.y-11][t] = archit[self.y-11][t] -1
-        #             self.speedy = -1 * self.speedy
-        #         else :
-        #             if((g%5 == 0 and self.speedx < 0) and (t!=0 and archit[self.y-11][t-1]!=0)):
-        #                 self.speedx = -1 * self.speedx
-        #                 archit[self.y-11][t-1]=archit[self.y-11][t-1]-1
-        #             elif((g%5 == 4 and self.speedx > 0) and (t!=12 and archit[self.y-11][t+1]!=0)):
-        #                 self.speedx = -1 * self.speedx
-        #                 archit[self.y-11][t+1]=archit[self.y-11][t+1]-1
-            
-            
-        # if(self.y >= 10 and self.y <=15):
-        #     if(self.speedx < 0 and archit[self.y-10][(self.x//6)-1]!=0):
-        #         self.speedx = -1 * self.speedx
-        #         archit[self.y-10][(self.x//6)-1] = archit[self.y-10][(self.x//6)-1] -1
-        #     if(self.speedx > 0 and archit[self.y-10][(self.x //6)+1]!=0):
-        #         self.speedx = -1 * self.speedx
-        #         archit[self.y-10][(self.x//6)+1] = archit[self.y-10][(self.x//6)+1] -1
-        
-        
-        # if(self.speedy < 0):
-        #     if((self.y >= 11) and (self.y<=16)):
-        #         if((self.x - 5)%6==0):
-        #             if(self.x == 5):
-        #                 if(self.speedx > 0 and archit[self.y-11][0]!=0):
-        #                     self.speedx = -1 * self.speedx
-        #                     self.speedy = -1 * self.speedy
-        #                     archit[self.y-11][0]=archit[self.y-11][0]-1
-        #                 if(self.speedx < 0 and archit[self.y-11][0]!=0):
-        #                     self.speedx = -1 * self.speedx
-        #                     self.speedy = -1 * self.speedy
-        #                     archit[self.y-11][0]=archit[self.y-11][0]-1
-                            
-        #             elif(self.x == 77 and archit[self.y-11][11]!=0):
-        #                 if(self.speedx > 0 and archit[self.y-11][11]!=0):
-        #                     self.speedx = -1 * self.speedx
-        #                     self.speedy = -1 * self.speedy
-        #                     archit[self.y-11][11]=archit[self.y-11][11]-1
-        #                 if(self.speedx < 0 and archit[self.y-11][11]!=0):
-        #                     self.speedx = -1 * self.speedx
-        #                     self.speedy = -1 * self.speedy
-        #                     archit[self.y-11][11]=archit[self.y-11][11]-1
-        #             else:
-        #                 if(archit[self.y-11][(self.x//6)] !=0 and archit[self.y-11][(self.x//6)-1]!=0):
-        #                     self.speedy = -1 * self.speedy
-        #                     archit[self.y-11][(self.x//6)]=archit[self.y-11][(self.x//6)]-1
-        #                     archit[self.y-11][(self.x//6)-1]=archit[self.y-11][(self.x//6)-1]-1
-        #                 elif(archit[self.y-11][(self.x//6)-1]!=0):
-        #                     archit[self.y-11][(self.x//6)-1]=archit[self.y-11][(self.x//6)-1]-1
-        #                     self.speedy = -1 * self.speedy
-        #                     if(self.speedx < 0):
-        #                         self.speedx = -1 * self.speedx
-        #                 elif(archit[self.y-11][(self.x//6)]!=0):
-        #                     archit[self.y-11][(self.x//6)]=archit[self.y-11][(self.x//6)]-1
-        #                     self.speedy = -1 * self.speedy
-        #                     if(self.speedx > 0):
-        #                         self.speedx = -1 * self.speedx
-        #         else:
-        #             t = self.x
-        #             for i in range(0,8):
-        #                 if(t%6==0):
-        #                     break
-        #                 t=t-1
-        #             t = t//6
-        #             t = t-1
-        #             if(archit[self.y-11][t]!=0):
-        #                 # print(self.x)
-        #                 archit[self.y-11][t]=archit[self.y-11][t]-1
-        #                 self.speedy = -1 * self.speedy
-
-        # elif(self.speedy > 0):
-        #     if((self.y >= 9) and (self.y<=14)):
-        #         if((self.x - 5)%6==0):
-        #             if(self.x == 5):
-        #                 if(self.speedx > 0 and archit[self.y-9][0]!=0):
-        #                     self.speedx = -1 * self.speedx
-        #                     self.speedy = -1 * self.speedy
-        #                     archit[self.y-9][0]=archit[self.y-9][0]-1
-        #                 elif(self.speedx < 0 and archit[self.y-9][0]!=0):
-        #                     self.speedx = -1 * self.speedx
-        #                     self.speedy = -1 * self.speedy
-        #                     archit[self.y-9][0]=archit[self.y-9][0]-1
-        #             elif(self.x == 77 and archit[self.y-9][9]!=0):
-        #                 if(self.speedx > 0):
-        #                     self.speedx = -1 * self.speedx
-        #                     self.speedy = -1 * self.speedy
-        #                     archit[self.y-9][9]=archit[self.y-9][9]-1
-        #                 elif(self.speedx < 0):
-        #                     self.speedx = -1 * self.speedx
-        #                     self.speedy = -1 * self.speedy
-        #                     archit[self.y-9][9]=archit[self.y-9][9]-1
-        #             else:
-        #                 if(archit[self.y-9][(self.x//6)] !=0 and archit[self.y-9][(self.x//6)-1]!=0):
-        #                     self.speedy = -1 * self.speedy
-        #                     archit[self.y-9][(self.x//6)]=archit[self.y-9][(self.x//6)+1]-1
-        #                     archit[self.y-9][(self.x//6)-1]=archit[self.y-9][(self.x//6)-1]-1
-        #                 elif(archit[self.y-9][(self.x//6)-1]!=0):
-        #                     archit[self.y-9][(self.x//6)-1]=archit[self.y-9][(self.x//6)-1]-1
-        #                     self.speedy = -1 * self.speedy
-        #                     if(self.speedx < 0):
-        #                         self.speedx = -1 * self.speedx
-        #                 elif(archit[self.y-9][(self.x//6)]!=0):
-        #                     archit[self.y-9][(self.x//6)]=archit[self.y-9][(self.x//6)]-1
-        #                     self.speedy = -1 * self.speedy
-        #                     if(self.speedx > 0):
-        #                         self.speedx = -1 * self.speedx
-        #         else:
-        #             t = self.x
-        #             for i in range(0,8):
-        #                 if(t%6==0):
-        #                     break
-        #                 t=t-1
-        #             t = t//6
-        #             t = t-1
-        #             if(archit[self.y-9][t]!=0):
-        #                 self.speedy = -1 * self.speedy
-        #                 archit[self.y-9][t]=archit[self.y-9][t]-1
         return True
 
     def collision_paddle(self,ppadle):
@@ -601,8 +562,11 @@ class Ball:
         if(self.sticky==True):
             ppadle.sticky==True
             
-        if(ppadle.sticky==True):
-            pass
+        if(ppadle.sticky==True or self.sticky==True):
+            print("stick")
+            if((self.speedy > 0) and (self.y == 27) and ((self.x >= ppadle.x) and (self.x <= (ppadle.x + ppadle.length)))):
+                self.speedy=0
+                self.speedx=0
         else:
             if((self.speedy > 0) and (self.y == 27) and ((self.x >= ppadle.x) and (self.x <= (ppadle.x + ppadle.length)))):
                 t1 = self.x - ppadle.x
