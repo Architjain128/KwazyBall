@@ -13,8 +13,8 @@ def landing_page():
 ###    ###   ###   ###   ###     ### #########    ###              #########  ###     ### ########## ########## '''+" "*40)
     print("\n"+Fore.YELLOW+" "*51 + "By Archit Jain")
     print("\n"+Fore.WHITE+" "*22 + "--------------------------------------------------------------------\n")
-    print(Fore.CYAN+"\n"+" "*50 + "Press 1 to start in easy mode\n")
-    print(Fore.CYAN+"\n"+" "*50 + "Press 2 to start in hard mode\n")
+    print(Fore.CYAN+"\n"+" "*44 + "Press 1 to start in easy mode")
+    print(Fore.CYAN+"\n"+" "*44 + "Press 2 to start in hard mode\n\n")
     print(Fore.CYAN+" "*45 + "Press any other key to exit\n")
     print("\n"+Fore.WHITE+" "*22 + "--------------------------------------------------------------------\n")
     
@@ -61,6 +61,8 @@ def gameover(SCORE,TIME):
     print(Fore.GREEN + " "*45+ "Final Score : "+ str(SCORE) +"\n")
     print(Fore.GREEN + " "*42+ "Time taken : "+ str(TIME) +" second(s) \n\n")
     print("\n"+Fore.WHITE+" "*20 + "----------------------------------------------------------------------\n")
+    print(Fore.GREEN + " "*42 + "See you again soon :)\n\n"+RESET)
+    
 
 def pausedmsg(SCORE,TIME):
     os.system('clear')

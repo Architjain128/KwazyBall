@@ -1,21 +1,12 @@
 """ Contains all game parameters in one place """
 
 from colorama import init, Fore, Style, Back
+
 init(autoreset=True)
 
 
-class Lives:
-    lives = 3
-
-
-# Define scene length(vertical), width(horizontal),
-# fullwidth(map length)
 MATRIX_WIDTH = 85
 MATRIX_LENGTH = 30
-
-ALLOWED_INPUTS = ['w', 'a', 'd', 'A', 'C', 'D', ' ']
-
-
 
 SPEED = 1
 

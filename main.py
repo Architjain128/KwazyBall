@@ -13,70 +13,72 @@ from ball import *
 landing_page = landing_page()
 
 getinp = Get()
-scene = Scene()
+scene = Scene(SPEED)
 paddle = Paddle()
 clock = Time(0)
 score = Score(0)
 level = Level(1)
-lives = Lives(5)
+lives = Lives(1) 
 ball = Ball(paddle)
-# ball
-# bricks
-# special power
-
-PAUSE = False
+PAUSE = Pause(False)
 scene.set_init_array(1)
 ball.start_throw(paddle)
-# paddle.addpaddle(35)
+FLAG = Level_change_flag(False)
 
-# lives.add_in_scene(scene)
-# score.add_in_scene(scene)
-# clock.add_in_scene(scene)
-# level.add_in_scene(scene)
-level_change_flag = False
 if(0 != landing_page):
     while True:
         
-        input = input_to(getinp,SPEED)
+        input = input_to(getinp,scene.speed)
         
         if(input=='q' or input=="Q"):
             quitmsg()
             break
         
-        if(input=='p' or input=="P"):
-            PAUSE = True
+        if(input=='p' or input=="P" and PAUSE.return_val() == False):
+            PAUSE.toggle_pause()
             pausedmsg(score.return_val(),clock.return_val())
         
-        if(input=='r' or input=="R"):
-            PAUSE=False
+        if(input=='r' or input=="R" and PAUSE.return_val() == True):
+            PAUSE.toggle_pause()
             
         if(input=='a' or input=="A"):
-            paddle.move_left(ball)
+            if(ball.get_fastball()==False):
+                paddle.move_left(ball)
+            else:
+                if(clock.return_value()%(scene.get_speed())==0):
+                    paddle.move_left(ball)
+                    
         
         if(input=='d' or input=="D"):
-            paddle.move_right(ball)
+            if(ball.get_fastball()==False):
+                    paddle.move_right(ball)
+            else:
+                if(clock.return_value()%(scene.get_speed())==0):
+                    paddle.move_right(ball)
+            
             
         if(input=='z' or input=="Z"):
-            level_change_flag = True
+            FLAG.set_val(True)
+
             
         if(input==' '):
-            paddle.sticky=False
+            paddle.set_sticky(False)
             ball.launch_ball(landing_page,paddle)
         
-        if(PAUSE==False):
-            clock.update_val(SPEED,scene)
-            # os.system('clear')
-            if(level_change_flag==True):
+        if(PAUSE.return_val()==False):
+            clock.update_val(scene.speed,scene)
+            if(FLAG.return_val()==True):
                 level.update_val(scene)
                 scene.set_init_array(level.val)
                 ball.start_throw(paddle)
-                level_change_flag = False
-                
+                FLAG.set_val(False)
+    
             scene.generate_screen(clock,level,lives,score,paddle,ball)
             
+        if(lives.return_val()==0):
+            gameover(score.return_val(),clock.return_val())
+            break
 
-            
 
 else:
     quitmsg();
-    # gameover(str(150));

@@ -17,6 +17,9 @@ class Paddle:
         for i in range(t,t+self.length):
             self.arr[i]="_"
 
+    def set_sticky(self,t):
+        self.sticky = t
+    
     def upgrade(self):
         self.length = self.length + 2*self.scale
         return 

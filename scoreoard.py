@@ -1,6 +1,5 @@
 import math
 
-
 class ScoreBoard : 
     def __init__(self,initialval):
         self.val = initialval
@@ -25,6 +24,8 @@ class Time(ScoreBoard):
         # self.add_in_scene(scene)
     def return_val(self):
         return math.floor(self.val)
+    def return_value(self):
+        return self.val
     def add_in_scene(self,scene):
         temp = str(self.val)
         for i in range(0,len(temp)):
@@ -40,6 +41,13 @@ class Score(ScoreBoard):
         for i in range(0,len(temp)):
             scene.matrix[6][84+i]=temp[i]
 
+class Pause(ScoreBoard):
+    def toggle_pause(self):
+        if(self.val == True):
+            self.val = False
+        else : 
+            self.val = True
+
 class Level(ScoreBoard):
     def update_val(self,scene):
         self.val = self.val + 1
@@ -49,3 +57,7 @@ class Level(ScoreBoard):
         temp = str(self.val)
         for i in range(0,len(temp)):
             scene.matrix[6][55+i]=temp[i]
+            
+class Level_change_flag(ScoreBoard):
+    def set_val(self,t):
+        self.val = t
