@@ -47,7 +47,6 @@ if(0 != landing_page):
             else:
                 if(clock.return_value()%(scene.get_speed())==0):
                     paddle.move_left(ball)
-                    
         
         if(input=='d' or input=="D"):
             if(ball.get_fastball()==False):
@@ -56,11 +55,17 @@ if(0 != landing_page):
                 if(clock.return_value()%(scene.get_speed())==0):
                     paddle.move_right(ball)
             
-            
-        if(input=='z' or input=="Z"):
+        if((input =='z' or (score.return_val()>=1130)) and level.return_val()==1):
             FLAG.set_val(True)
-
             
+        if((input =='z' or score.return_val()>=2380 )and (level.return_val()==2)):
+            gameover(score.return_val(),clock.return_val())
+            break
+            
+        if(lives.return_val()==0):
+            gameover(score.return_val(),clock.return_val())
+            break
+        
         if(input==' '):
             paddle.set_sticky(False)
             ball.launch_ball(landing_page,paddle)
@@ -69,16 +74,10 @@ if(0 != landing_page):
             clock.update_val(scene.speed,scene)
             if(FLAG.return_val()==True):
                 level.update_val(scene)
-                scene.set_init_array(level.val)
+                scene.set_init_array(level.return_val())
                 ball.start_throw(paddle)
                 FLAG.set_val(False)
-    
             scene.generate_screen(clock,level,lives,score,paddle,ball)
-            
-        if(lives.return_val()==0):
-            gameover(score.return_val(),clock.return_val())
-            break
-
-
+    
 else:
     quitmsg();

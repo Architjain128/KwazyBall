@@ -148,7 +148,7 @@ class Scene:
         os.system('clear')
         msg1 = Fore.WHITE+Back.MAGENTA+ "Stats for Nerds" + RESET
         print(msg1)
-        print("ball speed : " + str(self.speed))
+        print("ball speed : " + str(SPEED//self.speed))
         print("Paddle length : " + str(ppadle.length))
         
         print("Powerup")

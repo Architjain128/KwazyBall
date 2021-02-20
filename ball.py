@@ -335,7 +335,7 @@ class Ball:
                         if(self.thruball == False):
                             self.speedy = -1 * self.speedy
             else:
-                t = self.speedx
+                t = self.x
                 if((self.y>=11 and self.y<=16) and ( check_buddy(self.y-11) and  (archit[self.y-11][(t-9)//5]!=0))):
                     if(archit[self.y-11][(t-9)//5]!=10):
                         if(archit[self.y-11][(t-9)//5] == -1):
@@ -559,7 +559,7 @@ class Ball:
                         if(self.thruball==False):
                             self.speedy = -1 * self.speedy
             else:
-                t = self.x + self.speedx
+                t = self.x
                 if((self.y>=9 and self.y<=14) and ( check_buddy(self.y-9) and  archit[self.y-9][(t-9)//5]!=0)):
                     if(archit[self.y-9][(t-9)//5]!=10):
                         if(archit[self.y-9][(t-9)//5] == -1):
@@ -823,7 +823,7 @@ class Ball:
                         if(self.thruball == False):
                             self.speedy2 = -1 * self.speedy2
             else:
-                t = self.x + self.speedx 
+                t = self.x2
                 if((self.y2>=11 and self.y2<=16) and ( check_buddy(self.y2-11) and  (archit[self.y2-11][(t-9)//5]!=0))):
                     if(archit[self.y2-11][(t-9)//5]!=10):
                         if(archit[self.y2-11][(t-9)//5] == -1):
@@ -1047,7 +1047,7 @@ class Ball:
                         if(self.thruball==False):
                             self.speedy2 = -1 * self.speedy2
             else:
-                t = self.x + self.speedx
+                t = self.x2
                 if((self.y2>=9 and self.y2<=14) and ( check_buddy(self.y2-9) and  archit[self.y2-9][(t-9)//5]!=0)):
                     if(archit[self.y2-9][(t-9)//5]!=10):
                         if(archit[self.y2-9][(t-9)//5] == -1):

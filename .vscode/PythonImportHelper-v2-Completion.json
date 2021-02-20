@@ -189,33 +189,6 @@
         "documentation": {}
     },
     {
-        "label": "termios",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "termios",
-        "description": "termios",
-        "detail": "termios",
-        "documentation": {}
-    },
-    {
-        "label": "tty",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "tty",
-        "description": "tty",
-        "detail": "tty",
-        "documentation": {}
-    },
-    {
-        "label": "signal",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "signal",
-        "description": "signal",
-        "detail": "signal",
-        "documentation": {}
-    },
-    {
         "label": "time",
         "kind": 6,
         "isExtraImport": true,
@@ -262,6 +235,33 @@
         "description": "ball",
         "isExtraImport": true,
         "detail": "ball",
+        "documentation": {}
+    },
+    {
+        "label": "termios",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "termios",
+        "description": "termios",
+        "detail": "termios",
+        "documentation": {}
+    },
+    {
+        "label": "tty",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "tty",
+        "description": "tty",
+        "detail": "tty",
+        "documentation": {}
+    },
+    {
+        "label": "signal",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "signal",
+        "description": "signal",
+        "detail": "signal",
         "documentation": {}
     },
     {
@@ -355,6 +355,105 @@
         "documentation": {}
     },
     {
+        "label": "landing_page",
+        "kind": 5,
+        "importPath": "game",
+        "description": "game",
+        "peekOfCode": "landing_page = landing_page()\ngetinp = Get()\nscene = Scene(SPEED)\npaddle = Paddle()\nclock = Time(0)\nscore = Score(0)\nlevel = Level(1)\nlives = Lives(1) \nball = Ball(paddle)\nPAUSE = Pause(False)",
+        "detail": "game",
+        "documentation": {}
+    },
+    {
+        "label": "getinp",
+        "kind": 5,
+        "importPath": "game",
+        "description": "game",
+        "peekOfCode": "getinp = Get()\nscene = Scene(SPEED)\npaddle = Paddle()\nclock = Time(0)\nscore = Score(0)\nlevel = Level(1)\nlives = Lives(1) \nball = Ball(paddle)\nPAUSE = Pause(False)\nscene.set_init_array(1)",
+        "detail": "game",
+        "documentation": {}
+    },
+    {
+        "label": "scene",
+        "kind": 5,
+        "importPath": "game",
+        "description": "game",
+        "peekOfCode": "scene = Scene(SPEED)\npaddle = Paddle()\nclock = Time(0)\nscore = Score(0)\nlevel = Level(1)\nlives = Lives(1) \nball = Ball(paddle)\nPAUSE = Pause(False)\nscene.set_init_array(1)\nball.start_throw(paddle)",
+        "detail": "game",
+        "documentation": {}
+    },
+    {
+        "label": "paddle",
+        "kind": 5,
+        "importPath": "game",
+        "description": "game",
+        "peekOfCode": "paddle = Paddle()\nclock = Time(0)\nscore = Score(0)\nlevel = Level(1)\nlives = Lives(1) \nball = Ball(paddle)\nPAUSE = Pause(False)\nscene.set_init_array(1)\nball.start_throw(paddle)\nFLAG = Level_change_flag(False)",
+        "detail": "game",
+        "documentation": {}
+    },
+    {
+        "label": "clock",
+        "kind": 5,
+        "importPath": "game",
+        "description": "game",
+        "peekOfCode": "clock = Time(0)\nscore = Score(0)\nlevel = Level(1)\nlives = Lives(1) \nball = Ball(paddle)\nPAUSE = Pause(False)\nscene.set_init_array(1)\nball.start_throw(paddle)\nFLAG = Level_change_flag(False)\nif(0 != landing_page):",
+        "detail": "game",
+        "documentation": {}
+    },
+    {
+        "label": "score",
+        "kind": 5,
+        "importPath": "game",
+        "description": "game",
+        "peekOfCode": "score = Score(0)\nlevel = Level(1)\nlives = Lives(1) \nball = Ball(paddle)\nPAUSE = Pause(False)\nscene.set_init_array(1)\nball.start_throw(paddle)\nFLAG = Level_change_flag(False)\nif(0 != landing_page):\n    while True:",
+        "detail": "game",
+        "documentation": {}
+    },
+    {
+        "label": "level",
+        "kind": 5,
+        "importPath": "game",
+        "description": "game",
+        "peekOfCode": "level = Level(1)\nlives = Lives(1) \nball = Ball(paddle)\nPAUSE = Pause(False)\nscene.set_init_array(1)\nball.start_throw(paddle)\nFLAG = Level_change_flag(False)\nif(0 != landing_page):\n    while True:\n        input = input_to(getinp,scene.speed)",
+        "detail": "game",
+        "documentation": {}
+    },
+    {
+        "label": "lives",
+        "kind": 5,
+        "importPath": "game",
+        "description": "game",
+        "peekOfCode": "lives = Lives(1) \nball = Ball(paddle)\nPAUSE = Pause(False)\nscene.set_init_array(1)\nball.start_throw(paddle)\nFLAG = Level_change_flag(False)\nif(0 != landing_page):\n    while True:\n        input = input_to(getinp,scene.speed)\n        if(input=='q' or input==\"Q\"):",
+        "detail": "game",
+        "documentation": {}
+    },
+    {
+        "label": "ball",
+        "kind": 5,
+        "importPath": "game",
+        "description": "game",
+        "peekOfCode": "ball = Ball(paddle)\nPAUSE = Pause(False)\nscene.set_init_array(1)\nball.start_throw(paddle)\nFLAG = Level_change_flag(False)\nif(0 != landing_page):\n    while True:\n        input = input_to(getinp,scene.speed)\n        if(input=='q' or input==\"Q\"):\n            quitmsg()",
+        "detail": "game",
+        "documentation": {}
+    },
+    {
+        "label": "PAUSE",
+        "kind": 5,
+        "importPath": "game",
+        "description": "game",
+        "peekOfCode": "PAUSE = Pause(False)\nscene.set_init_array(1)\nball.start_throw(paddle)\nFLAG = Level_change_flag(False)\nif(0 != landing_page):\n    while True:\n        input = input_to(getinp,scene.speed)\n        if(input=='q' or input==\"Q\"):\n            quitmsg()\n            break",
+        "detail": "game",
+        "documentation": {}
+    },
+    {
+        "label": "FLAG",
+        "kind": 5,
+        "importPath": "game",
+        "description": "game",
+        "peekOfCode": "FLAG = Level_change_flag(False)\nif(0 != landing_page):\n    while True:\n        input = input_to(getinp,scene.speed)\n        if(input=='q' or input==\"Q\"):\n            quitmsg()\n            break\n        if(input=='p' or input==\"P\" and PAUSE.return_val() == False):\n            PAUSE.toggle_pause()\n            pausedmsg(score.return_val(),clock.return_val())",
+        "detail": "game",
+        "documentation": {}
+    },
+    {
         "label": "Get",
         "kind": 6,
         "importPath": "getch",
@@ -431,107 +530,8 @@
         "kind": 5,
         "importPath": "levelsetup",
         "description": "levelsetup",
-        "peekOfCode": "levelpow = [\n            [[0,0,0,0,0,0,0,0,0,0,0,0,0],\n            [0,0,0,0,0,0,0,0,0,0,0,0,0],\n            [0,0,0,0,0,0,0,0,0,0,0,0,0],\n            [0,0,0,0,0,0,0,0,0,0,0,0,0],\n            [0,0,0,0,0,0,0,0,0,0,0,0,0],\n            [3,0,6,0,2,0,0,0,1,0,5,0,4]]\n           ]\ndef return_init_array(level):\n    level = int(level)",
+        "peekOfCode": "levelpow = [\n            [[0,0,0,0,0,0,0,0,0,0,0,0,0],\n            [0,0,0,0,0,0,0,0,0,0,0,0,0],\n            [0,0,0,0,0,0,0,0,0,0,0,0,0],\n            [0,0,0,0,0,0,0,0,0,0,0,0,0],\n            [0,0,0,0,0,0,0,0,0,0,0,0,0],\n            [3,0,6,0,2,0,0,0,1,0,5,0,4]],\n           ]\ndef return_init_array(level):\n    level = int(level)",
         "detail": "levelsetup",
-        "documentation": {}
-    },
-    {
-        "label": "landing_page",
-        "kind": 5,
-        "importPath": "main",
-        "description": "main",
-        "peekOfCode": "landing_page = landing_page()\ngetinp = Get()\nscene = Scene(SPEED)\npaddle = Paddle()\nclock = Time(0)\nscore = Score(0)\nlevel = Level(1)\nlives = Lives(1) \nball = Ball(paddle)\nPAUSE = Pause(False)",
-        "detail": "main",
-        "documentation": {}
-    },
-    {
-        "label": "getinp",
-        "kind": 5,
-        "importPath": "main",
-        "description": "main",
-        "peekOfCode": "getinp = Get()\nscene = Scene(SPEED)\npaddle = Paddle()\nclock = Time(0)\nscore = Score(0)\nlevel = Level(1)\nlives = Lives(1) \nball = Ball(paddle)\nPAUSE = Pause(False)\nscene.set_init_array(1)",
-        "detail": "main",
-        "documentation": {}
-    },
-    {
-        "label": "scene",
-        "kind": 5,
-        "importPath": "main",
-        "description": "main",
-        "peekOfCode": "scene = Scene(SPEED)\npaddle = Paddle()\nclock = Time(0)\nscore = Score(0)\nlevel = Level(1)\nlives = Lives(1) \nball = Ball(paddle)\nPAUSE = Pause(False)\nscene.set_init_array(1)\nball.start_throw(paddle)",
-        "detail": "main",
-        "documentation": {}
-    },
-    {
-        "label": "paddle",
-        "kind": 5,
-        "importPath": "main",
-        "description": "main",
-        "peekOfCode": "paddle = Paddle()\nclock = Time(0)\nscore = Score(0)\nlevel = Level(1)\nlives = Lives(1) \nball = Ball(paddle)\nPAUSE = Pause(False)\nscene.set_init_array(1)\nball.start_throw(paddle)\nFLAG = Level_change_flag(False)",
-        "detail": "main",
-        "documentation": {}
-    },
-    {
-        "label": "clock",
-        "kind": 5,
-        "importPath": "main",
-        "description": "main",
-        "peekOfCode": "clock = Time(0)\nscore = Score(0)\nlevel = Level(1)\nlives = Lives(1) \nball = Ball(paddle)\nPAUSE = Pause(False)\nscene.set_init_array(1)\nball.start_throw(paddle)\nFLAG = Level_change_flag(False)\nif(0 != landing_page):",
-        "detail": "main",
-        "documentation": {}
-    },
-    {
-        "label": "score",
-        "kind": 5,
-        "importPath": "main",
-        "description": "main",
-        "peekOfCode": "score = Score(0)\nlevel = Level(1)\nlives = Lives(1) \nball = Ball(paddle)\nPAUSE = Pause(False)\nscene.set_init_array(1)\nball.start_throw(paddle)\nFLAG = Level_change_flag(False)\nif(0 != landing_page):\n    while True:",
-        "detail": "main",
-        "documentation": {}
-    },
-    {
-        "label": "level",
-        "kind": 5,
-        "importPath": "main",
-        "description": "main",
-        "peekOfCode": "level = Level(1)\nlives = Lives(1) \nball = Ball(paddle)\nPAUSE = Pause(False)\nscene.set_init_array(1)\nball.start_throw(paddle)\nFLAG = Level_change_flag(False)\nif(0 != landing_page):\n    while True:\n        input = input_to(getinp,scene.speed)",
-        "detail": "main",
-        "documentation": {}
-    },
-    {
-        "label": "lives",
-        "kind": 5,
-        "importPath": "main",
-        "description": "main",
-        "peekOfCode": "lives = Lives(1) \nball = Ball(paddle)\nPAUSE = Pause(False)\nscene.set_init_array(1)\nball.start_throw(paddle)\nFLAG = Level_change_flag(False)\nif(0 != landing_page):\n    while True:\n        input = input_to(getinp,scene.speed)\n        if(input=='q' or input==\"Q\"):",
-        "detail": "main",
-        "documentation": {}
-    },
-    {
-        "label": "ball",
-        "kind": 5,
-        "importPath": "main",
-        "description": "main",
-        "peekOfCode": "ball = Ball(paddle)\nPAUSE = Pause(False)\nscene.set_init_array(1)\nball.start_throw(paddle)\nFLAG = Level_change_flag(False)\nif(0 != landing_page):\n    while True:\n        input = input_to(getinp,scene.speed)\n        if(input=='q' or input==\"Q\"):\n            quitmsg()",
-        "detail": "main",
-        "documentation": {}
-    },
-    {
-        "label": "PAUSE",
-        "kind": 5,
-        "importPath": "main",
-        "description": "main",
-        "peekOfCode": "PAUSE = Pause(False)\nscene.set_init_array(1)\nball.start_throw(paddle)\nFLAG = Level_change_flag(False)\nif(0 != landing_page):\n    while True:\n        input = input_to(getinp,scene.speed)\n        if(input=='q' or input==\"Q\"):\n            quitmsg()\n            break",
-        "detail": "main",
-        "documentation": {}
-    },
-    {
-        "label": "FLAG",
-        "kind": 5,
-        "importPath": "main",
-        "description": "main",
-        "peekOfCode": "FLAG = Level_change_flag(False)\nif(0 != landing_page):\n    while True:\n        input = input_to(getinp,scene.speed)\n        if(input=='q' or input==\"Q\"):\n            quitmsg()\n            break\n        if(input=='p' or input==\"P\" and PAUSE.return_val() == False):\n            PAUSE.toggle_pause()\n            pausedmsg(score.return_val(),clock.return_val())",
-        "detail": "main",
         "documentation": {}
     },
     {
@@ -611,7 +611,7 @@
         "kind": 6,
         "importPath": "scoreoard",
         "description": "scoreoard",
-        "peekOfCode": "class Time(ScoreBoard):\n    def update_val(self,delta,scene):\n        self.val = self.val + delta\n        # self.add_in_scene(scene)\n    def return_val(self):\n        return math.floor(self.val)\n    def return_value(self):\n        return self.val\n    def add_in_scene(self,scene):\n        temp = str(self.val)",
+        "peekOfCode": "class Time(ScoreBoard):\n    def update_val(self,delta,scene):\n        self.val = self.val + delta\n    def return_val(self):\n        return math.floor(self.val)\n    def return_value(self):\n        return self.val\n    def add_in_scene(self,scene):\n        temp = str(self.val)\n        for i in range(0,len(temp)):",
         "detail": "scoreoard",
         "documentation": {}
     },
@@ -620,7 +620,7 @@
         "kind": 6,
         "importPath": "scoreoard",
         "description": "scoreoard",
-        "peekOfCode": "class Score(ScoreBoard):\n    def update_val(self,ss):\n        self.val = self.val + ss*10\n        # self.add_in_scene(scene)\n    def add_in_scene(self,scene):\n        temp = str(self.val)\n        for i in range(0,len(temp)):\n            scene.matrix[6][84+i]=temp[i]\nclass Pause(ScoreBoard):\n    def toggle_pause(self):",
+        "peekOfCode": "class Score(ScoreBoard):\n    def update_val(self,ss):\n        self.val = self.val + ss*10\n    def add_in_scene(self,scene):\n        temp = str(self.val)\n        for i in range(0,len(temp)):\n            scene.matrix[6][84+i]=temp[i]\nclass Pause(ScoreBoard):\n    def toggle_pause(self):\n        if(self.val == True):",
         "detail": "scoreoard",
         "documentation": {}
     },
@@ -629,7 +629,7 @@
         "kind": 6,
         "importPath": "scoreoard",
         "description": "scoreoard",
-        "peekOfCode": "class Pause(ScoreBoard):\n    def toggle_pause(self):\n        if(self.val == True):\n            self.val = False\n        else : \n            self.val = True\nclass Level(ScoreBoard):\n    def update_val(self,scene):\n        self.val = self.val + 1\n        # self.add_in_scene(scene)",
+        "peekOfCode": "class Pause(ScoreBoard):\n    def toggle_pause(self):\n        if(self.val == True):\n            self.val = False\n        else : \n            self.val = True\nclass Level(ScoreBoard):\n    def update_val(self,scene):\n        self.val = self.val + 1\n    def add_in_scene(self,scene):",
         "detail": "scoreoard",
         "documentation": {}
     },
@@ -638,7 +638,7 @@
         "kind": 6,
         "importPath": "scoreoard",
         "description": "scoreoard",
-        "peekOfCode": "class Level(ScoreBoard):\n    def update_val(self,scene):\n        self.val = self.val + 1\n        # self.add_in_scene(scene)\n    def add_in_scene(self,scene):\n        temp = str(self.val)\n        for i in range(0,len(temp)):\n            scene.matrix[6][55+i]=temp[i]\nclass Level_change_flag(ScoreBoard):\n    def set_val(self,t):",
+        "peekOfCode": "class Level(ScoreBoard):\n    def update_val(self,scene):\n        self.val = self.val + 1\n    def add_in_scene(self,scene):\n        temp = str(self.val)\n        for i in range(0,len(temp)):\n            scene.matrix[6][55+i]=temp[i]\nclass Level_change_flag(ScoreBoard):\n    def set_val(self,t):\n        self.val = t",
         "detail": "scoreoard",
         "documentation": {}
     },
