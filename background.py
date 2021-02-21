@@ -35,7 +35,7 @@ class Scene:
     def power_puff(self,tieme,ppadle,bball):
         for pp in self.powers:
             if(pp.active == True): 
-                if((pp.starteff+10) < tieme and pp.starteff !=0):
+                if((pp.starteff+ (10*self.speed)) < tieme and pp.starteff !=0):
                     pp.restore(self,ppadle,bball)
         return True
     

@@ -29,6 +29,8 @@ A terminal based implementation that tries to simulate the classic DX-Ball game 
 + Powerup balls vertically downward and can be collected by paddle 
 + Ball speed changes in x according to point of contaact on paddle
 + `Yellow` brick explodes in chain and also expoldes all surrounded bricks
++ `White` brick is unbreakable 
+
 ### Bricks Strength
 + <kbd>CYAN</kbd> : 1 strength
 + <kbd>Blue</kbd> : 2 strength
@@ -81,3 +83,6 @@ Some function are added and some are changed in inherited class `Scoreboard`
 The entire game is modelled using classes and objects which encapsulate logically different entities.
 ### Abstraction
 Things like `scene.generate(...)`, `ball.collison_check(...)`, `ball.move()`, `paddle.move_left()`, `paddle.move_right()` and many more function are used in abstracted way 
+
+## Extra
+Initial value can be changed in `config.py`
