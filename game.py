@@ -18,7 +18,7 @@ paddle = Paddle()
 clock = Time(0)
 score = Score(0)
 level = Level(1)
-lives = Lives(1) 
+lives = Lives(LIVES) 
 ball = Ball(paddle)
 PAUSE = Pause(False)
 scene.set_init_array(1)
@@ -57,9 +57,11 @@ if(0 != landing_page):
             
         if((input =='z' or (score.return_val()>=1130)) and level.return_val()==1):
             FLAG.set_val(True)
+            score.set_val(1130)
             
         if((input =='z' or score.return_val()>=2380 )and (level.return_val()==2)):
             gameover(score.return_val(),clock.return_val())
+            score.set_val(2380)
             break
             
         if(lives.return_val()==0):

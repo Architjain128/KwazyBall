@@ -34,6 +34,9 @@ class Score(ScoreBoard):
     def update_val(self,ss):
         self.val = self.val + ss*10
         
+    def set_val(self,ss):
+        self.val  = ss
+    
     def add_in_scene(self,scene):
         temp = str(self.val)
         for i in range(0,len(temp)):

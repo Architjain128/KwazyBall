@@ -9,6 +9,7 @@ MATRIX_WIDTH = 85
 MATRIX_LENGTH = 30
 
 SPEED = 1
+LIVES = 3
 
 # color escape sequences
 colors = {

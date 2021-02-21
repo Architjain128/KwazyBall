@@ -66,13 +66,17 @@ Each disables after for  10 seconds
     , `Score`
     and `Pause` are inherited classes of `Scoreboard`
 ### Polymorphism
-Some function are added and some are changed in inherited class
-+ `sub_life()`, `add_life()` and add_in_scene() function in `Lives`
-+ `update_val(...)`, return_val()`,`return_value()` in `Time`
-+ `update_val(...)` and `add_in_scene(...)` in `Score`
-+ `toggle_pause()` in `Pause`
-+ `update_val()` and `add_in_scene(...)` in `Level`
-+ `set_val(...)` in `Level_change_flag`
+Some function are added and some are changed in inherited class `Scoreboard`
++ Added
+    + `sub_life()`, `add_life()` and `add_in_scene()` function in `Lives`
+    + `update_val(...)`and `return_value()` function in `Time`
+    + `update_val(...)` and `add_in_scene(...)` function in `Score`
+    + `toggle_pause()` in `Pause`
+    + `update_val()` and `add_in_scene(...)` function  in `Level`
+    + `set_val(...)`  function in `Level_change_flag`
++ Changed
+    + `return_val()`  function in `Time`
+
 ### Encapsulation
 The entire game is modelled using classes and objects which encapsulate logically different entities.
 ### Abstraction

@@ -305,7 +305,7 @@
         "kind": 5,
         "importPath": "config",
         "description": "config",
-        "peekOfCode": "MATRIX_WIDTH = 85\nMATRIX_LENGTH = 30\nSPEED = 1\n# color escape sequences\ncolors = {\n    'Blue': '\\x1b[0;34m',\n    'Green': '\\x1b[0;32m',\n    'Cyan': '\\x1b[0;36m',\n    'Red': '\\x1b[0;31m',\n    'Purple': '\\x1b[0;35m',",
+        "peekOfCode": "MATRIX_WIDTH = 85\nMATRIX_LENGTH = 30\nSPEED = 1\nLIVES = 3\n# color escape sequences\ncolors = {\n    'Blue': '\\x1b[0;34m',\n    'Green': '\\x1b[0;32m',\n    'Cyan': '\\x1b[0;36m',\n    'Red': '\\x1b[0;31m',",
         "detail": "config",
         "documentation": {}
     },
@@ -314,7 +314,7 @@
         "kind": 5,
         "importPath": "config",
         "description": "config",
-        "peekOfCode": "MATRIX_LENGTH = 30\nSPEED = 1\n# color escape sequences\ncolors = {\n    'Blue': '\\x1b[0;34m',\n    'Green': '\\x1b[0;32m',\n    'Cyan': '\\x1b[0;36m',\n    'Red': '\\x1b[0;31m',\n    'Purple': '\\x1b[0;35m',\n    'Brown': '\\x1b[0;33m',",
+        "peekOfCode": "MATRIX_LENGTH = 30\nSPEED = 1\nLIVES = 3\n# color escape sequences\ncolors = {\n    'Blue': '\\x1b[0;34m',\n    'Green': '\\x1b[0;32m',\n    'Cyan': '\\x1b[0;36m',\n    'Red': '\\x1b[0;31m',\n    'Purple': '\\x1b[0;35m',",
         "detail": "config",
         "documentation": {}
     },
@@ -323,7 +323,16 @@
         "kind": 5,
         "importPath": "config",
         "description": "config",
-        "peekOfCode": "SPEED = 1\n# color escape sequences\ncolors = {\n    'Blue': '\\x1b[0;34m',\n    'Green': '\\x1b[0;32m',\n    'Cyan': '\\x1b[0;36m',\n    'Red': '\\x1b[0;31m',\n    'Purple': '\\x1b[0;35m',\n    'Brown': '\\x1b[0;33m',\n    'Gray': '\\x1b[0;37m',",
+        "peekOfCode": "SPEED = 1\nLIVES = 3\n# color escape sequences\ncolors = {\n    'Blue': '\\x1b[0;34m',\n    'Green': '\\x1b[0;32m',\n    'Cyan': '\\x1b[0;36m',\n    'Red': '\\x1b[0;31m',\n    'Purple': '\\x1b[0;35m',\n    'Brown': '\\x1b[0;33m',",
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "LIVES",
+        "kind": 5,
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "LIVES = 3\n# color escape sequences\ncolors = {\n    'Blue': '\\x1b[0;34m',\n    'Green': '\\x1b[0;32m',\n    'Cyan': '\\x1b[0;36m',\n    'Red': '\\x1b[0;31m',\n    'Purple': '\\x1b[0;35m',\n    'Brown': '\\x1b[0;33m',\n    'Gray': '\\x1b[0;37m',",
         "detail": "config",
         "documentation": {}
     },
@@ -359,7 +368,7 @@
         "kind": 5,
         "importPath": "game",
         "description": "game",
-        "peekOfCode": "landing_page = landing_page()\ngetinp = Get()\nscene = Scene(SPEED)\npaddle = Paddle()\nclock = Time(0)\nscore = Score(0)\nlevel = Level(1)\nlives = Lives(1) \nball = Ball(paddle)\nPAUSE = Pause(False)",
+        "peekOfCode": "landing_page = landing_page()\ngetinp = Get()\nscene = Scene(SPEED)\npaddle = Paddle()\nclock = Time(0)\nscore = Score(0)\nlevel = Level(1)\nlives = Lives(LIVES) \nball = Ball(paddle)\nPAUSE = Pause(False)",
         "detail": "game",
         "documentation": {}
     },
@@ -368,7 +377,7 @@
         "kind": 5,
         "importPath": "game",
         "description": "game",
-        "peekOfCode": "getinp = Get()\nscene = Scene(SPEED)\npaddle = Paddle()\nclock = Time(0)\nscore = Score(0)\nlevel = Level(1)\nlives = Lives(1) \nball = Ball(paddle)\nPAUSE = Pause(False)\nscene.set_init_array(1)",
+        "peekOfCode": "getinp = Get()\nscene = Scene(SPEED)\npaddle = Paddle()\nclock = Time(0)\nscore = Score(0)\nlevel = Level(1)\nlives = Lives(LIVES) \nball = Ball(paddle)\nPAUSE = Pause(False)\nscene.set_init_array(1)",
         "detail": "game",
         "documentation": {}
     },
@@ -377,7 +386,7 @@
         "kind": 5,
         "importPath": "game",
         "description": "game",
-        "peekOfCode": "scene = Scene(SPEED)\npaddle = Paddle()\nclock = Time(0)\nscore = Score(0)\nlevel = Level(1)\nlives = Lives(1) \nball = Ball(paddle)\nPAUSE = Pause(False)\nscene.set_init_array(1)\nball.start_throw(paddle)",
+        "peekOfCode": "scene = Scene(SPEED)\npaddle = Paddle()\nclock = Time(0)\nscore = Score(0)\nlevel = Level(1)\nlives = Lives(LIVES) \nball = Ball(paddle)\nPAUSE = Pause(False)\nscene.set_init_array(1)\nball.start_throw(paddle)",
         "detail": "game",
         "documentation": {}
     },
@@ -386,7 +395,7 @@
         "kind": 5,
         "importPath": "game",
         "description": "game",
-        "peekOfCode": "paddle = Paddle()\nclock = Time(0)\nscore = Score(0)\nlevel = Level(1)\nlives = Lives(1) \nball = Ball(paddle)\nPAUSE = Pause(False)\nscene.set_init_array(1)\nball.start_throw(paddle)\nFLAG = Level_change_flag(False)",
+        "peekOfCode": "paddle = Paddle()\nclock = Time(0)\nscore = Score(0)\nlevel = Level(1)\nlives = Lives(LIVES) \nball = Ball(paddle)\nPAUSE = Pause(False)\nscene.set_init_array(1)\nball.start_throw(paddle)\nFLAG = Level_change_flag(False)",
         "detail": "game",
         "documentation": {}
     },
@@ -395,7 +404,7 @@
         "kind": 5,
         "importPath": "game",
         "description": "game",
-        "peekOfCode": "clock = Time(0)\nscore = Score(0)\nlevel = Level(1)\nlives = Lives(1) \nball = Ball(paddle)\nPAUSE = Pause(False)\nscene.set_init_array(1)\nball.start_throw(paddle)\nFLAG = Level_change_flag(False)\nif(0 != landing_page):",
+        "peekOfCode": "clock = Time(0)\nscore = Score(0)\nlevel = Level(1)\nlives = Lives(LIVES) \nball = Ball(paddle)\nPAUSE = Pause(False)\nscene.set_init_array(1)\nball.start_throw(paddle)\nFLAG = Level_change_flag(False)\nif(0 != landing_page):",
         "detail": "game",
         "documentation": {}
     },
@@ -404,7 +413,7 @@
         "kind": 5,
         "importPath": "game",
         "description": "game",
-        "peekOfCode": "score = Score(0)\nlevel = Level(1)\nlives = Lives(1) \nball = Ball(paddle)\nPAUSE = Pause(False)\nscene.set_init_array(1)\nball.start_throw(paddle)\nFLAG = Level_change_flag(False)\nif(0 != landing_page):\n    while True:",
+        "peekOfCode": "score = Score(0)\nlevel = Level(1)\nlives = Lives(LIVES) \nball = Ball(paddle)\nPAUSE = Pause(False)\nscene.set_init_array(1)\nball.start_throw(paddle)\nFLAG = Level_change_flag(False)\nif(0 != landing_page):\n    while True:",
         "detail": "game",
         "documentation": {}
     },
@@ -413,7 +422,7 @@
         "kind": 5,
         "importPath": "game",
         "description": "game",
-        "peekOfCode": "level = Level(1)\nlives = Lives(1) \nball = Ball(paddle)\nPAUSE = Pause(False)\nscene.set_init_array(1)\nball.start_throw(paddle)\nFLAG = Level_change_flag(False)\nif(0 != landing_page):\n    while True:\n        input = input_to(getinp,scene.speed)",
+        "peekOfCode": "level = Level(1)\nlives = Lives(LIVES) \nball = Ball(paddle)\nPAUSE = Pause(False)\nscene.set_init_array(1)\nball.start_throw(paddle)\nFLAG = Level_change_flag(False)\nif(0 != landing_page):\n    while True:\n        input = input_to(getinp,scene.speed)",
         "detail": "game",
         "documentation": {}
     },
@@ -422,7 +431,7 @@
         "kind": 5,
         "importPath": "game",
         "description": "game",
-        "peekOfCode": "lives = Lives(1) \nball = Ball(paddle)\nPAUSE = Pause(False)\nscene.set_init_array(1)\nball.start_throw(paddle)\nFLAG = Level_change_flag(False)\nif(0 != landing_page):\n    while True:\n        input = input_to(getinp,scene.speed)\n        if(input=='q' or input==\"Q\"):",
+        "peekOfCode": "lives = Lives(LIVES) \nball = Ball(paddle)\nPAUSE = Pause(False)\nscene.set_init_array(1)\nball.start_throw(paddle)\nFLAG = Level_change_flag(False)\nif(0 != landing_page):\n    while True:\n        input = input_to(getinp,scene.speed)\n        if(input=='q' or input==\"Q\"):",
         "detail": "game",
         "documentation": {}
     },
@@ -530,7 +539,7 @@
         "kind": 5,
         "importPath": "levelsetup",
         "description": "levelsetup",
-        "peekOfCode": "levelpow = [\n            [[0,0,0,0,0,0,0,0,0,0,0,0,0],\n            [0,0,0,0,0,0,0,0,0,0,0,0,0],\n            [0,0,0,0,0,0,0,0,0,0,0,0,0],\n            [0,0,0,0,0,0,0,0,0,0,0,0,0],\n            [0,0,0,0,0,0,0,0,0,0,0,0,0],\n            [3,0,6,0,2,0,0,0,1,0,5,0,4]],\n           ]\ndef return_init_array(level):\n    level = int(level)",
+        "peekOfCode": "levelpow =  [\n            [[0,0,0,0,0,0,0,0,0,0,0,0,0],\n            [0,0,0,0,0,0,0,0,0,0,0,0,0],\n            [0,0,0,0,0,0,0,0,0,0,0,0,0],\n            [0,0,0,0,0,0,0,0,0,0,0,0,0],\n            [0,0,0,0,0,0,0,0,0,0,0,0,0],\n            [3,0,6,0,2,0,0,0,1,0,5,0,4]],\n            ]\ndef return_init_array(level):\n    level = int(level)",
         "detail": "levelsetup",
         "documentation": {}
     },
@@ -620,7 +629,7 @@
         "kind": 6,
         "importPath": "scoreoard",
         "description": "scoreoard",
-        "peekOfCode": "class Score(ScoreBoard):\n    def update_val(self,ss):\n        self.val = self.val + ss*10\n    def add_in_scene(self,scene):\n        temp = str(self.val)\n        for i in range(0,len(temp)):\n            scene.matrix[6][84+i]=temp[i]\nclass Pause(ScoreBoard):\n    def toggle_pause(self):\n        if(self.val == True):",
+        "peekOfCode": "class Score(ScoreBoard):\n    def update_val(self,ss):\n        self.val = self.val + ss*10\n    def set_val(self,ss):\n        self.val  = ss\n    def add_in_scene(self,scene):\n        temp = str(self.val)\n        for i in range(0,len(temp)):\n            scene.matrix[6][84+i]=temp[i]\nclass Pause(ScoreBoard):",
         "detail": "scoreoard",
         "documentation": {}
     },
