@@ -90,6 +90,54 @@
         "documentation": {}
     },
     {
+        "label": "RESET",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "SPEED",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "RESET",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "SPEED",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
         "label": "*",
         "importPath": "config",
         "description": "config",
@@ -164,6 +212,22 @@
         "documentation": {}
     },
     {
+        "label": "*",
+        "importPath": "powerup",
+        "description": "powerup",
+        "isExtraImport": true,
+        "detail": "powerup",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "powerup",
+        "description": "powerup",
+        "isExtraImport": true,
+        "detail": "powerup",
+        "documentation": {}
+    },
+    {
         "label": "gameover",
         "importPath": "messages",
         "description": "messages",
@@ -181,6 +245,22 @@
     },
     {
         "label": "*",
+        "importPath": "messages",
+        "description": "messages",
+        "isExtraImport": true,
+        "detail": "messages",
+        "documentation": {}
+    },
+    {
+        "label": "gameover",
+        "importPath": "messages",
+        "description": "messages",
+        "isExtraImport": true,
+        "detail": "messages",
+        "documentation": {}
+    },
+    {
+        "label": "gameover",
         "importPath": "messages",
         "description": "messages",
         "isExtraImport": true,
@@ -585,6 +665,42 @@
         "description": "messages",
         "peekOfCode": "def pausedmsg(SCORE,TIME):\n    os.system('clear')\n    print(\"\\n\\n\\n\")\n    print(Fore.BLUE + \" \"*20 + '''\n                            8888888b.                                          888      \n                            888   Y88b                                         888      \n                            888    888                                         888      \n                            888   d88P 8888b.  888  888 .d8888b   .d88b.   .d88888      \n                            8888888P\"     \"88b 888  888 88K      d8P  Y8b d88\" 888      \n                            888       .d888888 888  888 \"Y8888b. 88888888 888  888      ",
         "detail": "messages",
+        "documentation": {}
+    },
+    {
+        "label": "Ball",
+        "kind": 6,
+        "importPath": "oh",
+        "description": "oh",
+        "peekOfCode": "class Ball:\n    def __init__(self,ppadle):\n        self.die = False\n        self.spread = False\n        self.spread_time = False\n        self.shrink = False\n        self.shrink_time = False\n        self.thruball = False\n        self.thruball_time = False\n        self.sticky = False",
+        "detail": "oh",
+        "documentation": {}
+    },
+    {
+        "label": "check_buddy",
+        "kind": 2,
+        "importPath": "oh",
+        "description": "oh",
+        "peekOfCode": "def check_buddy(ok):\n    if(ok>=0 and ok<=5):\n        return True\n    return False\nclass Ball:\n    def __init__(self,ppadle):\n        self.die = False\n        self.spread = False\n        self.spread_time = False\n        self.shrink = False",
+        "detail": "oh",
+        "documentation": {}
+    },
+    {
+        "label": "Ball",
+        "kind": 6,
+        "importPath": "ohlb",
+        "description": "ohlb",
+        "peekOfCode": "class Ball:\n    def __init__(self,ppadle):\n        self.die = False\n        self.spread = False\n        self.spread_time = False\n        self.shrink = False\n        self.shrink_time = False\n        self.thruball = False\n        self.thruball_time = False\n        self.sticky = False",
+        "detail": "ohlb",
+        "documentation": {}
+    },
+    {
+        "label": "check_buddy",
+        "kind": 2,
+        "importPath": "ohlb",
+        "description": "ohlb",
+        "peekOfCode": "def check_buddy(ok):\n    if(ok>=0 and ok<=5):\n        return True\n    return False\nclass Ball:\n    def __init__(self,ppadle):\n        self.die = False\n        self.spread = False\n        self.spread_time = False\n        self.shrink = False",
+        "detail": "ohlb",
         "documentation": {}
     },
     {

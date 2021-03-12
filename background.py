@@ -48,7 +48,7 @@ class Scene:
     def tickCurTime(self):
         self.curTime = self.curTime + self.speed
     
-    def falling_Sky(self,sc,ti):
+    def falling_Sky(self,bball,sc,ti):
         # check on last line
         flsum = True
         for x in self.matrix[16]:
@@ -62,7 +62,9 @@ class Scene:
             a= [0,0,0,0,0,0,0,0,0,0,0,0,0]
             self.matrix.insert(0, a)
             self.matrix.pop()
-            self.skyfallcounter = self.skyfallcounter + 1 
+            self.skyfallcounter = self.skyfallcounter + 1
+            bball.lb = bball.lb + 1
+            bball.ub = bball.ub + 1
         
         # if fail life ovwe
         # else isert at top in booth array

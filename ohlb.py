@@ -1091,7 +1091,7 @@ class Ball:
                     self.speedx = -1
                 self.speedy = -1 * self.speedy
                 if(sscene.skyfall==True):
-                    sscene.falling_Sky(self,sscore.return_val(),cclock.return_val())
+                    sscene.falling_Sky(sscore.return_val(),cclock.return_val())
         return True
     
     def collision_paddle2(self,ppadle):
