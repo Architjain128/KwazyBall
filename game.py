@@ -30,7 +30,7 @@ if(0 != landing_page):
         
         input = input_to(getinp,scene.speed)
         
-        if(input=='q' or input=="Q"):
+        if(input=='q' or input=="Q" or scene.kill == True):
             quitmsg()
             break
         
@@ -74,10 +74,12 @@ if(0 != landing_page):
         
         if(PAUSE.return_val()==False):
             clock.update_val(scene.speed,scene)
+            scene.tickCurTime()
             if(FLAG.return_val()==True):
                 level.update_val(scene)
                 scene.set_init_array(level.return_val())
                 ball.start_throw(paddle)
+                scene.setcurTime(0)
                 FLAG.set_val(False)
             scene.generate_screen(clock,level,lives,score,paddle,ball)
     
