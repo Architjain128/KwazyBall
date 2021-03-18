@@ -90,7 +90,7 @@ class Ball:
             self.speedy = -1
             self.speedx = 0 + (((ppadle.x - self.x)//3)-ppadle.scale+1)
     
-    def collision_check(self,archit,archit_power,powers,sscore,llives,ppadle,cclock):
+    def collision_check(self,archit,archit_power,powers,sscore,llives,ppadle,cclock,ran_archit):
         # wall check
         # if(self.x == 5 and self.speedx < 0):
         #     self.speedx =  -1 * self.speedx 
@@ -142,6 +142,8 @@ class Ball:
                         if(archit[self.y-self.lb][(t-4)//5] != 10):
                             if(archit[self.y-self.lb][(t-4)//5] == -1):
                                 sscore.update_val( self.chickibum(self.y-self.lb,archit))
+                            elif(archit[self.y-self.lb][(t-4)//5] == 7):
+                                archit[self.y-self.lb][(t-4)//5]=ran_archit
                             else:
                                 if(self.thruball==True):
                                     sscore.update_val(archit[self.y-self.lb][(t-4)//5])
@@ -155,6 +157,8 @@ class Ball:
                         if(archit[self.y-(1+self.lb)][((t-4)//5)-1] != 10):
                             if(archit[self.y-(1+self.lb)][((t-4)//5)-1] == -1):
                                 sscore.update_val( self.chickibum(self.y-(1+self.lb),archit))
+                            elif(archit[self.y-(1+self.lb)][((t-4)//5)-1] == 7):
+                                archit[self.y-(1+self.lb)][((t-4)//5)-1] = ran_archit
                             else:
                                 if(self.thruball==True):
                                     sscore.update_val(archit[self.y-(1+self.lb)][((t-4)//5)-1] )
@@ -171,6 +175,8 @@ class Ball:
                         if(archit[self.y-self.lb][(t-4)//5]!=10):
                             if(archit[self.y-self.lb][(t-4)//5] == -1):
                                 sscore.update_val( self.chickibum(self.y-self.lb,archit))
+                            elif(archit[self.y-self.lb][(t-4)//5] == 7):
+                                archit[self.y-self.lb][(t-4)//5] = ran_archit
                             else:
                                 if(self.thruball==True):
                                     sscore.update_val(archit[self.y-self.lb][((t-4)//5)] )
@@ -187,6 +193,8 @@ class Ball:
                         if(archit[self.y-(1+self.lb)][((t-4)//5)-1] != 10):
                             if(archit[self.y-(1+self.lb)][((t-4)//5)-1] == -1):
                                 sscore.update_val( self.chickibum(self.y-(1+self.lb),archit))
+                            elif(archit[self.y-(1+self.lb)][((t-4)//5)-1] == 7):
+                                archit[self.y-(1+self.lb)][((t-4)//5)-1] = ran_archit
                             else:
                                 if(self.thruball==True):
                                     sscore.update_val(archit[self.y-(1+self.lb)][((t-4)//5)-1] )
@@ -204,6 +212,8 @@ class Ball:
                             if(archit[self.y-(1+self.lb)][((t-4)//5)]!=10):
                                 if(archit[self.y-(1+self.lb)][(t-4)//5] == -1):
                                     sscore.update_val( self.chickibum(self.y-(1+self.lb),archit))
+                                elif(archit[self.y-(1+self.lb)][(t-4)//5] == 7):
+                                    archit[self.y-(1+self.lb)][(t-4)//5] = ran_archit
                                 else:
                                     if(self.thruball==True):
                                         sscore.update_val(archit[self.y-(1+self.lb)][((t-4)//5)] )
@@ -221,6 +231,8 @@ class Ball:
                         if(archit[self.y-(1+self.lb)][(t-9)//5]!=10):
                             if(archit[self.y-(1+self.lb)][(t-4)//5] == -1):
                                 sscore.update_val( self.chickibum(self.y-(1+self.lb),archit))
+                            elif(archit[self.y-(1+self.lb)][(t-4)//5] == 7):
+                                archit[self.y-(1+self.lb)][(t-4)//5] = ran_archit
                             else:
                                 if(self.thruball==True):
                                     sscore.update_val(archit[self.y-(1+self.lb)][((t-9)//5)] )
@@ -232,7 +244,6 @@ class Ball:
                                     powers.append(Power((t-9)//5,self.y-(1+self.lb),archit_power[self.y-(1+self.lb)][(t-9)//5],cclock.return_val()))
                         if(self.thruball == False):
                             self.speedy = -1 * self.speedy
-
             elif(self.speedx < 0 ):
                 t = self.x + self.speedx + 1 
                 if(t%5==4 and t>9):
@@ -247,6 +258,8 @@ class Ball:
                         if(archit[self.y-self.lb][((t-14)//5)]!=10):
                             if(archit[self.y-self.lb][((t-14)//5)] == -1):
                                 sscore.update_val( self.chickibum(self.y-self.lb,archit))
+                            elif(archit[self.y-(1+self.lb)][(t-4)//5] == 7):
+                                archit[self.y-(1+self.lb)][(t-4)//5] = ran_archit
                             else:
                                 if(self.thruball==True):
                                     sscore.update_val(archit[self.y-self.lb][((t-14)//5)] )
@@ -260,6 +273,8 @@ class Ball:
                         if(archit[self.y-(1+self.lb)][(t-9)//5]!=10):
                             if(archit[self.y-(1+self.lb)][(t-9)//5] == -1):
                                 sscore.update_val( self.chickibum(self.y-(1+self.lb),archit))
+                            elif(archit[self.y-(1+self.lb)][(t-4)//5] == 7):
+                                archit[self.y-(1+self.lb)][(t-4)//5] = ran_archit
                             else:
                                 if(self.thruball==True):
                                     sscore.update_val(archit[self.y-(1+self.lb)][((t-9)//5)-1] )
@@ -277,6 +292,8 @@ class Ball:
                         if(archit[self.y-self.lb][((t-14)//5)]!=10):
                             if(archit[self.y-self.lb][((t-14)//5)] == -1):
                                 sscore.update_val( self.chickibum(self.y-self.lb,archit))
+                            elif(archit[self.y-(1+self.lb)][(t-4)//5] == 7):
+                                archit[self.y-(1+self.lb)][(t-4)//5] = ran_archit
                             else:
                                 if(self.thruball==True):
                                     sscore.update_val(archit[self.y-self.lb][((t-14)//5)] )
@@ -292,6 +309,8 @@ class Ball:
                         if(archit[self.y-(1+self.lb)][(t-9)//5] != 10):
                             if(archit[self.y-(1+self.lb)][(t-9)//5] == -1):
                                 sscore.update_val( self.chickibum(self.y-(1+self.lb),archit))
+                            elif(archit[self.y-(1+self.lb)][(t-9)//5] == 7):
+                                archit[self.y-(1+self.lb)][(t-9)//5] = ran_archit
                             else:
                                 if(self.thruball==True):
                                     sscore.update_val(archit[self.y-(1+self.lb)][((t-9)//5)] )
@@ -308,6 +327,8 @@ class Ball:
                             if(archit[self.y-(1+self.lb)][((t-4)//5)-1]!=10):
                                 if(archit[self.y-(1+self.lb)][((t-4)//5)-1] == -1):
                                     sscore.update_val( self.chickibum(self.y-(1+self.lb),archit))
+                                elif(archit[self.y-(1+self.lb)][((t-4)//5)-1] == 7):
+                                    archit[self.y-(1+self.lb)][((t-4)//5)-1] = ran_archit
                                 else:
                                     if(self.thruball==True):
                                         sscore.update_val(archit[self.y-(1+self.lb)][((t-4)//5)-1] )
@@ -325,6 +346,8 @@ class Ball:
                         if(archit[self.y-(1+self.lb)][(t-9)//5]!=10):
                             if(archit[self.y-(1+self.lb)][(t-9)//5] == -1):
                                 sscore.update_val( self.chickibum(self.y-(1+self.lb),archit))
+                            elif(archit[self.y-(1+self.lb)][((t-4)//5)-1] == 7):
+                                archit[self.y-(1+self.lb)][((t-4)//5)-1] = ran_archit
                             else:
                                 if(self.thruball==True):
                                     sscore.update_val(archit[self.y-(1+self.lb)][((t-9)//5)] )
@@ -342,6 +365,8 @@ class Ball:
                     if(archit[self.y-(1+self.lb)][(t-9)//5]!=10):
                         if(archit[self.y-(1+self.lb)][(t-9)//5] == -1):
                             sscore.update_val( self.chickibum(self.y-(1+self.lb),archit))
+                        elif(archit[self.y-(1+self.lb)][((t-4)//5)-1] == 7):
+                            archit[self.y-(1+self.lb)][((t-4)//5)-1] = ran_archit
                         else:
                             if(self.thruball==True):
                                     sscore.update_val(archit[self.y-(1+self.lb)][((t-9)//5)] )
@@ -353,6 +378,7 @@ class Ball:
                                     powers.append(Power(((t-9)//5),self.y-(1+self.lb),archit_power[self.y-(1+self.lb)][((t-9)//5)],cclock.return_val()))
                     if(self.thruball == False):
                         self.speedy = -1 * self.speedy
+                    # print("wjdvbow", self.y ,self.lb)
 
 
         elif(self.speedy > 0):
@@ -371,6 +397,8 @@ class Ball:
                         if(archit[self.y-self.lb][(t-4)//5]!=10):
                             if(archit[self.y-self.lb][(t-4)//5] == -1):
                                 sscore.update_val( self.chickibum(self.y-self.lb,archit))
+                            elif(archit[self.y-self.lb][(t-4)//5] == 7):
+                                archit[self.y-self.lb][(t-4)//5] = ran_archit
                             else:
                                 if(self.thruball==True):
                                     sscore.update_val(archit[self.y-self.lb][((t-4)//5)] )
@@ -383,6 +411,8 @@ class Ball:
                         if(archit[self.y-(self.lb-1)][((t-4)//5)-1]!=10):
                             if(archit[self.y-(self.lb-1)][((t-4)//5)-1] == -1):
                                 sscore.update_val( self.chickibum(self.y-(self.lb-1),archit))
+                            elif(archit[self.y-(self.lb-1)][((t-4)//5)-1] == 7):
+                                archit[self.y-(self.lb-1)][((t-4)//5)-1] = ran_archit
                             else:
                                 if(self.thruball==True):
                                     sscore.update_val(archit[self.y-(self.lb-1)][((t-4)//5)-1] )
@@ -399,6 +429,8 @@ class Ball:
                         if(archit[self.y-self.lb][(t-4)//5]!=10):
                             if(archit[self.y-self.lb][(t-4)//5] == -1):
                                 sscore.update_val( self.chickibum(self.y-self.lb,archit))
+                            elif(archit[self.y-self.lb][(t-4)//5] == 7):
+                                archit[self.y-self.lb][(t-4)//5] = ran_archit
                             else:
                                 if(self.thruball==True):
                                     sscore.update_val(archit[self.y-self.lb][((t-4)//5)] )
@@ -414,6 +446,8 @@ class Ball:
                         if(archit[self.y-(self.lb-1)][((t-4)//5)-1]!=10):
                             if(archit[self.y-(self.lb-1)][((t-4)//5)-1] == -1):
                                 sscore.update_val( self.chickibum(self.y-(self.lb-1),archit))
+                            elif(archit[self.y-(self.lb-1)][((t-4)//5)-1] == 7):
+                                archit[self.y-(self.lb-1)][((t-4)//5)-1] = ran_archit
                             else:
                                 if(self.thruball==True):
                                     sscore.update_val(archit[self.y-(self.lb-1)][((t-4)//5)-1] )
@@ -430,6 +464,8 @@ class Ball:
                             if(archit[self.y-(self.lb-1)][((t-4)//5)]!=10):
                                 if(archit[self.y-(self.lb-1)][((t-4)//5)] == -1):
                                     sscore.update_val( self.chickibum(self.y-(self.lb-1),archit))
+                                elif(archit[self.y-(self.lb-1)][((t-4)//5)] == 7):
+                                    archit[self.y-(self.lb-1)][((t-4)//5)] = ran_archit
                                 else:
                                     if(self.thruball==True):
                                         sscore.update_val(archit[self.y-(self.lb-1)][((t-4)//5)] )
@@ -447,6 +483,8 @@ class Ball:
                         if(archit[self.y-(self.lb-1)][(t-9)//5]!=10):
                             if(archit[self.y-(self.lb-1)][(t-9)//5] == -1):
                                 sscore.update_val( self.chickibum(self.y-(self.lb-1),archit))
+                            elif(archit[self.y-(self.lb-1)][(t-9)//5] == 7):
+                                archit[self.y-(self.lb-1)][(t-9)//5] = ran_archit
                             else:
                                 if(self.thruball==True):
                                     sscore.update_val(archit[self.y-(self.lb-1)][((t-9)//5)] )
@@ -473,6 +511,8 @@ class Ball:
                         if(archit[self.y-self.lb][((t-14)//5)]!=10):
                             if(archit[self.y-self.lb][((t-14)//5)] == -1):
                                 sscore.update_val( self.chickibum(self.y-self.lb,archit))
+                            elif(archit[self.y-self.lb][((t-14)//5)] == 7):
+                                archit[self.y-self.lb][((t-14)//5)] = ran_archit
                             else:
                                 if(self.thruball==True):
                                     sscore.update_val(archit[self.y-self.lb][((t-14)//5)] )
@@ -485,6 +525,8 @@ class Ball:
                         if(archit[self.y-(self.lb-1)][(t-9)//5]!=10):
                             if(archit[self.y-(self.lb-1)][(t-9)//5] == -1):
                                 sscore.update_val( self.chickibum(self.y-(self.lb-1),archit))
+                            elif(archit[self.y-(self.lb-1)][(t-9)//5] == 7):
+                                archit[self.y-(self.lb-1)][(t-9)//5] = ran_archit
                             else:
                                 if(self.thruball==True):
                                     sscore.update_val(archit[self.y-(self.lb-1)][((t-9)//5)] )
@@ -501,6 +543,8 @@ class Ball:
                         if(archit[self.y-self.lb][((t-14)//5)]!=10):
                             if(archit[self.y-self.lb][((t-14)//5)] == -1):
                                 sscore.update_val( self.chickibum(self.y-self.lb,archit))
+                            elif(archit[self.y-self.lb][((t-14)//5)] == 7):
+                                archit[self.y-self.lb][((t-14)//5)] = ran_archit
                             else:
                                 if(self.thruball==True):
                                     sscore.update_val(archit[self.y-self.lb][((t-14)//5)] )
@@ -516,6 +560,8 @@ class Ball:
                         if(archit[self.y-(self.lb-1)][(t-9)//5]!=10):
                             if(archit[self.y-(self.lb-1)][(t-9)//5] == -1):
                                 sscore.update_val( self.chickibum(self.y-(self.lb-1),archit))
+                            elif(archit[self.y-(self.lb-1)][(t-9)//5] == 7):
+                                archit[self.y-(self.lb-1)][(t-9)//5] = ran_archit
                             else:
                                 if(self.thruball==True):
                                     sscore.update_val(archit[self.y-(self.lb-1)][((t-9)//5)] )
@@ -532,6 +578,8 @@ class Ball:
                             if(archit[self.y-(self.lb-1)][((t-4)//5)-1] !=10):
                                 if(archit[self.y-(self.lb-1)][((t-4)//5)-1] == -1):
                                     sscore.update_val( self.chickibum(self.y-(self.lb-1),archit))
+                                elif(archit[self.y-(self.lb-1)][((t-4)//5)-1] == 7):
+                                    archit[self.y-(self.lb-1)][((t-4)//5)-1] = ran_archit
                                 else:
                                     if(self.thruball==True):
                                         sscore.update_val(archit[self.y-(self.lb-1)][((t-4)//5)-1] )
@@ -549,6 +597,8 @@ class Ball:
                         if(archit[self.y-(self.lb-1)][(t-9)//5]!=10):
                             if(archit[self.y-(self.lb-1)][(t-9)//5] == -1):
                                 sscore.update_val( self.chickibum(self.y-(self.lb-1),archit))
+                            elif(archit[self.y-(self.lb-1)][(t-9)//5] == 7):
+                                archit[self.y-(self.lb-1)][(t-9)//5] = ran_archit
                             else:
                                 if(self.thruball==True):
                                     sscore.update_val(archit[self.y-(self.lb-1)][((t-9)//5)] )
@@ -566,6 +616,8 @@ class Ball:
                     if(archit[self.y-(self.lb-1)][(t-9)//5]!=10):
                         if(archit[self.y-(self.lb-1)][(t-9)//5] == -1):
                             sscore.update_val( self.chickibum(self.y-(self.lb-1),archit))
+                        elif(archit[self.y-(self.lb-1)][(t-9)//5] == 7):
+                            archit[self.y-(self.lb-1)][(t-9)//5] = ran_archit
                         else:
                             if(self.thruball==True):
                                 sscore.update_val(archit[self.y-(self.lb-1)][((t-9)//5)] )
@@ -1090,8 +1142,11 @@ class Ball:
                 elif(self.speedx < -1):
                     self.speedx = -1
                 self.speedy = -1 * self.speedy
+                
                 if(sscene.skyfall==True):
-                    sscene.falling_Sky(self,sscore.return_val(),cclock.return_val())
+                    # self.lb += 1
+                    # self.ub += 1
+                    sscene.falling_Sky(sscore.return_val(),cclock.return_val())
         return True
     
     def collision_paddle2(self,ppadle):

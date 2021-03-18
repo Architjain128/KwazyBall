@@ -6,7 +6,7 @@ import colorama
 import os
 from powerup import *
 from messages import gameover
-
+from bullet import *
 
 
 class Scene:
@@ -35,7 +35,7 @@ class Scene:
     def tickCurTime(self):
         self.curTime = self.curTime + self.speed
     
-    def falling_Sky(self,bball,sc,ti):
+    def falling_Sky(self,sc,ti):
         # check on last line
         flsum = True
         for x in self.matrix[16]:
@@ -50,9 +50,7 @@ class Scene:
             self.matrix.insert(0, a)
             self.matrix.pop()
             self.skyfallcounter = self.skyfallcounter + 1
-            bball.lb = bball.lb + 1
-            bball.ub = bball.ub + 1
-        
+
         # if fail life ovwe
         # else isert at top in booth array
     
@@ -96,7 +94,6 @@ class Scene:
                     bv=choro
                 if(bv==5):
                     bv = 10
-                    
                 if(bv==0):
                     striii+="      "
                     arp = arp + [" "]*5
@@ -144,7 +141,9 @@ class Scene:
         print(len(arrp))
         return arrp
 
-    def generate_screen(self,cclock,llevel,llives,sscore,ppadle,bball):
+    def generate_screen(self,cclock,llevel,llives,sscore,ppadle,bball,bbullets):
+        choro = (self.rainbow % 5)+1
+        
         arr1 = [[' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '], 
                 [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '], 
                 [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '], 
@@ -187,6 +186,8 @@ class Scene:
         os.system('clear')
         msg1 = Fore.WHITE+Back.MAGENTA+ "Stats for Nerds" + RESET
         print(msg1)
+        print(bball.lb,bball.ub)
+        print(len(farr))
         print("ball speed : " + str(SPEED//self.speed))
         print("Paddle length : " + str(ppadle.length))
         
@@ -197,9 +198,11 @@ class Scene:
         print("\t4. Thru Ball : \t\t"+ str(bball.thruball))
         print("\t5. Fast Ball : \t\t"+ str(bball.fastball))
         print("\t6. Multi Ball : \t"+ str(bball.multiball))
-        b = bball.collision_check(self.matrix,self.power_matrix,self.powers,sscore,llives,ppadle,cclock)
+        b = bball.collision_check(self.matrix,self.power_matrix,self.powers,sscore,llives,ppadle,cclock,choro)
         a = bball.collision_paddle(sscore,cclock,self,ppadle)
-        
+        bbullets.add_bullet(ppadle.x,ppadle.x + ppadle.length-1,27)
+        bbullets.move_bullet()
+        bbullets.collison_bullet(self,bball.lb,bball.ub,choro)
         if(bball.multiball == True):
             b = bball.collision_check2(self.matrix,self.power_matrix,self.powers,sscore,llives,ppadle,cclock)
             a = bball.collision_paddle2(ppadle)
@@ -227,7 +230,13 @@ class Scene:
         d=self.power_puff(cclock.return_val(),ppadle,bball)
         c = self.power_moves(farr,bball,ppadle,cclock)
         
+        # bbullets.print_bullets(farr)
+        # bbullets.add_bullet(ppadle.x,ppadle.x + ppadle.scale*ppadle.length-1,27)
+        # bbullets.move_bullet()
+        # bbullets.collison_bullet(self,bball.lb,bball.ub,choro)
+        
         farr[bball.y][bball.x]='0'
+        bbullets.print_bullets(farr)
         
         if(bball.multiball==True):
             farr[bball.y2][bball.x2]=Fore.GREEN + "0"+ RESET

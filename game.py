@@ -14,6 +14,7 @@ landing_page = landing_page()
 
 getinp = Get()
 scene = Scene(SPEED)
+bullets = Bullets()
 paddle = Paddle()
 clock = Time(0)
 score = Score(0)
@@ -81,7 +82,7 @@ if(0 != landing_page):
                 ball.start_throw(paddle)
                 scene.setcurTime(0)
                 FLAG.set_val(False)
-            scene.generate_screen(clock,level,lives,score,paddle,ball)
+            scene.generate_screen(clock,level,lives,score,paddle,ball,bullets)
     
 else:
     quitmsg();
