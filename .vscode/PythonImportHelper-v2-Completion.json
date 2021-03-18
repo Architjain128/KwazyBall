@@ -228,43 +228,11 @@
         "documentation": {}
     },
     {
-        "label": "gameover",
-        "importPath": "messages",
-        "description": "messages",
-        "isExtraImport": true,
-        "detail": "messages",
-        "documentation": {}
-    },
-    {
-        "label": "gameover",
-        "importPath": "messages",
-        "description": "messages",
-        "isExtraImport": true,
-        "detail": "messages",
-        "documentation": {}
-    },
-    {
         "label": "*",
-        "importPath": "messages",
-        "description": "messages",
+        "importPath": "powerup",
+        "description": "powerup",
         "isExtraImport": true,
-        "detail": "messages",
-        "documentation": {}
-    },
-    {
-        "label": "gameover",
-        "importPath": "messages",
-        "description": "messages",
-        "isExtraImport": true,
-        "detail": "messages",
-        "documentation": {}
-    },
-    {
-        "label": "gameover",
-        "importPath": "messages",
-        "description": "messages",
-        "isExtraImport": true,
-        "detail": "messages",
+        "detail": "powerup",
         "documentation": {}
     },
     {
@@ -273,6 +241,46 @@
         "description": "bullet",
         "isExtraImport": true,
         "detail": "bullet",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "messages",
+        "description": "messages",
+        "isExtraImport": true,
+        "detail": "messages",
+        "documentation": {}
+    },
+    {
+        "label": "gameover",
+        "importPath": "messages",
+        "description": "messages",
+        "isExtraImport": true,
+        "detail": "messages",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "messages",
+        "description": "messages",
+        "isExtraImport": true,
+        "detail": "messages",
+        "documentation": {}
+    },
+    {
+        "label": "gameover",
+        "importPath": "messages",
+        "description": "messages",
+        "isExtraImport": true,
+        "detail": "messages",
+        "documentation": {}
+    },
+    {
+        "label": "gameover",
+        "importPath": "messages",
+        "description": "messages",
+        "isExtraImport": true,
+        "detail": "messages",
         "documentation": {}
     },
     {
@@ -326,11 +334,27 @@
         "documentation": {}
     },
     {
+        "label": "Time",
+        "importPath": "scoreoard",
+        "description": "scoreoard",
+        "isExtraImport": true,
+        "detail": "scoreoard",
+        "documentation": {}
+    },
+    {
         "label": "*",
         "importPath": "ball",
         "description": "ball",
         "isExtraImport": true,
         "detail": "ball",
+        "documentation": {}
+    },
+    {
+        "label": "Ufo",
+        "importPath": "boss",
+        "description": "boss",
+        "isExtraImport": true,
+        "detail": "boss",
         "documentation": {}
     },
     {
@@ -394,6 +418,24 @@
         "description": "ball",
         "peekOfCode": "def check_buddy(ok):\n    if(ok>=0 and ok<=5):\n        return True\n    return False\nclass Ball:\n    def __init__(self,ppadle):\n        self.die = False\n        self.spread = False\n        self.spread_time = False\n        self.shrink = False",
         "detail": "ball",
+        "documentation": {}
+    },
+    {
+        "label": "Boom",
+        "kind": 6,
+        "importPath": "boss",
+        "description": "boss",
+        "peekOfCode": "class Boom:\n    def __init__(self,idx,x,y):\n        self.x = x\n        self.idx = idx\n        self.y = y\n        self.vis = True\nclass Ufo:\n    def __init__(self):\n        self.x = 40\n        self.y = 8",
+        "detail": "boss",
+        "documentation": {}
+    },
+    {
+        "label": "Ufo",
+        "kind": 6,
+        "importPath": "boss",
+        "description": "boss",
+        "peekOfCode": "class Ufo:\n    def __init__(self):\n        self.x = 40\n        self.y = 8\n        self.tok = 0\n        self.index = 0\n        self.boom_array = []\n        self.health = 3\n    def move_ufo(self,x):\n        self.x=x",
+        "detail": "boss",
         "documentation": {}
     },
     {
@@ -482,7 +524,7 @@
         "kind": 5,
         "importPath": "game",
         "description": "game",
-        "peekOfCode": "landing_page = landing_page()\ngetinp = Get()\nscene = Scene(SPEED)\nbullets = Bullets()\npaddle = Paddle()\nclock = Time(0)\nscore = Score(0)\nlevel = Level(1)\nlives = Lives(LIVES) \nball = Ball(paddle)",
+        "peekOfCode": "landing_page = landing_page()\ngetinp = Get()\nscene = Scene(SPEED)\nbullets = Bullets()\nufo = Ufo()\npaddle = Paddle()\nclock = Time(0)\nscore = Score(0)\nlevel = Level(1)\nlives = Lives(LIVES) ",
         "detail": "game",
         "documentation": {}
     },
@@ -491,7 +533,7 @@
         "kind": 5,
         "importPath": "game",
         "description": "game",
-        "peekOfCode": "getinp = Get()\nscene = Scene(SPEED)\nbullets = Bullets()\npaddle = Paddle()\nclock = Time(0)\nscore = Score(0)\nlevel = Level(1)\nlives = Lives(LIVES) \nball = Ball(paddle)\nPAUSE = Pause(False)",
+        "peekOfCode": "getinp = Get()\nscene = Scene(SPEED)\nbullets = Bullets()\nufo = Ufo()\npaddle = Paddle()\nclock = Time(0)\nscore = Score(0)\nlevel = Level(1)\nlives = Lives(LIVES) \nball = Ball(paddle)",
         "detail": "game",
         "documentation": {}
     },
@@ -500,7 +542,7 @@
         "kind": 5,
         "importPath": "game",
         "description": "game",
-        "peekOfCode": "scene = Scene(SPEED)\nbullets = Bullets()\npaddle = Paddle()\nclock = Time(0)\nscore = Score(0)\nlevel = Level(1)\nlives = Lives(LIVES) \nball = Ball(paddle)\nPAUSE = Pause(False)\nscene.set_init_array(1)",
+        "peekOfCode": "scene = Scene(SPEED)\nbullets = Bullets()\nufo = Ufo()\npaddle = Paddle()\nclock = Time(0)\nscore = Score(0)\nlevel = Level(1)\nlives = Lives(LIVES) \nball = Ball(paddle)\nPAUSE = Pause(False)",
         "detail": "game",
         "documentation": {}
     },
@@ -509,7 +551,16 @@
         "kind": 5,
         "importPath": "game",
         "description": "game",
-        "peekOfCode": "bullets = Bullets()\npaddle = Paddle()\nclock = Time(0)\nscore = Score(0)\nlevel = Level(1)\nlives = Lives(LIVES) \nball = Ball(paddle)\nPAUSE = Pause(False)\nscene.set_init_array(1)\nball.start_throw(paddle)",
+        "peekOfCode": "bullets = Bullets()\nufo = Ufo()\npaddle = Paddle()\nclock = Time(0)\nscore = Score(0)\nlevel = Level(1)\nlives = Lives(LIVES) \nball = Ball(paddle)\nPAUSE = Pause(False)\nscene.set_init_array(1)",
+        "detail": "game",
+        "documentation": {}
+    },
+    {
+        "label": "ufo",
+        "kind": 5,
+        "importPath": "game",
+        "description": "game",
+        "peekOfCode": "ufo = Ufo()\npaddle = Paddle()\nclock = Time(0)\nscore = Score(0)\nlevel = Level(1)\nlives = Lives(LIVES) \nball = Ball(paddle)\nPAUSE = Pause(False)\nscene.set_init_array(1)\nball.start_throw(paddle)",
         "detail": "game",
         "documentation": {}
     },
@@ -554,7 +605,7 @@
         "kind": 5,
         "importPath": "game",
         "description": "game",
-        "peekOfCode": "lives = Lives(LIVES) \nball = Ball(paddle)\nPAUSE = Pause(False)\nscene.set_init_array(1)\nball.start_throw(paddle)\nFLAG = Level_change_flag(False)\nif(0 != landing_page):\n    while True:\n        input = input_to(getinp,scene.speed)\n        if(input=='q' or input==\"Q\" or scene.kill == True):",
+        "peekOfCode": "lives = Lives(LIVES) \nball = Ball(paddle)\nPAUSE = Pause(False)\nscene.set_init_array(1)\nball.start_throw(paddle)\nFLAG = Level_change_flag(False)\nif(0 != landing_page):\n    while True:\n        input = input_to(getinp,scene.speed)\n        if(input=='q' or input==\"Q\"):",
         "detail": "game",
         "documentation": {}
     },
@@ -563,7 +614,7 @@
         "kind": 5,
         "importPath": "game",
         "description": "game",
-        "peekOfCode": "ball = Ball(paddle)\nPAUSE = Pause(False)\nscene.set_init_array(1)\nball.start_throw(paddle)\nFLAG = Level_change_flag(False)\nif(0 != landing_page):\n    while True:\n        input = input_to(getinp,scene.speed)\n        if(input=='q' or input==\"Q\" or scene.kill == True):\n            quitmsg()",
+        "peekOfCode": "ball = Ball(paddle)\nPAUSE = Pause(False)\nscene.set_init_array(1)\nball.start_throw(paddle)\nFLAG = Level_change_flag(False)\nif(0 != landing_page):\n    while True:\n        input = input_to(getinp,scene.speed)\n        if(input=='q' or input==\"Q\"):\n            quitmsg()",
         "detail": "game",
         "documentation": {}
     },
@@ -572,7 +623,7 @@
         "kind": 5,
         "importPath": "game",
         "description": "game",
-        "peekOfCode": "PAUSE = Pause(False)\nscene.set_init_array(1)\nball.start_throw(paddle)\nFLAG = Level_change_flag(False)\nif(0 != landing_page):\n    while True:\n        input = input_to(getinp,scene.speed)\n        if(input=='q' or input==\"Q\" or scene.kill == True):\n            quitmsg()\n            break",
+        "peekOfCode": "PAUSE = Pause(False)\nscene.set_init_array(1)\nball.start_throw(paddle)\nFLAG = Level_change_flag(False)\nif(0 != landing_page):\n    while True:\n        input = input_to(getinp,scene.speed)\n        if(input=='q' or input==\"Q\"):\n            quitmsg()\n            break",
         "detail": "game",
         "documentation": {}
     },
@@ -581,7 +632,7 @@
         "kind": 5,
         "importPath": "game",
         "description": "game",
-        "peekOfCode": "FLAG = Level_change_flag(False)\nif(0 != landing_page):\n    while True:\n        input = input_to(getinp,scene.speed)\n        if(input=='q' or input==\"Q\" or scene.kill == True):\n            quitmsg()\n            break\n        if(input=='p' or input==\"P\" and PAUSE.return_val() == False):\n            PAUSE.toggle_pause()\n            pausedmsg(score.return_val(),clock.return_val())",
+        "peekOfCode": "FLAG = Level_change_flag(False)\nif(0 != landing_page):\n    while True:\n        input = input_to(getinp,scene.speed)\n        if(input=='q' or input==\"Q\"):\n            quitmsg()\n            break\n        if(scene.kill == True):\n            break\n        if(input=='p' or input==\"P\" and PAUSE.return_val() == False):",
         "detail": "game",
         "documentation": {}
     },
@@ -689,7 +740,16 @@
         "kind": 2,
         "importPath": "messages",
         "description": "messages",
-        "peekOfCode": "def gameover(SCORE,TIME):\n    os.system('clear')\n    print(\"\\n\\n\\n\")\n    print(Fore.BLUE + \" \"*20+ '''\n             .d8888b.                                        .d88888b.                            \n            d88P  Y88b                                      d88P\" \"Y88b                           \n            888    888                                      888     888                           \n            888         8888b.  88888b.d88b.   .d88b.       888     888 888  888  .d88b.  888d888 \n            888  88888     \"88b 888 \"888 \"88b d8P  Y8b      888     888 888  888 d8P  Y8b 888P\"   \n            888    888 .d888888 888  888  888 88888888      888     888 Y88  88P 88888888 888     ",
+        "peekOfCode": "def gameover(SCORE,TIME):        \n    os.system('clear')\n    print(\"\\n\\n\\n\")\n    if(SCORE==0 and TIME ==0):\n        printwinmsg()\n    print(Fore.BLUE + \" \"*20+ '''\n             .d8888b.                                        .d88888b.                            \n            d88P  Y88b                                      d88P\" \"Y88b                           \n            888    888                                      888     888                           \n            888         8888b.  88888b.d88b.   .d88b.       888     888 888  888  .d88b.  888d888 ",
+        "detail": "messages",
+        "documentation": {}
+    },
+    {
+        "label": "printwinmsg",
+        "kind": 2,
+        "importPath": "messages",
+        "description": "messages",
+        "peekOfCode": "def printwinmsg():\n    print(\"\\n\\n\\n\\n\")\n    print( \" \"*40  + \"WINNER\")\n    print(\"\\n\\n\\n\\n\")\ndef pausedmsg(SCORE,TIME):\n    os.system('clear')\n    print(\"\\n\\n\\n\")\n    print(Fore.BLUE + \" \"*20 + '''\n                            8888888b.                                          888      \n                            888   Y88b                                         888      ",
         "detail": "messages",
         "documentation": {}
     },

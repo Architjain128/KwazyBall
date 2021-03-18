@@ -1,5 +1,6 @@
 import os
 from config import *
+from scoreoard import Time
 
 def landing_page():
     os.system('clear')
@@ -43,9 +44,11 @@ def quitmsg():
                 888   "Y88P"   "Y88888       "Y888888"   "Y88888 888  "Y888 
                                                    Y8b ''' + "\n\n") 
 
-def gameover(SCORE,TIME):
+def gameover(SCORE,TIME):        
     os.system('clear')
     print("\n\n\n")
+    if(SCORE==0 and TIME ==0):
+        printwinmsg()
     print(Fore.BLUE + " "*20+ '''
              .d8888b.                                        .d88888b.                            
             d88P  Y88b                                      d88P" "Y88b                           
@@ -60,6 +63,11 @@ def gameover(SCORE,TIME):
     print("\n"+Fore.WHITE+" "*20 + "----------------------------------------------------------------------\n")
     print(Fore.GREEN + " "*42 + "See you again soon :)\n\n"+RESET)
     
+
+def printwinmsg():
+    print("\n\n\n\n")
+    print( " "*40  + "WINNER")
+    print("\n\n\n\n")
 
 def pausedmsg(SCORE,TIME):
     os.system('clear')

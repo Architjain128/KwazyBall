@@ -1,3 +1,4 @@
+from powerup import *
 
 class Bullet:
     def __init__(self,id1,id2,x,y):
@@ -35,18 +36,20 @@ class Bullets:
             b.y = b.y -1
     
     def visible_bullet(self,b,lb):
-        if(b.y<=lb):
+        if(b.y<=(lb-2)):
             b.vis = False
     
-    def collison_bullet(self,sscene,lb,ub,ran_archit):
+    def collison_bullet(self,sscene,lb,ub,ran_archit,sscore,cclock):
         for b in self.bullet_array:
             self.visible_bullet(b,lb)
             if(b.vis == True):
-                if(b.y<=(1+ub) and b.y>lb ):
+                if((b.y<=(1+ub) and b.y>lb ) and ((b.x-9)//5 >=0 and (b.x-9)//5<= 12) ):
                     if(sscene.matrix[b.y-1-lb][(b.x-9)//5]!=0):
-                        if(sscene.matrix[b.y-1-lb][(b.x-9)//5]!=10):
-                            if(sscene.matrix[b.y-1-lb][(b.x-9)//5]!=7):
-                                sscene.matrix[b.y-1-lb][(b.x-9)//5] = sscene.matrix[b.y-1-lb][(b.x-9)//5] - 1 
+                        if(sscene.matrix[b.y-1-lb][(b.x-9)//5]!=10 and sscene.matrix[b.y-1-lb][(b.x-9)//5]!=-1):
+                            if(sscene.matrix[b.y-1-lb][(b.x-9)//5]!=7 and sscene.power_matrix[b.y-1-lb][(b.x-9)//5]):
+                                sscene.powers.append(Power((b.x-9)//5,b.y-1-lb,sscene.power_matrix[b.y-1-lb][(b.x-9)//5],cclock.return_val()))
+                                sscene.matrix[b.y-1-lb][(b.x-9)//5] = sscene.matrix[b.y-1-lb][(b.x-9)//5] - 1
+                                sscore.update_val(1)
                             else:
                                 sscene.matrix[b.y-1-lb][(b.x-9)//5] = ran_archit
                         b.vis = False

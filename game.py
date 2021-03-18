@@ -9,12 +9,14 @@ from background import *
 from paddle import *
 from scoreoard import *
 from ball import *
+from boss import Ufo
 
 landing_page = landing_page()
 
 getinp = Get()
 scene = Scene(SPEED)
 bullets = Bullets()
+ufo = Ufo()
 paddle = Paddle()
 clock = Time(0)
 score = Score(0)
@@ -31,10 +33,11 @@ if(0 != landing_page):
         
         input = input_to(getinp,scene.speed)
         
-        if(input=='q' or input=="Q" or scene.kill == True):
+        if(input=='q' or input=="Q"):
             quitmsg()
             break
-        
+        if(scene.kill == True):
+            break
         if(input=='p' or input=="P" and PAUSE.return_val() == False):
             PAUSE.toggle_pause()
             pausedmsg(score.return_val(),clock.return_val())
@@ -61,8 +64,12 @@ if(0 != landing_page):
             score.set_val(1130)
             
         if((input =='z' or score.return_val()>=2380 )and (level.return_val()==2)):
-            gameover(score.return_val(),clock.return_val())
+            FLAG.set_val(True)
             score.set_val(2380)
+        
+        if((input =='z' or score.return_val()>=5380 )and (level.return_val()==3)):
+            gameover(score.return_val(),clock.return_val())
+            score.set_val(5380)
             break
             
         if(lives.return_val()==0):
@@ -82,7 +89,7 @@ if(0 != landing_page):
                 ball.start_throw(paddle)
                 scene.setcurTime(0)
                 FLAG.set_val(False)
-            scene.generate_screen(clock,level,lives,score,paddle,ball,bullets)
+            scene.generate_screen(clock,level,lives,score,paddle,ball,bullets,ufo)
     
 else:
     quitmsg();

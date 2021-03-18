@@ -5,9 +5,8 @@ from config import *
 import colorama
 import os
 from powerup import *
-from messages import gameover
 from bullet import *
-
+from messages import *
 
 class Scene:
     
@@ -141,7 +140,7 @@ class Scene:
         print(len(arrp))
         return arrp
 
-    def generate_screen(self,cclock,llevel,llives,sscore,ppadle,bball,bbullets):
+    def generate_screen(self,cclock,llevel,llives,sscore,ppadle,bball,bbullets,uufo):
         choro = (self.rainbow % 5)+1
         
         arr1 = [[' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '], 
@@ -190,6 +189,8 @@ class Scene:
         print(len(farr))
         print("ball speed : " + str(SPEED//self.speed))
         print("Paddle length : " + str(ppadle.length))
+        if(llevel.return_val()==3):
+            print("UFO Health : " + str(uufo.health))
         
         print("Powerup")
         print("\t1. Large Paddle : \t"+ str(bball.spread))
@@ -202,7 +203,23 @@ class Scene:
         a = bball.collision_paddle(sscore,cclock,self,ppadle)
         bbullets.add_bullet(ppadle.x,ppadle.x + ppadle.length-1,27)
         bbullets.move_bullet()
-        bbullets.collison_bullet(self,bball.lb,bball.ub,choro)
+        bbullets.collison_bullet(self,bball.lb,bball.ub,choro,sscore,cclock)
+        
+        if(llevel.return_val()==3):
+            uufo.move_ufo(ppadle.x + (ppadle.length//2) )
+            uufo.print_ufo(farr)
+            uufo.add_boom()
+            uufo.move_boom()
+            uufo.visible_boom()
+            uufo.print_boom(farr)
+            uufo.destroy_boom(ppadle,llives)
+            uufo.ufo_hit(bball,bbullets)
+            winw = uufo.win_check()
+            if(winw == True):
+                gameover(0,0)
+                self.kill = True
+                
+        
         if(bball.multiball == True):
             b = bball.collision_check2(self.matrix,self.power_matrix,self.powers,sscore,llives,ppadle,cclock)
             a = bball.collision_paddle2(ppadle)
@@ -230,11 +247,7 @@ class Scene:
         d=self.power_puff(cclock.return_val(),ppadle,bball)
         c = self.power_moves(farr,bball,ppadle,cclock)
         
-        # bbullets.print_bullets(farr)
-        # bbullets.add_bullet(ppadle.x,ppadle.x + ppadle.scale*ppadle.length-1,27)
-        # bbullets.move_bullet()
-        # bbullets.collison_bullet(self,bball.lb,bball.ub,choro)
-        
+    
         farr[bball.y][bball.x]='0'
         bbullets.print_bullets(farr)
         
