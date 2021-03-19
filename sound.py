@@ -7,20 +7,14 @@ other = 'sounds/other.wav'
 loss = 'sounds/loss.wav'
 
 def play_blast():
-    pass
-    # playsound(blast)
+    playsound(blast)
 def play_brick():
-    pass
-    # playsound(brick)
+    playsound(brick)
 def play_gameover():
-    pass
-    # playsound(gameover)
+    playsound(gameover)
 def play_winner():
-    pass
-    # playsound(winner)
+    playsound(winner)
 def play_other():
-    pass
-    # playsound(other)
+    playsound(other)
 def play_loss():
-    pass
-    # playsound(loss)
+    playsound(loss)

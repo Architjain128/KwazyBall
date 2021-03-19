@@ -956,7 +956,7 @@
         "kind": 2,
         "importPath": "sound",
         "description": "sound",
-        "peekOfCode": "def play_blast():\n    pass\n    # playsound(blast)\ndef play_brick():\n    pass\n    # playsound(brick)\ndef play_gameover():\n    pass\n    # playsound(gameover)\ndef play_winner():",
+        "peekOfCode": "def play_blast():\n    playsound(blast)\ndef play_brick():\n    playsound(brick)\ndef play_gameover():\n    playsound(gameover)\ndef play_winner():\n    playsound(winner)\ndef play_other():\n    playsound(other)",
         "detail": "sound",
         "documentation": {}
     },
@@ -965,7 +965,7 @@
         "kind": 2,
         "importPath": "sound",
         "description": "sound",
-        "peekOfCode": "def play_brick():\n    pass\n    # playsound(brick)\ndef play_gameover():\n    pass\n    # playsound(gameover)\ndef play_winner():\n    pass\n    # playsound(winner)\ndef play_other():",
+        "peekOfCode": "def play_brick():\n    playsound(brick)\ndef play_gameover():\n    playsound(gameover)\ndef play_winner():\n    playsound(winner)\ndef play_other():\n    playsound(other)\ndef play_loss():\n    playsound(loss)",
         "detail": "sound",
         "documentation": {}
     },
@@ -974,7 +974,7 @@
         "kind": 2,
         "importPath": "sound",
         "description": "sound",
-        "peekOfCode": "def play_gameover():\n    pass\n    # playsound(gameover)\ndef play_winner():\n    pass\n    # playsound(winner)\ndef play_other():\n    pass\n    # playsound(other)\ndef play_loss():",
+        "peekOfCode": "def play_gameover():\n    playsound(gameover)\ndef play_winner():\n    playsound(winner)\ndef play_other():\n    playsound(other)\ndef play_loss():\n    playsound(loss)",
         "detail": "sound",
         "documentation": {}
     },
@@ -983,7 +983,7 @@
         "kind": 2,
         "importPath": "sound",
         "description": "sound",
-        "peekOfCode": "def play_winner():\n    pass\n    # playsound(winner)\ndef play_other():\n    pass\n    # playsound(other)\ndef play_loss():\n    pass\n    # playsound(loss)",
+        "peekOfCode": "def play_winner():\n    playsound(winner)\ndef play_other():\n    playsound(other)\ndef play_loss():\n    playsound(loss)",
         "detail": "sound",
         "documentation": {}
     },
@@ -992,7 +992,7 @@
         "kind": 2,
         "importPath": "sound",
         "description": "sound",
-        "peekOfCode": "def play_other():\n    pass\n    # playsound(other)\ndef play_loss():\n    pass\n    # playsound(loss)",
+        "peekOfCode": "def play_other():\n    playsound(other)\ndef play_loss():\n    playsound(loss)",
         "detail": "sound",
         "documentation": {}
     },
@@ -1001,7 +1001,7 @@
         "kind": 2,
         "importPath": "sound",
         "description": "sound",
-        "peekOfCode": "def play_loss():\n    pass\n    # playsound(loss)",
+        "peekOfCode": "def play_loss():\n    playsound(loss)",
         "detail": "sound",
         "documentation": {}
     },
@@ -1010,7 +1010,7 @@
         "kind": 5,
         "importPath": "sound",
         "description": "sound",
-        "peekOfCode": "brick = 'sounds/brick.wav'\nblast = 'sounds/blast.wav'\ngameover = 'sounds/gameover.wav'\nwinner = 'sounds/winner.mp3'\nother = 'sounds/other.wav'\nloss = 'sounds/loss.wav'\ndef play_blast():\n    pass\n    # playsound(blast)\ndef play_brick():",
+        "peekOfCode": "brick = 'sounds/brick.wav'\nblast = 'sounds/blast.wav'\ngameover = 'sounds/gameover.wav'\nwinner = 'sounds/winner.mp3'\nother = 'sounds/other.wav'\nloss = 'sounds/loss.wav'\ndef play_blast():\n    playsound(blast)\ndef play_brick():\n    playsound(brick)",
         "detail": "sound",
         "documentation": {}
     },
@@ -1019,7 +1019,7 @@
         "kind": 5,
         "importPath": "sound",
         "description": "sound",
-        "peekOfCode": "blast = 'sounds/blast.wav'\ngameover = 'sounds/gameover.wav'\nwinner = 'sounds/winner.mp3'\nother = 'sounds/other.wav'\nloss = 'sounds/loss.wav'\ndef play_blast():\n    pass\n    # playsound(blast)\ndef play_brick():\n    pass",
+        "peekOfCode": "blast = 'sounds/blast.wav'\ngameover = 'sounds/gameover.wav'\nwinner = 'sounds/winner.mp3'\nother = 'sounds/other.wav'\nloss = 'sounds/loss.wav'\ndef play_blast():\n    playsound(blast)\ndef play_brick():\n    playsound(brick)\ndef play_gameover():",
         "detail": "sound",
         "documentation": {}
     },
@@ -1028,7 +1028,7 @@
         "kind": 5,
         "importPath": "sound",
         "description": "sound",
-        "peekOfCode": "gameover = 'sounds/gameover.wav'\nwinner = 'sounds/winner.mp3'\nother = 'sounds/other.wav'\nloss = 'sounds/loss.wav'\ndef play_blast():\n    pass\n    # playsound(blast)\ndef play_brick():\n    pass\n    # playsound(brick)",
+        "peekOfCode": "gameover = 'sounds/gameover.wav'\nwinner = 'sounds/winner.mp3'\nother = 'sounds/other.wav'\nloss = 'sounds/loss.wav'\ndef play_blast():\n    playsound(blast)\ndef play_brick():\n    playsound(brick)\ndef play_gameover():\n    playsound(gameover)",
         "detail": "sound",
         "documentation": {}
     },
@@ -1037,7 +1037,7 @@
         "kind": 5,
         "importPath": "sound",
         "description": "sound",
-        "peekOfCode": "winner = 'sounds/winner.mp3'\nother = 'sounds/other.wav'\nloss = 'sounds/loss.wav'\ndef play_blast():\n    pass\n    # playsound(blast)\ndef play_brick():\n    pass\n    # playsound(brick)\ndef play_gameover():",
+        "peekOfCode": "winner = 'sounds/winner.mp3'\nother = 'sounds/other.wav'\nloss = 'sounds/loss.wav'\ndef play_blast():\n    playsound(blast)\ndef play_brick():\n    playsound(brick)\ndef play_gameover():\n    playsound(gameover)\ndef play_winner():",
         "detail": "sound",
         "documentation": {}
     },
@@ -1046,7 +1046,7 @@
         "kind": 5,
         "importPath": "sound",
         "description": "sound",
-        "peekOfCode": "other = 'sounds/other.wav'\nloss = 'sounds/loss.wav'\ndef play_blast():\n    pass\n    # playsound(blast)\ndef play_brick():\n    pass\n    # playsound(brick)\ndef play_gameover():\n    pass",
+        "peekOfCode": "other = 'sounds/other.wav'\nloss = 'sounds/loss.wav'\ndef play_blast():\n    playsound(blast)\ndef play_brick():\n    playsound(brick)\ndef play_gameover():\n    playsound(gameover)\ndef play_winner():\n    playsound(winner)",
         "detail": "sound",
         "documentation": {}
     },
@@ -1055,7 +1055,7 @@
         "kind": 5,
         "importPath": "sound",
         "description": "sound",
-        "peekOfCode": "loss = 'sounds/loss.wav'\ndef play_blast():\n    pass\n    # playsound(blast)\ndef play_brick():\n    pass\n    # playsound(brick)\ndef play_gameover():\n    pass\n    # playsound(gameover)",
+        "peekOfCode": "loss = 'sounds/loss.wav'\ndef play_blast():\n    playsound(blast)\ndef play_brick():\n    playsound(brick)\ndef play_gameover():\n    playsound(gameover)\ndef play_winner():\n    playsound(winner)\ndef play_other():",
         "detail": "sound",
         "documentation": {}
     }
