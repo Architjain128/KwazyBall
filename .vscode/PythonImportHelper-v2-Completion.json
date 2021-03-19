@@ -470,7 +470,7 @@
         "kind": 6,
         "importPath": "background",
         "description": "background",
-        "peekOfCode": "class Scene:\n    def __init__(self,speed):\n        self.speed = speed\n        self.matrix = []\n        self.power_matrix = []\n        self.powers = []\n        self.curTime = 0\n        self.skyfallat = 0\n        self.skyfall = True\n        self.skyfallcounter = 0",
+        "peekOfCode": "class Scene:\n    def __init__(self,speed):\n        self.speed = speed\n        self.matrix = []\n        self.power_matrix = []\n        self.powers = []\n        self.curTime = 0\n        self.skyfallat = 0\n        self.skyfall = False\n        self.skyfallcounter = 60",
         "detail": "background",
         "documentation": {}
     },

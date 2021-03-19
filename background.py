@@ -18,13 +18,21 @@ class Scene:
         self.powers = []
         self.curTime = 0
         self.skyfallat = 0
-        self.skyfall = True
-        self.skyfallcounter = 0
+        self.skyfall = False
+        self.skyfallcounter = 60
         self.kill = False
         self.rainbow = 0
+        self.index=0
 
     def get_speed(self):
         return self.speed
+    
+    def matrix_change(self):
+        for x in self.matrix:
+            for y in x:
+                if( y!=0):
+                    print(y)
+                    y=1
     
     def setcurTime(self,val):
         self.curTime = val
@@ -36,8 +44,9 @@ class Scene:
     
     def falling_Sky(self,sc,ti):
         # check on last line
+        pipip = len(self.matrix)
         flsum = True
-        for x in self.matrix[16]:
+        for x in self.matrix[pipip -1]:
             if(x!=0):
                 flsum = False
                 self.kill = True
@@ -214,8 +223,8 @@ class Scene:
         print("\t7. Fire Ball : \t"+ str(bball.fireball))
         if(bball.fireball==True):
             print("power timeout on : " + str(bball.fireball_time))
+        a = bball.collision_paddle(sscore,cclock,self,ppadle,llevel)
         b = bball.collision_check(self.matrix,self.power_matrix,self.powers,sscore,llives,ppadle,cclock,choro)
-        a = bball.collision_paddle(sscore,cclock,self,ppadle)
         
         if(llevel.return_val()!=1):
             bbullets.add_bullet(ppadle.x,ppadle.x + ppadle.length-1,27)

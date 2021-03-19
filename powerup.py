@@ -128,10 +128,10 @@ class Power:
             idiotbox = True
             msg3 = msg3 + " : Mutiball activated"
             bball.multiball = True
-            bball.x2=bball.x
-            bball.y2=bball.y
-            bball.speedx2 = -1*bball.speedx 
-            bball.speedy2 = -1*bball.speedy 
+            bball.x2=-1*bball.x
+            bball.y2=-1*bball.y
+            # bball.speedx2 = -1*bball.speedx 
+            # bball.speedy2 = -1*bball.speedy 
             bball.multiball_time = self.starteff + 5
             
             

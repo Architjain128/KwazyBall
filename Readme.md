@@ -20,16 +20,37 @@ A terminal based implementation that tries to simulate the classic DX-Ball game 
 - <kbd>P</kbd> or <kbd>p</kbd>: pause
 - <kbd>R</kbd> or <kbd>r</kbd>: resume
 - <kbd>Q</kbd> or <kbd>q</kbd>: quit
+- <kbd>z</kbd> : Level Up
+
+## Assumptions
++ bullet cannot explode yellow bricks
++ powerup over in 10 seconds
 
 ## Featurs
 + Show play time 
 + Multiple Lives
 + Show score 
 + Multiple Levels are created
-+ Powerup balls vertically downward and can be collected by paddle 
++ Powerup galls in parabolic path on dependent of ball hiting and can be collected by paddle 
 + Ball speed changes in x according to point of contaact on paddle
 + `Yellow` brick explodes in chain and also expoldes all surrounded bricks
 + `White` brick is unbreakable 
++ Level 1
+    + have powerup
+    + no falling sky
+    + Rainbow bricks
++ Level 2
+    + No powerups
+    + Bullets with interval of 1 sec
+    + Falling sky after 60 seconds in interval of 5 hits on paddle
+    + No rainbow bricks
++ Level 3
+    + No powerups
+    + Ufo with health
+    + Fallig Boom on paddle
+    + No rainbow bricks
++ Sound
++ Fireball
 
 ### Bricks Strength
 + <kbd>CYAN</kbd> : 1 strength
@@ -38,7 +59,7 @@ A terminal based implementation that tries to simulate the classic DX-Ball game 
 + <kbd>Green</kbd> : 4 strength
 + <kbd>Yellow</kbd> : Expolding Brick
 + <kbd>Gray</kbd> : Unbreakable
-
++ <kbd>Multi color</kbd> : Rainbow Brick
 
 ## Powerups
 Each disables after for  10 seconds
@@ -48,6 +69,7 @@ Each disables after for  10 seconds
 4. Thru Ball
 5. Fast Ball
 6. Multi Ball
+7. Fireball
 
 ## Classes
 + Scene
@@ -60,6 +82,10 @@ Each disables after for  10 seconds
     + Level_change_flag
     + Score
     + Pause
++ Bullet
++ Bullets
++ Ufo
++ Boom
 
 ## OOPS Concepts
 ### Inheritace
@@ -85,4 +111,6 @@ The entire game is modelled using classes and objects which encapsulate logicall
 Things like `scene.generate(...)`, `ball.collison_check(...)`, `ball.move()`, `paddle.move_left()`, `paddle.move_right()` and many more function are used in abstracted way 
 
 ## Extra
-Initial value can be changed in `config.py`
++ Initial value can be changed in `config.py`
++ Didn't apply brick generation by ufo
+

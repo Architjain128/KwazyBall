@@ -5,6 +5,7 @@ import random
 from config import *
 from messages import gameover
 from sound import play_blast, play_other
+import time
 
 def check_buddy(ok):
     if(ok>=0 and ok<=5):
@@ -1188,7 +1189,7 @@ class Ball:
                         self.speedy2 = -1 * self.speedy2
         return True
 
-    def collision_paddle(self,sscore,cclock,sscene,ppadle):
+    def collision_paddle(self,sscore,cclock,sscene,ppadle,llevel):
         # if ball stiky
         
         if(self.sticky==True):
@@ -1215,9 +1216,15 @@ class Ball:
                 play_other()
                 
                 if(sscene.skyfall==True):
-                    # self.lb += 1
-                    # self.ub += 1
-                    sscene.falling_Sky(sscore.return_val(),cclock.return_val())
+                    if(sscene.index%5==0):
+                        sscene.falling_Sky(sscore.return_val(),cclock.return_val())
+                        sscene.index+=1
+                        self.ub+=1
+                    # self.lb+=1
+                else:
+                    if(cclock.return_val()>sscene.skyfallat and llevel.return_val()!=0):
+                        # sscene.matrix_change()
+                        sscene.skyfall = True
         return True
     
     def collision_paddle2(self,ppadle):

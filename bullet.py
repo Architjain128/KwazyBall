@@ -46,10 +46,11 @@ class Bullets:
                 if((b.y<=(1+ub) and b.y>lb ) and ((b.x-9)//5 >=0 and (b.x-9)//5<= 12) ):
                     if(sscene.matrix[b.y-1-lb][(b.x-9)//5]!=0):
                         if(sscene.matrix[b.y-1-lb][(b.x-9)//5]!=10 and sscene.matrix[b.y-1-lb][(b.x-9)//5]!=-1):
-                            if(sscene.matrix[b.y-1-lb][(b.x-9)//5]!=7 and sscene.power_matrix[b.y-1-lb][(b.x-9)//5]):
-                                sscene.powers.append(Power(0,(b.x-9)//5,b.y-1-lb,sscene.power_matrix[b.y-1-lb][(b.x-9)//5],cclock.return_val()))
+                            if(sscene.matrix[b.y-1-lb][(b.x-9)//5]!=7):
+                                if(sscene.power_matrix[b.y-1-lb][(b.x-9)//5]!=0):
+                                    sscene.powers.append(Power(0,(b.x-9)//5,b.y-1-lb,sscene.power_matrix[b.y-1-lb][(b.x-9)//5],cclock.return_val()))
                                 sscene.matrix[b.y-1-lb][(b.x-9)//5] = sscene.matrix[b.y-1-lb][(b.x-9)//5] - 1
                                 sscore.update_val(1)
-                            else:
+                            elif(sscene.matrix[b.y-1-lb][(b.x-9)//5]==7)):
                                 sscene.matrix[b.y-1-lb][(b.x-9)//5] = ran_archit
                         b.vis = False
