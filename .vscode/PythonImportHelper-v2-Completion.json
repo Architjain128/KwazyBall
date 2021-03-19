@@ -90,54 +90,6 @@
         "documentation": {}
     },
     {
-        "label": "RESET",
-        "importPath": "config",
-        "description": "config",
-        "isExtraImport": true,
-        "detail": "config",
-        "documentation": {}
-    },
-    {
-        "label": "SPEED",
-        "importPath": "config",
-        "description": "config",
-        "isExtraImport": true,
-        "detail": "config",
-        "documentation": {}
-    },
-    {
-        "label": "*",
-        "importPath": "config",
-        "description": "config",
-        "isExtraImport": true,
-        "detail": "config",
-        "documentation": {}
-    },
-    {
-        "label": "RESET",
-        "importPath": "config",
-        "description": "config",
-        "isExtraImport": true,
-        "detail": "config",
-        "documentation": {}
-    },
-    {
-        "label": "SPEED",
-        "importPath": "config",
-        "description": "config",
-        "isExtraImport": true,
-        "detail": "config",
-        "documentation": {}
-    },
-    {
-        "label": "*",
-        "importPath": "config",
-        "description": "config",
-        "isExtraImport": true,
-        "detail": "config",
-        "documentation": {}
-    },
-    {
         "label": "*",
         "importPath": "config",
         "description": "config",
@@ -212,15 +164,7 @@
         "documentation": {}
     },
     {
-        "label": "*",
-        "importPath": "powerup",
-        "description": "powerup",
-        "isExtraImport": true,
-        "detail": "powerup",
-        "documentation": {}
-    },
-    {
-        "label": "*",
+        "label": "Power",
         "importPath": "powerup",
         "description": "powerup",
         "isExtraImport": true,
@@ -261,22 +205,6 @@
     },
     {
         "label": "*",
-        "importPath": "messages",
-        "description": "messages",
-        "isExtraImport": true,
-        "detail": "messages",
-        "documentation": {}
-    },
-    {
-        "label": "gameover",
-        "importPath": "messages",
-        "description": "messages",
-        "isExtraImport": true,
-        "detail": "messages",
-        "documentation": {}
-    },
-    {
-        "label": "gameover",
         "importPath": "messages",
         "description": "messages",
         "isExtraImport": true,
@@ -506,7 +434,7 @@
         "kind": 6,
         "importPath": "boss",
         "description": "boss",
-        "peekOfCode": "class Ufo:\n    def __init__(self):\n        self.x = 40\n        self.y = 8\n        self.tok = 0\n        self.index = 0\n        self.boom_array = []\n        self.health = 3\n    def move_ufo(self,x):\n        self.x=x",
+        "peekOfCode": "class Ufo:\n    def __init__(self):\n        self.x = 40\n        self.y = 8\n        self.tok = 0\n        self.index = 0\n        self.boom_array = []\n        self.health = 30\n    def move_ufo(self,x):\n        self.x=x",
         "detail": "boss",
         "documentation": {}
     },
@@ -835,42 +763,6 @@
         "documentation": {}
     },
     {
-        "label": "Ball",
-        "kind": 6,
-        "importPath": "oh",
-        "description": "oh",
-        "peekOfCode": "class Ball:\n    def __init__(self,ppadle):\n        self.die = False\n        self.spread = False\n        self.spread_time = False\n        self.shrink = False\n        self.shrink_time = False\n        self.thruball = False\n        self.thruball_time = False\n        self.sticky = False",
-        "detail": "oh",
-        "documentation": {}
-    },
-    {
-        "label": "check_buddy",
-        "kind": 2,
-        "importPath": "oh",
-        "description": "oh",
-        "peekOfCode": "def check_buddy(ok):\n    if(ok>=0 and ok<=5):\n        return True\n    return False\nclass Ball:\n    def __init__(self,ppadle):\n        self.die = False\n        self.spread = False\n        self.spread_time = False\n        self.shrink = False",
-        "detail": "oh",
-        "documentation": {}
-    },
-    {
-        "label": "Ball",
-        "kind": 6,
-        "importPath": "ohlb",
-        "description": "ohlb",
-        "peekOfCode": "class Ball:\n    def __init__(self,ppadle):\n        self.die = False\n        self.spread = False\n        self.spread_time = False\n        self.shrink = False\n        self.shrink_time = False\n        self.thruball = False\n        self.thruball_time = False\n        self.sticky = False",
-        "detail": "ohlb",
-        "documentation": {}
-    },
-    {
-        "label": "check_buddy",
-        "kind": 2,
-        "importPath": "ohlb",
-        "description": "ohlb",
-        "peekOfCode": "def check_buddy(ok):\n    if(ok>=0 and ok<=5):\n        return True\n    return False\nclass Ball:\n    def __init__(self,ppadle):\n        self.die = False\n        self.spread = False\n        self.spread_time = False\n        self.shrink = False",
-        "detail": "ohlb",
-        "documentation": {}
-    },
-    {
         "label": "Paddle",
         "kind": 6,
         "importPath": "paddle",
@@ -893,7 +785,7 @@
         "kind": 6,
         "importPath": "scoreoard",
         "description": "scoreoard",
-        "peekOfCode": "class ScoreBoard : \n    def __init__(self,initialval):\n        self.val = initialval\n    def return_val(self):\n        return self.val\nclass Lives(ScoreBoard):\n    def sub_life(self):\n        self.val = self.val - 1\n        play_loss()\n        return self.val",
+        "peekOfCode": "class ScoreBoard : \n    def __init__(self,initialval):\n        self.val = initialval\n        self.fl = False\n    def return_val(self):\n        return self.val\nclass Lives(ScoreBoard):\n    def sub_life(self):\n        self.val = self.val - 1\n        self.fl = True",
         "detail": "scoreoard",
         "documentation": {}
     },
@@ -902,7 +794,7 @@
         "kind": 6,
         "importPath": "scoreoard",
         "description": "scoreoard",
-        "peekOfCode": "class Lives(ScoreBoard):\n    def sub_life(self):\n        self.val = self.val - 1\n        play_loss()\n        return self.val\n    def add_life(self):\n        self.val = self.val + 1\n        return self.val\n    def add_in_scene(self,scene):\n        temp = str(self.val)",
+        "peekOfCode": "class Lives(ScoreBoard):\n    def sub_life(self):\n        self.val = self.val - 1\n        self.fl = True\n        play_loss()\n        return self.val\n    def add_life(self):\n        self.val = self.val + 1\n        return self.val\n    def add_in_scene(self,scene):",
         "detail": "scoreoard",
         "documentation": {}
     },

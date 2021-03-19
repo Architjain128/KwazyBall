@@ -1,3 +1,4 @@
+from powerup import Power
 
 class Boom:
     def __init__(self,idx,x,y):
@@ -13,7 +14,7 @@ class Ufo:
         self.tok = 0
         self.index = 0
         self.boom_array = []
-        self.health = 3
+        self.health = 30
         
     def move_ufo(self,x):
         self.x=x
@@ -47,17 +48,19 @@ class Ufo:
                 b.vis = False
             
     # collect boom
-    def destroy_boom(self,ppadle,llives):
+    def destroy_boom(self,ppadle,llives,sscene):
         for b in self.boom_array:
             if(b.y == 27):
                 if(b.x >= ppadle.x and b.x <= ppadle.x + ppadle.length):
+                    sscene.powers=[]
                     llives.sub_life()
+                    
                     # life loss
                     
     def ufo_hit(self,bball,bbullets):
         for b in bbullets.bullet_array:
             if(b.y == 9):
-                if(b.x >= (self.x-1) and b.x >= (self.x+1) ):
+                if(b.x >= (self.x-1) and b.x <= (self.x+1) ):
                     self.health -=1
 
         if(bball.y == 9):

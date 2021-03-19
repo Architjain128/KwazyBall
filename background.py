@@ -62,10 +62,10 @@ class Scene:
         # if fail life ovwe
         # else isert at top in booth array
     
-    def power_puff(self,tieme,ppadle,bball):
+    def power_puff(self,tieme,ppadle,bball,fl):
         for pp in self.powers:
             if(pp.active == True): 
-                if((pp.starteff+ (10*self.speed)) < tieme and pp.starteff !=0):
+                if(((pp.starteff+ (10*self.speed)) < tieme and pp.starteff !=0) or fl):
                     pp.restore(self,ppadle,bball)
         return True
     
@@ -191,6 +191,9 @@ class Scene:
         arr2 = self.matrix_to_bricks()
         arr2 = np.array(arr2)
         farr = np.vstack([arr1,arr2,arr3])
+        
+      
+        
         os.system('clear')
         msg1 = Fore.WHITE+Back.MAGENTA+ "Stats for Nerds" + RESET
         print(msg1)
@@ -220,7 +223,7 @@ class Scene:
         print("\t6. Multi Ball : \t"+ str(bball.multiball))
         if(bball.multiball==True):
             print("power timeout on : " + str(bball.multiball_time))
-        print("\t7. Fire Ball : \t"+ str(bball.fireball))
+        print("\t7. Fire Ball : \t\t"+ str(bball.fireball))
         if(bball.fireball==True):
             print("power timeout on : " + str(bball.fireball_time))
         a = bball.collision_paddle(sscore,cclock,self,ppadle,llevel)
@@ -239,7 +242,7 @@ class Scene:
             uufo.move_boom()
             uufo.visible_boom()
             uufo.print_boom(farr)
-            uufo.destroy_boom(ppadle,llives)
+            uufo.destroy_boom(ppadle,llives,self)
             uufo.ufo_hit(bball,bbullets)
             winw = uufo.win_check()
             if(winw == True):
@@ -271,7 +274,7 @@ class Scene:
         for i in range(t,t+ppadle.length):
             farr[27][i]="_"
             
-        d=self.power_puff(cclock.return_val(),ppadle,bball)
+        d=self.power_puff(cclock.return_val(),ppadle,bball,0)
         c = self.power_moves(farr,bball,ppadle,cclock)
         
     

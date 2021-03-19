@@ -183,14 +183,23 @@ class Ball:
             play_other()
             
         if(self.y == 28 and self.speedy > 0):
-            llives.sub_life()
             self.spread = False
             self.shrink = False
             self.thruball = False
             self.fastball = False
             self.sticky = False
             self.mutliball = False
+            self.fireball = False
+            self.spread_time = cclock.return_val()
+            self.shrink_time = cclock.return_val()
+            self.thruball_time = cclock.return_val()
+            self.fastball_time = cclock.return_val()
+            self.sticky_time = cclock.return_val()
+            self.mutliball_time = cclock.return_val()
+            self.fireball_time = cclock.return_val()
+            powers = []
             ppadle.sticky = True
+            llives.sub_life()
             self.start_throw(ppadle)
             
             # self.speedy =  -1 * self.speedy      # Just to check
@@ -1222,7 +1231,7 @@ class Ball:
                         self.ub+=1
                     # self.lb+=1
                 else:
-                    if(cclock.return_val()>sscene.skyfallat and llevel.return_val()!=0):
+                    if(cclock.return_val()>sscene.skyfallat and llevel.return_val()!=1):
                         # sscene.matrix_change()
                         sscene.skyfall = True
         return True

@@ -51,6 +51,6 @@ class Bullets:
                                     sscene.powers.append(Power(0,(b.x-9)//5,b.y-1-lb,sscene.power_matrix[b.y-1-lb][(b.x-9)//5],cclock.return_val()))
                                 sscene.matrix[b.y-1-lb][(b.x-9)//5] = sscene.matrix[b.y-1-lb][(b.x-9)//5] - 1
                                 sscore.update_val(1)
-                            elif(sscene.matrix[b.y-1-lb][(b.x-9)//5]==7)):
+                            elif(sscene.matrix[b.y-1-lb][(b.x-9)//5]==7):
                                 sscene.matrix[b.y-1-lb][(b.x-9)//5] = ran_archit
                         b.vis = False

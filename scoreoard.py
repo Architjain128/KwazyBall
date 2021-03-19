@@ -4,12 +4,14 @@ from sound import play_blast, play_brick, play_loss, play_other
 class ScoreBoard : 
     def __init__(self,initialval):
         self.val = initialval
+        self.fl = False
     def return_val(self):
         return self.val
 
 class Lives(ScoreBoard):
     def sub_life(self):
         self.val = self.val - 1
+        self.fl = True
         play_loss()
         return self.val
     def add_life(self):
