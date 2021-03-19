@@ -44,7 +44,7 @@ class Power:
             msg3 = msg3 + " : Thruball deactivated"
             idiotbox = True
             bball.thruball=False
-        if(self.num==5):
+        if(self.num==5 ):
             msg3 = msg3 + " : Fast ball deactivated"
             idiotbox = True
             bball.fastball=False
@@ -54,6 +54,10 @@ class Power:
             idiotbox = True
             bball.multiballflag = False
             bball.multiball = False
+        if(self.num ==7):
+            msg3 = msg3 + " : Fire ball deactivated"
+            idiotbox = True
+            bball.fireball=False
         if(idiotbox == True):
             print(msg3)
         return False
@@ -71,13 +75,13 @@ class Power:
             tt = self.x*5 + 11
             self.x = tt
             self.confi +=1
-        
-        
-        if(self.y == 25 and self.num !=  6):
+        if(self.confi !=0):
+            tt = self.x
+        if(self.y == 27 and self.num !=  6):
             if(tt >= ppadle.x and tt <= ppadle.x + ppadle.length):
                 self.starteff = cclock.return_val()
                 self.collect(sscene,bball,ppadle,cclock)
-        elif(self.y == 27 and self.num == 6):
+        elif(self.y == 27 ):
             if(tt >= ppadle.x and tt <= ppadle.x + ppadle.length):
                 self.starteff = cclock.return_val()
                 self.collect(sscene,bball,ppadle,cclock)
@@ -92,28 +96,34 @@ class Power:
             msg3 = msg3 + " : Paddle spread activated"
             ppadle.upgrade()
             bball.spread = True
+            bball.spread_time = self.starteff + 10
         
         if(num == 2):
             idiotbox = True
             msg3 = msg3 + " : Paddle shrink activated"
             ppadle.degrade()
             bball.shrink = True
+            bball.shrink_time = self.starteff + 10
+
         if(num == 3):
             idiotbox = True
             msg3 = msg3 + " : Sticky ball activated"
             bball.sticky=True
+            bball.sticky_time = self.starteff + 10
         
         if(num == 4):
             idiotbox = True
             msg3 = msg3 + " : Thruball activated"
             bball.thruball = True
+            bball.thruball_time = self.starteff +10
         
-        if(num == 5):
+        if(num == 5 ):
             idiotbox = True
             msg3 = msg3 + " : Fast ball activated"
             bball.fastball = True
             sscene.speed = sscene.speed/2
-        
+            bball.fastball_time = self.starteff + 10
+
         if(num == 6):
             idiotbox = True
             msg3 = msg3 + " : Mutiball activated"
@@ -122,6 +132,16 @@ class Power:
             bball.y2=bball.y
             bball.speedx2 = -1*bball.speedx 
             bball.speedy2 = -1*bball.speedy 
+            bball.multiball_time = self.starteff + 5
+            
+            
+        if(num == 7 ):
+            idiotbox = True
+            msg3 = msg3 + " : Fire ball activated"
+            bball.fireball = True
+            bball.fireball_time = self.starteff + 10
+            
+        
         if(idiotbox == True):
             print(msg3)
         return False

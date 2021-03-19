@@ -293,6 +293,70 @@
         "documentation": {}
     },
     {
+        "label": "play_blast",
+        "importPath": "sound",
+        "description": "sound",
+        "isExtraImport": true,
+        "detail": "sound",
+        "documentation": {}
+    },
+    {
+        "label": "play_other",
+        "importPath": "sound",
+        "description": "sound",
+        "isExtraImport": true,
+        "detail": "sound",
+        "documentation": {}
+    },
+    {
+        "label": "play_gameover",
+        "importPath": "sound",
+        "description": "sound",
+        "isExtraImport": true,
+        "detail": "sound",
+        "documentation": {}
+    },
+    {
+        "label": "play_winner",
+        "importPath": "sound",
+        "description": "sound",
+        "isExtraImport": true,
+        "detail": "sound",
+        "documentation": {}
+    },
+    {
+        "label": "play_blast",
+        "importPath": "sound",
+        "description": "sound",
+        "isExtraImport": true,
+        "detail": "sound",
+        "documentation": {}
+    },
+    {
+        "label": "play_brick",
+        "importPath": "sound",
+        "description": "sound",
+        "isExtraImport": true,
+        "detail": "sound",
+        "documentation": {}
+    },
+    {
+        "label": "play_loss",
+        "importPath": "sound",
+        "description": "sound",
+        "isExtraImport": true,
+        "detail": "sound",
+        "documentation": {}
+    },
+    {
+        "label": "play_other",
+        "importPath": "sound",
+        "description": "sound",
+        "isExtraImport": true,
+        "detail": "sound",
+        "documentation": {}
+    },
+    {
         "label": "time",
         "kind": 6,
         "isExtraImport": true,
@@ -391,6 +455,14 @@
         "importPath": "math",
         "description": "math",
         "detail": "math",
+        "documentation": {}
+    },
+    {
+        "label": "playsound",
+        "importPath": "playsound",
+        "description": "playsound",
+        "isExtraImport": true,
+        "detail": "playsound",
         "documentation": {}
     },
     {
@@ -821,7 +893,7 @@
         "kind": 6,
         "importPath": "scoreoard",
         "description": "scoreoard",
-        "peekOfCode": "class ScoreBoard : \n    def __init__(self,initialval):\n        self.val = initialval\n    def return_val(self):\n        return self.val\nclass Lives(ScoreBoard):\n    def sub_life(self):\n        self.val = self.val - 1\n        return self.val\n    def add_life(self):",
+        "peekOfCode": "class ScoreBoard : \n    def __init__(self,initialval):\n        self.val = initialval\n    def return_val(self):\n        return self.val\nclass Lives(ScoreBoard):\n    def sub_life(self):\n        self.val = self.val - 1\n        play_loss()\n        return self.val",
         "detail": "scoreoard",
         "documentation": {}
     },
@@ -830,7 +902,7 @@
         "kind": 6,
         "importPath": "scoreoard",
         "description": "scoreoard",
-        "peekOfCode": "class Lives(ScoreBoard):\n    def sub_life(self):\n        self.val = self.val - 1\n        return self.val\n    def add_life(self):\n        self.val = self.val + 1\n        return self.val\n    def add_in_scene(self,scene):\n        temp = str(self.val)\n        for i in range(0,len(temp)):",
+        "peekOfCode": "class Lives(ScoreBoard):\n    def sub_life(self):\n        self.val = self.val - 1\n        play_loss()\n        return self.val\n    def add_life(self):\n        self.val = self.val + 1\n        return self.val\n    def add_in_scene(self,scene):\n        temp = str(self.val)",
         "detail": "scoreoard",
         "documentation": {}
     },
@@ -848,7 +920,7 @@
         "kind": 6,
         "importPath": "scoreoard",
         "description": "scoreoard",
-        "peekOfCode": "class Score(ScoreBoard):\n    def update_val(self,ss):\n        self.val = self.val + ss*10\n    def set_val(self,ss):\n        self.val  = ss\n    def add_in_scene(self,scene):\n        temp = str(self.val)\n        for i in range(0,len(temp)):\n            scene.matrix[6][84+i]=temp[i]\nclass Pause(ScoreBoard):",
+        "peekOfCode": "class Score(ScoreBoard):\n    def update_val(self,ss):\n        self.val = self.val + ss*10\n        play_brick()\n    def set_val(self,ss):\n        self.val  = ss\n    def add_in_scene(self,scene):\n        temp = str(self.val)\n        for i in range(0,len(temp)):\n            scene.matrix[6][84+i]=temp[i]",
         "detail": "scoreoard",
         "documentation": {}
     },
@@ -877,6 +949,114 @@
         "description": "scoreoard",
         "peekOfCode": "class Level_change_flag(ScoreBoard):\n    def set_val(self,t):\n        self.val = t",
         "detail": "scoreoard",
+        "documentation": {}
+    },
+    {
+        "label": "play_blast",
+        "kind": 2,
+        "importPath": "sound",
+        "description": "sound",
+        "peekOfCode": "def play_blast():\n    pass\n    # playsound(blast)\ndef play_brick():\n    pass\n    # playsound(brick)\ndef play_gameover():\n    pass\n    # playsound(gameover)\ndef play_winner():",
+        "detail": "sound",
+        "documentation": {}
+    },
+    {
+        "label": "play_brick",
+        "kind": 2,
+        "importPath": "sound",
+        "description": "sound",
+        "peekOfCode": "def play_brick():\n    pass\n    # playsound(brick)\ndef play_gameover():\n    pass\n    # playsound(gameover)\ndef play_winner():\n    pass\n    # playsound(winner)\ndef play_other():",
+        "detail": "sound",
+        "documentation": {}
+    },
+    {
+        "label": "play_gameover",
+        "kind": 2,
+        "importPath": "sound",
+        "description": "sound",
+        "peekOfCode": "def play_gameover():\n    pass\n    # playsound(gameover)\ndef play_winner():\n    pass\n    # playsound(winner)\ndef play_other():\n    pass\n    # playsound(other)\ndef play_loss():",
+        "detail": "sound",
+        "documentation": {}
+    },
+    {
+        "label": "play_winner",
+        "kind": 2,
+        "importPath": "sound",
+        "description": "sound",
+        "peekOfCode": "def play_winner():\n    pass\n    # playsound(winner)\ndef play_other():\n    pass\n    # playsound(other)\ndef play_loss():\n    pass\n    # playsound(loss)",
+        "detail": "sound",
+        "documentation": {}
+    },
+    {
+        "label": "play_other",
+        "kind": 2,
+        "importPath": "sound",
+        "description": "sound",
+        "peekOfCode": "def play_other():\n    pass\n    # playsound(other)\ndef play_loss():\n    pass\n    # playsound(loss)",
+        "detail": "sound",
+        "documentation": {}
+    },
+    {
+        "label": "play_loss",
+        "kind": 2,
+        "importPath": "sound",
+        "description": "sound",
+        "peekOfCode": "def play_loss():\n    pass\n    # playsound(loss)",
+        "detail": "sound",
+        "documentation": {}
+    },
+    {
+        "label": "brick",
+        "kind": 5,
+        "importPath": "sound",
+        "description": "sound",
+        "peekOfCode": "brick = 'sounds/brick.wav'\nblast = 'sounds/blast.wav'\ngameover = 'sounds/gameover.wav'\nwinner = 'sounds/winner.mp3'\nother = 'sounds/other.wav'\nloss = 'sounds/loss.wav'\ndef play_blast():\n    pass\n    # playsound(blast)\ndef play_brick():",
+        "detail": "sound",
+        "documentation": {}
+    },
+    {
+        "label": "blast",
+        "kind": 5,
+        "importPath": "sound",
+        "description": "sound",
+        "peekOfCode": "blast = 'sounds/blast.wav'\ngameover = 'sounds/gameover.wav'\nwinner = 'sounds/winner.mp3'\nother = 'sounds/other.wav'\nloss = 'sounds/loss.wav'\ndef play_blast():\n    pass\n    # playsound(blast)\ndef play_brick():\n    pass",
+        "detail": "sound",
+        "documentation": {}
+    },
+    {
+        "label": "gameover",
+        "kind": 5,
+        "importPath": "sound",
+        "description": "sound",
+        "peekOfCode": "gameover = 'sounds/gameover.wav'\nwinner = 'sounds/winner.mp3'\nother = 'sounds/other.wav'\nloss = 'sounds/loss.wav'\ndef play_blast():\n    pass\n    # playsound(blast)\ndef play_brick():\n    pass\n    # playsound(brick)",
+        "detail": "sound",
+        "documentation": {}
+    },
+    {
+        "label": "winner",
+        "kind": 5,
+        "importPath": "sound",
+        "description": "sound",
+        "peekOfCode": "winner = 'sounds/winner.mp3'\nother = 'sounds/other.wav'\nloss = 'sounds/loss.wav'\ndef play_blast():\n    pass\n    # playsound(blast)\ndef play_brick():\n    pass\n    # playsound(brick)\ndef play_gameover():",
+        "detail": "sound",
+        "documentation": {}
+    },
+    {
+        "label": "other",
+        "kind": 5,
+        "importPath": "sound",
+        "description": "sound",
+        "peekOfCode": "other = 'sounds/other.wav'\nloss = 'sounds/loss.wav'\ndef play_blast():\n    pass\n    # playsound(blast)\ndef play_brick():\n    pass\n    # playsound(brick)\ndef play_gameover():\n    pass",
+        "detail": "sound",
+        "documentation": {}
+    },
+    {
+        "label": "loss",
+        "kind": 5,
+        "importPath": "sound",
+        "description": "sound",
+        "peekOfCode": "loss = 'sounds/loss.wav'\ndef play_blast():\n    pass\n    # playsound(blast)\ndef play_brick():\n    pass\n    # playsound(brick)\ndef play_gameover():\n    pass\n    # playsound(gameover)",
+        "detail": "sound",
         "documentation": {}
     }
 ]

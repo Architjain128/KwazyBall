@@ -1,6 +1,7 @@
 import os
 from config import *
 from scoreoard import Time
+from sound import play_gameover, play_winner
 
 def landing_page():
     os.system('clear')
@@ -43,6 +44,7 @@ def quitmsg():
                 888  Y88..88P Y88b 888      Y88b.Y8b88P Y88b 888 888 Y88b.  
                 888   "Y88P"   "Y88888       "Y888888"   "Y88888 888  "Y888 
                                                    Y8b ''' + "\n\n") 
+    play_gameover()
 
 def gameover(SCORE,TIME):        
     os.system('clear')
@@ -62,6 +64,10 @@ def gameover(SCORE,TIME):
     print(Fore.GREEN + " "*42+ "Time taken : "+ str(TIME) +" second(s) \n\n")
     print("\n"+Fore.WHITE+" "*20 + "----------------------------------------------------------------------\n")
     print(Fore.GREEN + " "*42 + "See you again soon :)\n\n"+RESET)
+    if(SCORE==0 and TIME ==0):
+        play_winner()
+    else:
+        play_gameover()
     
 
 def printwinmsg():

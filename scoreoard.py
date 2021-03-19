@@ -1,4 +1,5 @@
 import math
+from sound import play_blast, play_brick, play_loss, play_other
 
 class ScoreBoard : 
     def __init__(self,initialval):
@@ -9,6 +10,7 @@ class ScoreBoard :
 class Lives(ScoreBoard):
     def sub_life(self):
         self.val = self.val - 1
+        play_loss()
         return self.val
     def add_life(self):
         self.val = self.val + 1
@@ -33,6 +35,7 @@ class Time(ScoreBoard):
 class Score(ScoreBoard):
     def update_val(self,ss):
         self.val = self.val + ss*10
+        play_brick()
         
     def set_val(self,ss):
         self.val  = ss

@@ -47,7 +47,7 @@ class Bullets:
                     if(sscene.matrix[b.y-1-lb][(b.x-9)//5]!=0):
                         if(sscene.matrix[b.y-1-lb][(b.x-9)//5]!=10 and sscene.matrix[b.y-1-lb][(b.x-9)//5]!=-1):
                             if(sscene.matrix[b.y-1-lb][(b.x-9)//5]!=7 and sscene.power_matrix[b.y-1-lb][(b.x-9)//5]):
-                                sscene.powers.append(0,Power((b.x-9)//5,b.y-1-lb,sscene.power_matrix[b.y-1-lb][(b.x-9)//5],cclock.return_val()))
+                                sscene.powers.append(Power(0,(b.x-9)//5,b.y-1-lb,sscene.power_matrix[b.y-1-lb][(b.x-9)//5],cclock.return_val()))
                                 sscene.matrix[b.y-1-lb][(b.x-9)//5] = sscene.matrix[b.y-1-lb][(b.x-9)//5] - 1
                                 sscore.update_val(1)
                             else:

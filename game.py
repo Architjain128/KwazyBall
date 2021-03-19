@@ -88,7 +88,7 @@ if(0 != landing_page):
                 scene.set_init_array(level.return_val())
                 ball.start_throw(paddle)
                 scene.setcurTime(0)
-                scene.powers = []
+                # scene.powers = []
                 bullets.bullet_array = []
                 ufo.boom_array = []
                 FLAG.set_val(False)

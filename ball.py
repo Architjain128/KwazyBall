@@ -4,6 +4,7 @@ from powerup import *
 import random
 from config import *
 from messages import gameover
+from sound import play_blast, play_other
 
 def check_buddy(ok):
     if(ok>=0 and ok<=5):
@@ -36,11 +37,76 @@ class Ball:
         self.speedx2 = 0
         self.speedy2 = 0
         self.collison = False
+        self.fireball = False
+        self.fireball_time = False
         self.start_throw(ppadle)
         
     def get_fastball(self):
         return self.fastball
     
+    def checkly(self,a,b,c):
+        if(a<=b and a>=c):
+            return True
+        return False
+    
+    def fire_bum(self,x,y,ar):
+        tt = 0
+        if((x<=12 and x>=0)and(y>=0 and y<=5)):
+            if(ar[x][y]>0):
+                if(ar[x][y]!=10):
+                    tt += ar[x][y]
+                ar[x][y]=0
+            
+        if((x<=12 and x>=0)and((y-1)>=0 and (y-1)<=5)):
+            if(ar[x][y-1]>0):
+                if(ar[x][y-1]!=10):
+                    tt += ar[x][y-1]
+                ar[x][y-1]=0
+
+        if((x<=12 and x>=0)and((y+1)>=0 and (y+1)<=5)):
+            if(ar[x][y+1]>0):
+                if(ar[x][y+1]!=10):
+                    tt += ar[x][y+1]
+                ar[x][y+1]=0
+        
+        if(((x-1)<=12 and (x-1)>=0)and(y>=0 and y<=5)):
+            if(ar[x-1][y]>0):
+                if(ar[x-1][y]!=10):
+                    tt += ar[x-1][y]
+                ar[x-1][y]=0
+            
+        if(((x-1)<=12 and (x-1)>=0)and((y-1)>=0 and (y-1)<=5)):
+            if(ar[x-1][y-1]>0):
+                if(ar[x-1][y-1]!=10):
+                    tt += ar[x-1][y-1]
+                ar[x-1][y-1]=0
+
+        if(((x-1)<=12 and (x-1)>=0)and((y+1)>=0 and (y+1)<=5)):
+            if(ar[x-1][y+1]>0):
+                if(ar[x-1][y+1]!=10):
+                    tt += ar[x-1][y+1]
+                ar[x-1][y+1]=0
+        
+        if(((x+1)<=12 and (x+1)>=0)and(y>=0 and y<=5)):
+            if(ar[x+1][y]>0):
+                if(ar[x+1][y]!=10):
+                    tt += ar[x+1][y]
+                ar[x+1][y]=0
+            
+        if(((x+1)<=12 and (x+1)>=0)and((y-1)>=0 and (y-1)<=5)):
+            if(ar[x+1][y-1]>0):
+                if(ar[x+1][y-1]!=10):
+                    tt += ar[x+1][y-1]
+                ar[x+1][y-1]=0
+
+        if(((x+1)<=12 and (x+1)>=0)and((y+1)>=0 and (y+1)<=5)):
+            if(ar[x+1][y+1]>0):
+                if(ar[x+1][y+1]!=10):
+                    tt += ar[x+1][y+1]
+                ar[x+1][y+1]=0
+        play_blast()
+        return tt
+            
     def chickibum(self,y,ar):
         re = 0
         if(y==0):
@@ -70,6 +136,7 @@ class Ball:
                     temp = temp + ar[y+1][i]
                     ar[y+1][i]=0
             re = temp
+        play_blast()
         return re
 
     def start_throw(self,ppadle):
@@ -105,11 +172,15 @@ class Ball:
         if(self.speedx < 0 and (self.x + self.speedx < 4)):
             self.speedx =  -1 * self.speedx 
             self.x = self.speedx - self.x + 8
+            play_other()
         if(self.speedx > 0 and (self.x + self.speedx >= 77)):
             self.speedx =  -1 * self.speedx 
             self.x = self.speedx - self.x + 77 + 77
+            play_other()
         if(self.y == 8 and self.speedy < 0):
             self.speedy =  -1 * self.speedy 
+            play_other()
+            
         if(self.y == 28 and self.speedy > 0):
             llives.sub_life()
             self.spread = False
@@ -229,10 +300,10 @@ class Ball:
                 else:
                     if((self.y <=(1+self.ub) and self.y >= (1+self.lb)) and ((t>8 and t<73) and (archit[self.y-(1+self.lb)][(t-9)//5]!=0))):
                         if(archit[self.y-(1+self.lb)][(t-9)//5]!=10):
-                            if(archit[self.y-(1+self.lb)][(t-4)//5] == -1):
+                            if(archit[self.y-(1+self.lb)][(t-9)//5] == -1):
                                 sscore.update_val( self.chickibum(self.y-(1+self.lb),archit))
-                            elif(archit[self.y-(1+self.lb)][(t-4)//5] == 7):
-                                archit[self.y-(1+self.lb)][(t-4)//5] = ran_archit
+                            elif(archit[self.y-(1+self.lb)][(t-9)//5] == 7):
+                                archit[self.y-(1+self.lb)][(t-9)//5] = ran_archit
                             else:
                                 if(self.thruball==True):
                                     sscore.update_val(archit[self.y-(1+self.lb)][((t-9)//5)] )
@@ -346,8 +417,8 @@ class Ball:
                         if(archit[self.y-(1+self.lb)][(t-9)//5]!=10):
                             if(archit[self.y-(1+self.lb)][(t-9)//5] == -1):
                                 sscore.update_val( self.chickibum(self.y-(1+self.lb),archit))
-                            elif(archit[self.y-(1+self.lb)][((t-4)//5)-1] == 7):
-                                archit[self.y-(1+self.lb)][((t-4)//5)-1] = ran_archit
+                            elif(archit[self.y-(1+self.lb)][((t-9)//5)] == 7):
+                                archit[self.y-(1+self.lb)][((t-9)//5)] = ran_archit
                             else:
                                 if(self.thruball==True):
                                     sscore.update_val(archit[self.y-(1+self.lb)][((t-9)//5)] )
@@ -392,7 +463,7 @@ class Ball:
                         flss = True
                     if((self.y <=(self.ub-1) and self.y >= (self.lb-1)) and ((t>8 and t<=73) and ( check_buddy((self.y-(self.lb-1))) and archit[self.y-(self.lb-1)][((t-4)//5)-1]!=0))):
                         flup = True
-                    print(flss, flup)
+                    # print(flss, flup)
                     if(flss==True and flup==True):
                         if(archit[self.y-self.lb][(t-4)//5]!=10):
                             if(archit[self.y-self.lb][(t-4)//5] == -1):
@@ -496,7 +567,6 @@ class Ball:
                                     powers.append(Power(self.speedx,((t-9)//5),self.y-(self.lb-1),archit_power[self.y-(self.lb-1)][((t-9)//5)],cclock.return_val()))
                         if(self.thruball==False):
                             self.speedy = -1 * self.speedy
-            
             elif(self.speedx < 0 ):
                 t = self.x + self.speedx + 1
                 if(t%5==4 and t>9):
@@ -905,7 +975,7 @@ class Ball:
                         flss = True
                     if((self.y2 <=(self.ub-1) and self.y2 >= (self.lb-1)) and ((t>8 and t<=73) and ( check_buddy(self.y2-(self.lb-1)) and archit[self.y2-(self.lb-1)][((t-4)//5)-1]!=0))):
                         flup = True
-                    print(flss, flup)
+                    # print(flss, flup)
                     if(flss==True and flup==True):
                         if(archit[self.y2-self.lb][(t-4)//5]!=10):
                             if(archit[self.y2-self.lb][(t-4)//5] == -1):
@@ -1142,6 +1212,7 @@ class Ball:
                 elif(self.speedx < -1):
                     self.speedx = -1
                 self.speedy = -1 * self.speedy
+                play_other()
                 
                 if(sscene.skyfall==True):
                     # self.lb += 1
@@ -1171,6 +1242,7 @@ class Ball:
                 elif(self.speedx < -1):
                     self.speedx = -1
                 self.speedy2 = -1 * self.speedy2
+                play_other()
                 # print("OKOK")
         return True
     

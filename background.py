@@ -137,7 +137,7 @@ class Scene:
             arrp.append(arp)
             if(i!=I-1):
                 striii+="\n"
-        print(len(arrp))
+        # print(len(arrp))
         return arrp
 
     def generate_screen(self,cclock,llevel,llives,sscore,ppadle,bball,bbullets,uufo):
@@ -186,7 +186,7 @@ class Scene:
         msg1 = Fore.WHITE+Back.MAGENTA+ "Stats for Nerds" + RESET
         print(msg1)
         print(bball.lb,bball.ub)
-        print(len(farr))
+        # print(len(farr))
         print("ball speed : " + str(SPEED//self.speed))
         print("Paddle length : " + str(ppadle.length))
         if(llevel.return_val()==3):
@@ -194,11 +194,26 @@ class Scene:
         
         print("Powerup")
         print("\t1. Large Paddle : \t"+ str(bball.spread))
+        if(bball.spread==True):
+            print("power timeout on : " + str(bball.spread_time))
         print("\t2. Small Paddle : \t"+ str(bball.shrink))
+        if(bball.shrink==True):
+            print("power timeout on : " + str(bball.shrink_time))
         print("\t3. Sticky Paddle : \t"+ str(bball.sticky))
+        if(bball.sticky==True):
+            print("power timeout on : " + str(bball.sticky_time))
         print("\t4. Thru Ball : \t\t"+ str(bball.thruball))
+        if(bball.thruball==True):
+            print("power timeout on : " + str(bball.thruball_time))
         print("\t5. Fast Ball : \t\t"+ str(bball.fastball))
+        if(bball.fastball==True):
+            print("power timeout on : " + str(bball.fastball_time))
         print("\t6. Multi Ball : \t"+ str(bball.multiball))
+        if(bball.multiball==True):
+            print("power timeout on : " + str(bball.multiball_time))
+        print("\t7. Fire Ball : \t"+ str(bball.fireball))
+        if(bball.fireball==True):
+            print("power timeout on : " + str(bball.fireball_time))
         b = bball.collision_check(self.matrix,self.power_matrix,self.powers,sscore,llives,ppadle,cclock,choro)
         a = bball.collision_paddle(sscore,cclock,self,ppadle)
         
