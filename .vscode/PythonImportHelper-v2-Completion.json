@@ -677,7 +677,7 @@
         "kind": 2,
         "importPath": "levelsetup",
         "description": "levelsetup",
-        "peekOfCode": "def return_init_array(level):\n    level = int(level)\n    return levelarr[level]\ndef return_init_power_array(level):\n    level = int(level)\n    return levelpow[0]\ndef setup(level):\n    arrp = []\n    arp = []\n    striii=\"\"",
+        "peekOfCode": "def return_init_array(level):\n    level = int(level)\n    return levelarr[level]\ndef return_init_power_array(level):\n    level = int(level)\n    return levelpow[level]\ndef setup(level):\n    arrp = []\n    arp = []\n    striii=\"\"",
         "detail": "levelsetup",
         "documentation": {}
     },
@@ -686,7 +686,7 @@
         "kind": 2,
         "importPath": "levelsetup",
         "description": "levelsetup",
-        "peekOfCode": "def return_init_power_array(level):\n    level = int(level)\n    return levelpow[0]\ndef setup(level):\n    arrp = []\n    arp = []\n    striii=\"\"\n    I=int(len(levelarr[level]))\n    for i in range(0,I):\n        J=int(len(levelarr[level][i]))",
+        "peekOfCode": "def return_init_power_array(level):\n    level = int(level)\n    return levelpow[level]\ndef setup(level):\n    arrp = []\n    arp = []\n    striii=\"\"\n    I=int(len(levelarr[level]))\n    for i in range(0,I):\n        J=int(len(levelarr[level][i]))",
         "detail": "levelsetup",
         "documentation": {}
     },
@@ -713,7 +713,7 @@
         "kind": 5,
         "importPath": "levelsetup",
         "description": "levelsetup",
-        "peekOfCode": "levelpow =  [\n            [[0,0,0,0,0,0,0,0,0,0,0,0,0],\n            [0,0,0,0,0,0,0,0,0,0,0,0,0],\n            [0,0,0,0,0,0,0,0,0,0,0,0,0],\n            [0,0,0,0,0,0,0,0,0,0,0,0,0],\n            [0,0,0,0,0,0,0,0,0,0,0,0,0],\n            [3,0,6,0,2,0,0,0,1,0,5,0,4]],\n            ]\ndef return_init_array(level):\n    level = int(level)",
+        "peekOfCode": "levelpow =  [\n            [[0,0,0,0,0,0,0,0,0,0,0,0,0],\n            [0,0,0,0,0,0,0,0,0,0,0,0,0],\n            [0,0,0,0,0,0,0,0,0,0,0,0,0],\n            [0,0,0,0,0,0,0,0,0,0,0,0,0],\n            [0,0,0,0,0,0,0,0,0,0,0,0,0],\n            [0,0,0,0,0,0,0,0,0,0,0,0,0]],\n            [[0,0,0,0,0,0,0,0,0,0,0,0,0],\n            [0,0,0,0,0,0,0,0,0,0,0,0,0],\n            [0,0,0,0,0,0,0,0,0,0,0,0,0],",
         "detail": "levelsetup",
         "documentation": {}
     },
@@ -812,7 +812,7 @@
         "kind": 6,
         "importPath": "powerup",
         "description": "powerup",
-        "peekOfCode": "class Power:\n    def __init__(self,x,y,num,tinka):\n        self.x = x\n        self.y = y+10\n        self.speedy = 2\n        self.num = num\n        self.start = int(tinka)\n        self.starteff = 0\n        self.active = True\n    def print_data(self):",
+        "peekOfCode": "class Power:\n    def __init__(self,sp,x,y,num,tinka):\n        self.x = x\n        self.y = y+10\n        self.speedy = 2\n        self.speedx = sp\n        self.num = num\n        self.start = int(tinka)\n        self.starteff = 0\n        self.active = True",
         "detail": "powerup",
         "documentation": {}
     },

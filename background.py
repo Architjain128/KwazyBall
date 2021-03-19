@@ -64,13 +64,13 @@ class Scene:
         for pp in self.powers:
             if(pp.active==True and pp.y<=25):
                 cc = pp.power_move(self,bball,ppadle,cclock)
-                farr[pp.y][pp.x*5+11]=str(pp.num)
+                farr[pp.y][pp.x]=str(pp.num)
                 
         return True
     
     def set_init_array(self,level):
         self.matrix = return_init_array(level)
-        self.power_matrix = return_init_power_array(0)
+        self.power_matrix = return_init_power_array(level)
         # self.matrix = return_init_power_array(level)
         # print(self.matrix)
 
@@ -201,9 +201,12 @@ class Scene:
         print("\t6. Multi Ball : \t"+ str(bball.multiball))
         b = bball.collision_check(self.matrix,self.power_matrix,self.powers,sscore,llives,ppadle,cclock,choro)
         a = bball.collision_paddle(sscore,cclock,self,ppadle)
-        bbullets.add_bullet(ppadle.x,ppadle.x + ppadle.length-1,27)
-        bbullets.move_bullet()
-        bbullets.collison_bullet(self,bball.lb,bball.ub,choro,sscore,cclock)
+        
+        if(llevel.return_val()!=1):
+            bbullets.add_bullet(ppadle.x,ppadle.x + ppadle.length-1,27)
+            bbullets.move_bullet()
+            bbullets.collison_bullet(self,bball.lb,bball.ub,choro,sscore,cclock)
+            bbullets.print_bullets(farr)
         
         if(llevel.return_val()==3):
             uufo.move_ufo(ppadle.x + (ppadle.length//2) )
@@ -249,7 +252,7 @@ class Scene:
         
     
         farr[bball.y][bball.x]='0'
-        bbullets.print_bullets(farr)
+        
         
         if(bball.multiball==True):
             farr[bball.y2][bball.x2]=Fore.GREEN + "0"+ RESET

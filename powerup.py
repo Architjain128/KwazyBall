@@ -2,14 +2,19 @@ from config import *
 
 class Power:
     
-    def __init__(self,x,y,num,tinka):
+    def __init__(self,sp,x,y,num,tinka):
         self.x = x
         self.y = y+10
         self.speedy = 2
+        self.speedx = sp
         self.num = num
         self.start = int(tinka)
         self.starteff = 0
         self.active = True
+        self.indexx = 0
+        self.set = 0
+        self.confi =0 
+        self.moving = [-1,0,1,3,5,8,12]
     
     def print_data(self):
         print(self.x,self.y,self.speedy,self.num,self.start,self.starteff,self.active)
@@ -54,8 +59,20 @@ class Power:
         return False
 
     def power_move(self,sscene,bball,ppadle,cclock):
-        self.y = self.y + self.speedy
-        tt = self.x*5 + 11
+        if(self.set ==0):
+            self.set = self.y
+        self.y = self.set + self.moving[self.indexx]
+        self.indexx +=1
+        if(self.x==5 or self.x == 77 ):
+            self.speedx = -1*self.speedx
+        if(self.confi!=0):
+            self.x = self.x + self.speedx
+        if(self.confi == 0):
+            tt = self.x*5 + 11
+            self.x = tt
+            self.confi +=1
+        
+        
         if(self.y == 25 and self.num !=  6):
             if(tt >= ppadle.x and tt <= ppadle.x + ppadle.length):
                 self.starteff = cclock.return_val()
