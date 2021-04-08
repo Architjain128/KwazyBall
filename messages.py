@@ -1,5 +1,7 @@
 import os
 from config import *
+from scoreoard import Time
+from sound import play_gameover, play_winner
 
 def landing_page():
     os.system('clear')
@@ -13,7 +15,7 @@ def landing_page():
 ###    ###   ###   ###   ###     ### #########    ###              #########  ###     ### ########## ########## '''+" "*40)
     print("\n"+Fore.YELLOW+" "*51 + "By Archit Jain")
     print("\n"+Fore.WHITE+" "*22 + "--------------------------------------------------------------------\n")
-    print(Fore.CYAN+"\n"+" "*50 + "Press 1 to start\n")
+    print(Fore.CYAN+"\n"+" "*50 + "Press 1 to start")
     print(Fore.CYAN+" "*45 + "Press any other key to exit\n")
     print("\n"+Fore.WHITE+" "*22 + "--------------------------------------------------------------------\n")
     
@@ -42,10 +44,13 @@ def quitmsg():
                 888  Y88..88P Y88b 888      Y88b.Y8b88P Y88b 888 888 Y88b.  
                 888   "Y88P"   "Y88888       "Y888888"   "Y88888 888  "Y888 
                                                    Y8b ''' + "\n\n") 
+    play_gameover()
 
-def gameover(SCORE,TIME):
+def gameover(SCORE,TIME):        
     os.system('clear')
     print("\n\n\n")
+    if(SCORE==0 and TIME ==0):
+        printwinmsg()
     print(Fore.BLUE + " "*20+ '''
              .d8888b.                                        .d88888b.                            
             d88P  Y88b                                      d88P" "Y88b                           
@@ -55,9 +60,21 @@ def gameover(SCORE,TIME):
             888    888 .d888888 888  888  888 88888888      888     888 Y88  88P 88888888 888     
             Y88b  d88P 888  888 888  888  888 Y8b.          Y88b. .d88P  Y8bd8P  Y8b.     888     
              "Y8888P88 "Y888888 888  888  888  "Y8888        "Y88888P"    Y88P    "Y8888  888 ''' + "\n\n\n\n") 
-    print(Fore.GREEN + " "*45+ "Final Score : "+ SCORE +"\n")
-    print(Fore.GREEN + " "*45+ "Time taken : "+ TIME +" second(s) \n\n")
+    if((SCORE!=0 and TIME !=0)):
+        print(Fore.GREEN + " "*45+ "Final Score : "+ str(SCORE) +"\n")
+        print(Fore.GREEN + " "*42+ "Time taken : "+ str(TIME) +" second(s) \n\n")
     print("\n"+Fore.WHITE+" "*20 + "----------------------------------------------------------------------\n")
+    print(Fore.GREEN + " "*42 + "See you again soon :)\n\n"+RESET)
+    if(SCORE==0 and TIME ==0):
+        play_winner()
+    else:
+        play_gameover()
+    
+
+def printwinmsg():
+    print("\n\n\n\n")
+    print( " "*40  + "WINNER")
+    print("\n\n\n\n")
 
 def pausedmsg(SCORE,TIME):
     os.system('clear')
@@ -71,8 +88,8 @@ def pausedmsg(SCORE,TIME):
                             888       .d888888 888  888 "Y8888b. 88888888 888  888      
                             888       888  888 Y88b 888      X88 Y8b.     Y88b 888      
                             888       "Y888888  "Y88888  88888P'  "Y8888   "Y88888 ''' + "\n\n") 
-    print(Fore.GREEN + " "*45+ "Current Score : "+ SCORE +"\n")
-    print(Fore.GREEN + " "*45+ "Time taken : "+ TIME +" second(s) \n\n")
+    print(Fore.GREEN + " "*45+ "Current Score : "+ str(SCORE) +"\n")
+    print(Fore.GREEN + " "*42+ "Time taken : "+ str(TIME) +" second(s) \n\n")
     print("\n"+Fore.WHITE+" "*20 + "----------------------------------------------------------------------\n")
     print("\n"+Fore.WHITE+" "*20 + "                    < Press [R] or [r] to resume >                    \n")
     print("\n"+Fore.WHITE+" "*20 + "                     < Press [Q] or [q] to quit >                     \n")
